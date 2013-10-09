@@ -85,6 +85,9 @@
     # export GIT_EDITOR="subl -w"
     # export EDITOR="subl -w"
 
+    # Point vim to newest (brewed) version
+    alias vim='/usr/local/Cellar/vim/7.4.027/bin/vim'
+
     # Editors - Vim 7.4 option
     # Tells your shell that when a program requires various editors, use the
     # newest version of vim (brewed in the Cellar).
@@ -206,9 +209,6 @@ function lg {
   REST=`echo $1 | sed -e 's/^.\(.*\)/\1/'`
   ls -la | grep "[$FIRST]$REST"
 }
-
-# Point vim to newest (brewed) version
-alias vim='/usr/local/Cellar/vim/7.4.027/bin/vim'
 
   # RVM
   # Mandatory loading of RVM into the shell
