@@ -194,7 +194,6 @@ function extract () {
     . `brew --prefix`/etc/bash_completion
   fi
 
-#export PATH=/usr/local/bin:/Users/ivan/.rvm/gems/ruby-1.9.3-p448/bin:/Users/ivan/.rvm/gems/ruby-1.9.3-p448@global/bin:/Users/ivan/.rvm/rubies/ruby-1.9.3-p448/bin:/Users/ivan/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export PATH=/usr/local/bin:/Users/ivan/.rvm/gems/ruby-1.9.3-p448/bin:/Users/ivan/.rvm/gems/ruby-1.9.3-p448@global/bin:/Users/ivan/.rvm/rubies/ruby-1.9.3-p448/bin:/Users/ivan/.rvm/bin:$PATH
 
 # Case insensitive tab autocomplete
