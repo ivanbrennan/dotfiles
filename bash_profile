@@ -1,23 +1,3 @@
-# =====================
-# === OLD PROFILE =====
-# =====================
-
-# set default compiler to gcc version 4.2 (as per Treehouse instructions)
-#export CC=/usr/bin/gcc 
-
-# if the file at ~/.rvm/scripts/rvm exists, load it
-# (load RVM into a shell session *as a function*)
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# move /usr/local/bin to front of PATH as per Homebrew instructions
-
-#alias l='ls -lah'
-
-# autocomplete git commands/branches
-#if [ -f `brew --prefix`/etc/bash_completion ]; then
-#      . `brew --prefix`/etc/bash_completion
-#fi
-
 # ======================
 # = FLATIRON PROFILE ===
 # ======================
