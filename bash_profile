@@ -18,7 +18,7 @@
     # ♥ ☆ - Keeping some cool ASCII Characters for reference
 
     # Here is where we actually export the PS1 Variable which stores the text for your prompt
-    export PS1="\[\e]2;\u@\h\a[\[\e[37;44;1m\]\t\[\e[0m\]]$RED\$(parse_git_branch) \[\e[32m\]\W\[\e[0m\]\n\[\e[0;31m\]$CHAR \[\e[0m\]"
+    export PS1="\[\e]2;\u@\h\a[\[\e[37;44;1m\]\t\[\e[0m\]]$RED\$(parse_git_branch) \[\e[34m\]\W\[\e[0m\]\n\[\e[0;31m\]$CHAR \[\e[0m\]"
       PS2='> '
       PS4='+ '
     }
@@ -195,7 +195,7 @@ function lg {
 # Enable coloring in the terminal
 export CLICOLOR=1
 # Specify how to color specific items
-export LSCOLORS=GxFxCxDxBxegedabagaced
+export LSCOLORS=ExFxCxDxBxegedabagaced
 #The color designators are as follows: 
 #
 #a black 
@@ -232,8 +232,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 #8. executable with setuid bit set 
 #9. executable with setgid bit set 
 #10. directory writable to others, with sticky bit 
-#11. directory writable to others, without sticky 
-#bit 
+#11. directory writable to others, without sticky bit 
 #
 #The default is "exfxcxdxbxegedabagacad", i.e. blue fore- 
 #ground and default background for regular directories, 
