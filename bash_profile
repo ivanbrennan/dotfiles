@@ -194,10 +194,6 @@ function extract () {
     . `brew --prefix`/etc/bash_completion
   fi
 
-  # RVM
-  # Mandatory loading of RVM into the shell
-  # This must be the last line of your bash_profile always
-  [[ -s "/Users/$USER/.rvm/scripts/rvm" ]] && source "/Users/$USER/.rvm/scripts/rvm"
 #export PATH=/usr/local/bin:/Users/ivan/.rvm/gems/ruby-1.9.3-p448/bin:/Users/ivan/.rvm/gems/ruby-1.9.3-p448@global/bin:/Users/ivan/.rvm/rubies/ruby-1.9.3-p448/bin:/Users/ivan/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export PATH=/usr/local/bin:/Users/ivan/.rvm/gems/ruby-1.9.3-p448/bin:/Users/ivan/.rvm/gems/ruby-1.9.3-p448@global/bin:/Users/ivan/.rvm/rubies/ruby-1.9.3-p448/bin:/Users/ivan/.rvm/bin:$PATH
 
@@ -214,3 +210,8 @@ function lg {
 
 # Point vim to newest (brewed) version
 alias vim='/usr/local/Cellar/vim/7.4.027/bin/vim'
+
+  # RVM
+  # Mandatory loading of RVM into the shell
+  # This must be the last line of your bash_profile always
+  [[ -s "/Users/$USER/.rvm/scripts/rvm" ]] && source "/Users/$USER/.rvm/scripts/rvm"
