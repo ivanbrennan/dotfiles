@@ -152,6 +152,10 @@ function extract () {
     fi
 }
 
+# Quickly navigate to certain directories in the interactive shell.
+# DON'T EXPORT THIS, as it can screw up scripts.
+CDPATH=".:~/Development/Flatiron:~"
+
 # Aliases
 # =====================
   # LS
