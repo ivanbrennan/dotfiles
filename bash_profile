@@ -1,3 +1,6 @@
+#!bin/bash
+
+
 # ======================
 # = FLATIRON PROFILE ===
 # ======================
@@ -14,12 +17,19 @@
     # Define some local colors
     local         RED="\[\033[0;31m\]" # This syntax is some weird bash color thing I never
     local   LIGHT_RED="\[\033[1;31m\]" # really understood
-    local        CHAR=""
+    local       GREEN="\[\033[1;32m\]"
+    local       BLACK="\[\033[0;30m\]"
+    local        BLUE="\[\033[0;34m\]"
+    local         OFF="\[\033[0m\]"
+    local        CHAR="℔" #λ⦔Ω№
     # ♥ ☆ - Keeping some cool ASCII Characters for reference
 
     # Here is where we actually export the PS1 Variable which stores the text for your prompt
-    export PS1="\[\e]2;\u@\h\a[\[\e[37;44;1m\]\t\[\e[0m\]]$RED\$(parse_git_branch) \[\e[34m\]\W\[\e[0m\]\n\[\e[0;31m\]$CHAR \[\e[0m\]"
-      PS2='> '
+   #export PS1="\[\e]2;\u@\h\a[\[\e[37;44;1m\]\t\[\e[0m\]]$RED\$(parse_git_branch) \[\e[34m\]\W\[\e[0m\]\n\[\e[0;37m\]$CHAR \[\e[0m\]"
+   export PS1="\[╭╺[$BLUE\u$OFF][$BLUE\h$OFF]\]$GREEN\$(parse_git_branch) \[\e[34m\]\w\[\e[0m\]\n╰╺⧉\[\e[1;34m\] \[\e[0m\]"
+
+      PS2="\[╭╺[$GREEN\u$OFF][$GREEN\h$OFF]\]$GREEN\$(parse_git_branch) \[\e[34m\]\w\[\e[0m\]\n╰╺℔\[\e[1;34m\] \[\e[0m\]"
+
       PS4='+ '
     }
 
@@ -103,7 +113,6 @@
 #    # Read http://blog.seldomatt.com/blog/2012/10/08/bash-and-the-one-true-path/ for more on that.
 #    export PATH="$USR_PATHS:$PYTHON_SHARE:$PATH"
 
-
     # If you go into your shell and type: $PATH you will see the output of your current path.
     # For example, mine is:
     # /Users/avi/.rvm/gems/ruby-1.9.3-p392/bin:/Users/avi/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/avi/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/avi/.rvm/bin:/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/local/mysql/bin:/usr/local/share/python:/bin:/usr/sbin:/sbin:
@@ -156,6 +165,9 @@ function extract () {
 # DON'T EXPORT THIS, as it can screw up scripts.
 CDPATH=".:~/Development/Flatiron:~"
 
+# Make directory and CD into it
+#function md () { mkdir -p "$@" && eval cd "\"$$#\""; }
+
 # Aliases
 # =====================
   # LS
@@ -171,7 +183,6 @@ CDPATH=".:~/Development/Flatiron:~"
   alias gb="git branch"
   alias gba="git branch -a"
 
-
 # Final Configurations and Plugins
 # =====================
   # Git Bash Completion
@@ -181,7 +192,8 @@ CDPATH=".:~/Development/Flatiron:~"
     . `brew --prefix`/etc/bash_completion
   fi
 
-export PATH=/usr/local/bin:/Users/ivan/.rvm/gems/ruby-1.9.3-p448/bin:/Users/ivan/.rvm/gems/ruby-1.9.3-p448@global/bin:/Users/ivan/.rvm/rubies/ruby-1.9.3-p448/bin:/Users/ivan/.rvm/bin:$PATH
+# export PATH=/usr/local/bin:/Users/ivan/.rvm/gems/ruby-1.9.3-p448/bin:/Users/ivan/.rvm/gems/ruby-1.9.3-p448@global/bin:/Users/ivan/.rvm/rubies/ruby-1.9.3-p448/bin:/Users/ivan/.rvm/bin:$PATH
+export PATH=/usr/local/bin:/Users/ivan/.rvm/bin:$PATH
 
 # Case insensitive tab autocomplete
 bind "set completion-ignore-case on"
@@ -199,51 +211,52 @@ function lg {
 # Enable coloring in the terminal
 export CLICOLOR=1
 # Specify how to color specific items
-export LSCOLORS=ExFxCxDxBxegedabagaced
+export LSCOLORS=exFxCxDxBxegedabagaced
 #The color designators are as follows: 
 #
-#a black 
-#b red 
-#c green 
-#d brown 
-#e blue 
-#f magenta 
-#g cyan 
-#h light grey 
-#A bold black, usually shows up as dark grey 
-#B bold red 
-#C bold green 
-#D bold brown, usually shows up as yellow 
-#E bold blue 
-#F bold magenta 
-#G bold cyan 
-#H bold light grey; looks like bright white 
-#x default foreground or background 
+#a black
+#b red
+#c green
+#d brown
+#e blue
+#f magenta
+#g cyan
+#h light grey
+#A bold black, usually shows up as dark grey
+#B bold red
+#C bold green
+#D bold brown, usually shows up as yellow
+#E bold blue
+#F bold magenta
+#G bold cyan
+#H bold light grey; looks like bright white
+#x default foreground or background
 #
-#Note that the above are standard ANSI colors. The actual 
-#display may differ depending on the color capabilities of 
-#the terminal in use. 
+#Note that the above are standard ANSI colors. The actual
+#display may differ depending on the color capabilities of
+#the terminal in use.
 #
-#The order of the attributes are as follows: 
+#The order of the attributes are as follows:
 #
-#1. directory 
-#2. symbolic link 
-#3. socket 
-#4. pipe 
-#5. executable 
-#6. block special 
-#7. character special 
-#8. executable with setuid bit set 
-#9. executable with setgid bit set 
-#10. directory writable to others, with sticky bit 
-#11. directory writable to others, without sticky bit 
+#1. directory
+#2. symbolic link
+#3. socket
+#4. pipe
+#5. executable
+#6. block special
+#7. character special
+#8. executable with setuid bit set
+#9. executable with setgid bit set
+#10. directory writable to others, with sticky bit
+#11. directory writable to others, without sticky bit
 #
-#The default is "exfxcxdxbxegedabagacad", i.e. blue fore- 
-#ground and default background for regular directories, 
-#black foreground and red background for setuid executa- 
-#bles, etc. 
+#The default is "exfxcxdxbxegedabagacad", i.e. blue fore-
+#ground and default background for regular directories,
+#black foreground and red background for setuid executa-
+#bles, etc.
 
   # RVM
   # Mandatory loading of RVM into the shell
   # This must be the last line of your bash_profile always
-  [[ -s "/Users/$USER/.rvm/scripts/rvm" ]] && source "/Users/$USER/.rvm/scripts/rvm"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
