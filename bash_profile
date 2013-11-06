@@ -21,7 +21,7 @@
     local       BLACK="\[\033[0;30m\]"
     local        BLUE="\[\033[0;34m\]"
     local         OFF="\[\033[0m\]"
-    local        CHAR="℔" #λ⦔Ω№
+    local        CHAR="℔" #λ⦔Ω№✓
     # ♥ ☆ - Keeping some cool ASCII Characters for reference
 
     # Here is where we actually export the PS1 Variable which stores the text for your prompt
