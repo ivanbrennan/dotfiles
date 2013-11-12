@@ -211,7 +211,7 @@ function lg {
 # Enable coloring in the terminal
 export CLICOLOR=1
 # Specify how to color specific items
-export LSCOLORS=exFxCxDxBxegedabagaced
+export LSCOLORS=cxFxCxDxBxegedabagaced
 #The color designators are as follows: 
 #
 #a black
