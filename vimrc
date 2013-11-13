@@ -11,7 +11,7 @@ set listchars=trail:.,tab:>-    " characters
 "set titlestring="%{&columns}\ x\ %{&lines}"
 set laststatus=2
 set guicursor+=a:blinkon0
-set guifont=Monaco:h16
+set guifont=Source\ Code\ Pro:h16
 
 "let &titlestring = hostname() . "[vim(" . expand("%:t") . ")]"
 "if &term == "screen"
