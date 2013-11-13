@@ -15,20 +15,21 @@
   # This function builds your prompt. It is called below
   function prompt {
     # Define some local colors
-    local         RED="\[\033[0;31m\]" # This syntax is some weird bash color thing I never
-    local   LIGHT_RED="\[\033[1;31m\]" # really understood
-    local       GREEN="\[\033[1;32m\]"
-    local       BLACK="\[\033[0;30m\]"
-    local        BLUE="\[\033[0;34m\]"
-    local         OFF="\[\033[0m\]"
-    local        CHAR="℔" #λ⦔Ω№✓
+    local          RED="\[\033[0;31m\]" # This syntax is some weird bash color thing I never
+    local    LIGHT_RED="\[\033[1;31m\]" # really understood
+    local        GREEN="\[\033[1;32m\]"
+    local        BLACK="\[\033[0;30m\]"
+    local         BLUE="\[\033[0;34m\]"
+    local        WHITE="\[\033[0;37m\]"
+    local          OFF="\[\033[0m\]"
+    local         CHAR="℔" #λ⦔Ω№✓
     # ♥ ☆ - Keeping some cool ASCII Characters for reference
 
     # Here is where we actually export the PS1 Variable which stores the text for your prompt
 #   export PS1="\[╭╺[$BLUE\u$OFF][$BLUE\h$OFF]\]$RED\$(parse_git_branch) $BLUE\w\[\e[0m\]\n╰╺⧉$BLUE \[\e[0m\]"
-   export PS1="\[╭[$BLUE\u$OFF][$BLUE\h$OFF]\]$RED\$(parse_git_branch) $BLUE\w\[\e[0m\]\n╰⧉$BLUE \[\e[0m\]"
+   export PS1="\[\[╭[\[\033[0;34m\]\u\[\033[0m\]][\[\033[0;34m\]\h\[\033[0m\]]\[\033[0;31m\]\$(parse_git_branch) \[\033[0;34m\]\w\[\e[0m\]\[\033[0m\]\n╰⧉\[\033[0m\] \]"
 
-      PS2="\[╭╺[$GREEN\u$OFF][$GREEN\h$OFF]\]$RED\$(parse_git_branch) $BLUE\w\[\e[0m\]\n╰╺℔$BLUE \[\e[0m\]"
+      PS2="\[╭[$GREEN\u$OFF][$GREEN\h$OFF]\]$RED\$(parse_git_branch) $BLUE\w\[\e[0m\]\n╰℔$BLUE \[\e[0m\]"
 
       PS4='+ '
     }
@@ -192,7 +193,6 @@ CDPATH=".:~/Development/Flatiron:~"
     . `brew --prefix`/etc/bash_completion
   fi
 
-# export PATH=/usr/local/bin:/Users/ivan/.rvm/gems/ruby-1.9.3-p448/bin:/Users/ivan/.rvm/gems/ruby-1.9.3-p448@global/bin:/Users/ivan/.rvm/rubies/ruby-1.9.3-p448/bin:/Users/ivan/.rvm/bin:$PATH
 export PATH=/usr/local/bin:/Users/ivan/.rvm/bin:$PATH
 
 # Case insensitive tab autocomplete
