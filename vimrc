@@ -31,7 +31,7 @@ set autoindent                  " Mimic indentation of previous line
 filetype plugin indent on       " filetype detection and options
 
 syntax on                       " syntax highlighting
-colorscheme vylight
+colorscheme smyck
 
 set splitbelow                  " open new splits below
 set splitright                  " open new splits on right
@@ -278,4 +278,5 @@ set timeoutlen=200              " timeout on mappings and key codes
   nnoremap <Leader>c5 :colo<Space>mayansmoke<CR>
   nnoremap <Leader>c6 :colo<Space>slate<CR>
   nnoremap <Leader>c7 :colo<Space>mustang<CR>
+  nnoremap <Leader>c8 :colo<Space>smyck<CR>
 
