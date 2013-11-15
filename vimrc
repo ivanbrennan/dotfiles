@@ -1,17 +1,78 @@
-set nocompatible                " rise above vi compatibility
+""
+"" Basic Setup
+""
+
+set nocompatible                " Use vim, no vi defaults
+set number                      " Show line numbers
+set ruler                       " Show line and column number
+syntax enable                   " Turn on syntax highlighting allowing local overrides
+set encoding=utf-8              " Set default encoding to UTF-8
+
+""
+"" Whitespace
+""
+
+set nowrap                      " Don't wrap lines
+set tabstop=2                   " Tab is two spaces
+set shiftwidth=2                " Autoindent (with <<) is two spaces
+set expandtab                   " Convert tabs to spaces
+set backspace=indent,eol,start  " Backspace through everything in insert mode
+
+" List chars
+set list                        " Show invisible characters
+set listchars=""                " Reset the listchars
+set listchars=tab:\ \           " Show tab as "  "
+set listchars+=trail:.          " Show trailing spaces as dots
+set listchars+=extends:>        " Show when line continues offscreen
+set listchars+=precedes:<       " Show when line precedes offscreen
+
+""
+"" Searching
+""
+
+set hlsearch      " Highlight matches
+set incsearch     " Incremental searching
+set ignorecase    " Searches are case insensitive...
+set smartcase      " ...unless they contain a capital letter
+
+""
+"" Appearance
+""
+
+colorscheme smyck
+
+set cursorline
+hi clear CursorLine
+augroup CLClear
+    autocmd! ColorScheme * hi clear CursorLine
+augroup END
+
+set laststatus=2
+
+set statusline=
+set statusline+=%<\         " Cut at start
+set statusline+=%#normal#
+set statusline+=(%n)       " Buffer
+set statusline+=%*\ 
+set statusline+=%f\         " Path
+
+set statusline+=%m          " Modified
+set statusline+=%y\         " Filetype
+
+set statusline+=%=\         " Left/right separator
+
+set statusline+=[%c]        " Column
+set statusline+=[%l/%L]\    " Line/total
+set statusline+=%#normal#
+set statusline+=%P        " Percent through file
+set statusline+=%*\ 
+
+set guifont=Source\ Code\ Pro:h16
 
 set backup                      " keep a backup file
 set backupdir=~/.vim/backup     " all backup files
 set directory=~/.vim/tmp        " all temp files
 set history=50                  " keep history 50-deep
-
-set number                      " display line numbers
-set list                        " display whitespace
-set listchars=trail:.,tab:>-    " characters
-"set titlestring="%{&columns}\ x\ %{&lines}"
-set laststatus=2
-set guicursor+=a:blinkon0
-set guifont=Source\ Code\ Pro:h16
 
 "let &titlestring = hostname() . "[vim(" . expand("%:t") . ")]"
 "if &term == "screen"
@@ -22,19 +83,10 @@ set guifont=Source\ Code\ Pro:h16
 "  set title
 "endif
 
-set backspace=indent,eol,start  " allow backspacing over everything in insert mode
-
-set expandtab                   " convert tabs to spaces
-set shiftwidth=2                " auto-indent tab width
-set softtabstop=2               " manual tab width
-set autoindent                  " Mimic indentation of previous line
-filetype plugin indent on       " filetype detection and options
-
-syntax on                       " syntax highlighting
-colorscheme smyck
-
 set splitbelow                  " open new splits below
 set splitright                  " open new splits on right
+
+execute pathogen#infect()
 
 "*-------------------------------------------------------*"
 " KEY MAPS
@@ -42,7 +94,7 @@ set splitright                  " open new splits on right
 set timeoutlen=200              " timeout on mappings and key codes
 
 " Set leader
-  let mapleader=";"
+  let mapleader="\\"
 
 
 " Quickly edit/reload vimrc
@@ -89,9 +141,9 @@ set timeoutlen=200              " timeout on mappings and key codes
   nnoremap kjj G
 
 " Page up
-  nnoremap jk <C-b>
+  nnoremap <C-u> <C-b>
 " Page down
-  nnoremap kj <C-f>
+  nnoremap <C-n> <C-f>
 
 " Half-page up
 "  nnoremap <Space>jk <C-u>
@@ -102,6 +154,9 @@ set timeoutlen=200              " timeout on mappings and key codes
   nnoremap <C-k> <C-y>
 " Scroll down 1 line
   nnoremap <C-j> <C-e>
+
+" Clear search results
+  nnoremap <Leader>h :nohlsearch<CR>
 
 "*-------------------------------------------------------*"
 " Editing:          i | jk   U | Y
@@ -191,7 +246,7 @@ set timeoutlen=200              " timeout on mappings and key codes
 
 " Open new line above current line
 "  nnoremap <Space>o O
-  inoremap <C-Space> <C-o>O
+  inoremap <S-Return> <C-o>O
 " Open new line below current line
   inoremap <C-Return> <C-o>o
 
@@ -214,6 +269,9 @@ set timeoutlen=200              " timeout on mappings and key codes
 " Buffer/SplitOperations:
 "
 
+" NERDTreeToggle
+  nnoremap <Leader>n :NERDTreeToggle<CR>
+
 " List buffers
   nnoremap bl :ls<CR>
 " Close current buffer
@@ -225,10 +283,6 @@ set timeoutlen=200              " timeout on mappings and key codes
   nnoremap bn :bnext<CR>
 " Previous buffer
   nnoremap bp :bprevious<CR>
-" Next tab
-  nnoremap <Leader>t :tabn<CR>
-" Previous tab
-"  nnoremap tj :tabp<CR>
 " Go right one split (cycle)
   nnoremap wl <C-w><C-w>
 " Go left one split (cycle)
@@ -237,12 +291,10 @@ set timeoutlen=200              " timeout on mappings and key codes
 " Switch horizontal split to vertical
   nnoremap <Leader>df <C-W>t<C-W>H
 " Switch vertical split to horizontal
-  nnoremap <Leader>fv <C-W>t<C-W>K
+  nnoremap <Leader>dc <C-W>t<C-W>K
 
 " Edit file in new tab
-  nnoremap <Leader>rt :tabe<Space>
-" Open blank tab
-  nnoremap <Leader>t :tabe<CR>
+  nnoremap <Leader>t :tabe<Space>
 
 " Edit file in vertical split
   nnoremap <Leader>fg :vsp<Space>

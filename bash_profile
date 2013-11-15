@@ -27,7 +27,7 @@
 
     # Here is where we actually export the PS1 Variable which stores the text for your prompt
 #   export PS1="\[╭╺[$BLUE\u$OFF][$BLUE\h$OFF]\]$RED\$(parse_git_branch) $BLUE\w\[\e[0m\]\n╰╺⧉$BLUE \[\e[0m\]"
-   export PS1="\[\[╭[\[\033[0;34m\]\u\[\033[0m\]][\[\033[0;34m\]\h\[\033[0m\]]\[\033[0;31m\]\$(parse_git_branch) \[\033[0;34m\]\w\[\e[0m\]\[\033[0m\]\n╰⧉\[\033[0m\] \]"
+   export PS1="\[\[╭╺[\[\033[0;34m\]\u\[\033[0m\]][\[\033[0;34m\]\h\[\033[0m\]]\[\033[0;31m\]\$(parse_git_branch) \[\033[0;34m\]\w\[\e[0m\]\[\033[0m\]\n╰╺⧉\[\033[0m\] \]"
 
       PS2="\[╭[$GREEN\u$OFF][$GREEN\h$OFF]\]$RED\$(parse_git_branch) $BLUE\w\[\e[0m\]\n╰℔$BLUE \[\e[0m\]"
 
