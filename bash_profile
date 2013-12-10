@@ -19,7 +19,7 @@
     local    LIGHT_RED="\[\033[1;31m\]" # really understood
     local        GREEN="\[\033[1;32m\]"
     local        BLACK="\[\033[0;30m\]"
-    local         BLUE="\[\033[0;34m\]"
+    local         BLUE="\[\033[1;34m\]"
     local        WHITE="\[\033[0;37m\]"
     local          OFF="\[\033[0m\]"
     local         CHAR="℔" #λ⦔Ω№✓
@@ -27,7 +27,7 @@
 
     # Here is where we actually export the PS1 Variable which stores the text for your prompt
 #   export PS1="\[╭╺[$BLUE\u$OFF][$BLUE\h$OFF]\]$RED\$(parse_git_branch) $BLUE\w\[\e[0m\]\n╰╺⧉$BLUE \[\e[0m\]"
-   export PS1="\[╭╺[\[\033[0;34m\]\u\[\033[0m\]][\[\033[0;34m\]\h\[\033[0m\]]\[\033[0;31m\]\$(parse_git_branch) \[\033[0;34m\]\w\[\e[0m\]\[\e[m\n╰╺⧉\[\033[0m\] "
+   export PS1="\[╭╺[\[\033[1;34m\]\u\[\033[0m\]][\[\033[1;34m\]\h\[\033[0m\]]\[\033[0;31m\]\$(parse_git_branch) \[\033[1;34m\]\w\[\e[0m\]\[\e[m\n╰╺⧉\[\033[0m\] "
 
       PS2="\[╭[$GREEN\u$OFF][$GREEN\h$OFF]\]$RED\$(parse_git_branch) $BLUE\w\[\e[0m\]\n╰℔$BLUE \[\e[0m\]"
 
@@ -211,8 +211,8 @@ function lg {
 # Enable coloring in the terminal
 export CLICOLOR=1
 # Specify how to color specific items
-export LSCOLORS=cxFxCxDxBxegedabagaced
-#The color designators are as follows: 
+export LSCOLORS=hxFxCxDxBxegedabagaced
+#The color designators are as follows:
 #
 #a black
 #b red
