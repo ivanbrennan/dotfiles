@@ -1,5 +1,5 @@
-[credential]
-  helper = osxkeychain
+[include]
+  path = ~/.gitconfig.local
 [core]
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
   excludesfile = /Users/ivan/.gitignore
@@ -22,17 +22,6 @@
   sync = !legit sync \"$@\"
   publish = !legit publish \"$@\"
   graft = !legit graft \"$@\"
-[github]
-  user = ivanbrennan
-  token = 
-  email = ivan.brennan@gmail.com
-[github "user"]
-  user = ivanbrennan
-  token = 
-  email = ivan.brennan@gmail.com
-[user]
-	name = ivanbrennan
-	email = ivan.brennan@gmail.com
 [color]
   ui = true
   diff = auto
