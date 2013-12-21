@@ -24,11 +24,11 @@
   graft = !legit graft \"$@\"
 [github]
   user = ivanbrennan
-  token = 9e11e8dac09e33ae92c531fff915a237b258515c
+  token = 
   email = ivan.brennan@gmail.com
 [github "user"]
   user = ivanbrennan
-  token = 9e11e8dac09e33ae92c531fff915a237b258515c
+  token = 
   email = ivan.brennan@gmail.com
 [user]
 	name = ivanbrennan
