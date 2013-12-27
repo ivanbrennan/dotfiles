@@ -78,6 +78,8 @@
 
     # Point vim to newest (brewed) version
     alias vim='/usr/local/Cellar/vim/7.4.027/bin/vim'
+    # Just one gvim
+    alias mvim='mvim --remote-silent'
 
     # Editors - Vim 7.4 option
     # Tells your shell that when a program requires various editors, use the
