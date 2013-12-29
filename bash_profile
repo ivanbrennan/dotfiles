@@ -1,11 +1,9 @@
 #!bin/bash
 
 
-# ======================
-# = FLATIRON PROFILE ===
-# ======================
-# Configuring Our Prompt
-# ======================
+# ::::::::::::::::::::::
+# Configuring the Prompt
+# ::::::::::::::::::::::
 
   # This function is called in your prompt to output your active git branch.
   function parse_git_branch {
@@ -23,7 +21,6 @@
     local        WHITE="\[\033[0;37m\]"
     local          OFF="\[\033[0m\]"
     local         CHAR="℔" #λ⦔Ω№✓
-    # ♥ ☆ - Keeping some cool ASCII Characters for reference
 
     # Here is where we actually export the PS1 Variable which stores the text for your prompt
    export PS1="\[╭╺[\[\033[1;34m\]\u\[\033[0m\]][\[\033[1;34m\]\h\[\033[0m\]]\[\033[0;31m\]\$(parse_git_branch) \[\033[1;34m\]\w\[\e[0m\]\[\e[m\n╰╺⧉\[\033[0m\]  "
@@ -78,8 +75,6 @@
 
     # Point vim to newest (brewed) version
     alias vim='/usr/local/Cellar/vim/7.4.027/bin/vim'
-    # Just one gvim
-    alias mvim='mvim --remote-silent'
 
     # Editors - Vim 7.4 option
     # Tells your shell that when a program requires various editors, use the
@@ -122,6 +117,15 @@
 
 # Helpful Functions
 # =====================
+
+# A function to run just one mvim. Use 'gvim' to avoid this.
+function mvim() {
+  if (( $# > 0 )) ; then
+    command mvim --remote-silent "$@"
+  else
+    command mvim --remote-send ":call foreground()<CR>:enew<CR>:<BS>"
+  fi
+}
 
 # A function to CD into the desktop from anywhere
 # so you just type desktop.
