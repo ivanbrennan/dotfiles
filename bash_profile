@@ -174,10 +174,6 @@
   }
   # }}}
 
-  # Make directory and CD into it {{{
-  function md () { mkdir -p "$@" && eval cd "\"$$#\""; }
-  # }}}
-
   # Easily grep for a matching file {{{
   # USE: lg filename
   function lg {
