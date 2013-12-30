@@ -118,12 +118,14 @@
 # Helpful Functions
 # =====================
 
-# A function to run just one mvim. Use 'gvim' to avoid this.
-function mvim() {
-  if (( $# > 0 )) ; then
+# A function to run just one mvim
+function ivim {
+  if [ -n "$1" ] ; then
     command mvim --remote-silent "$@"
-  else
+  elif [ -n "$( mvim --serverlist )" ] ; then
     command mvim --remote-send ":call foreground()<CR>:enew<CR>:<BS>"
+  else
+    command mvim
   fi
 }
 
