@@ -122,7 +122,7 @@
 # ::::::::: Functions :::::::::::::::::::::::: {{{
 
   # Run just one MacVim {{{
-  function vom {
+  function ivim {
     if [ -n "$1" ] ; then
       command mvim --remote-silent "$@"
     elif [ -n "$( mvim --serverlist )" ] ; then
@@ -186,6 +186,10 @@
 # }}}
 
 # ::::::::: Aliases :::::::::::::::::::::::::: {{{
+
+  # Source / Edit this file
+  alias sbs="source ~/.bash_profile"
+  alias vbs="ivim ~/.bash_profile"
 
   # Point Vim to newest (brewed) version
   alias vim="/usr/local/Cellar/vim/7.4.027/bin/vim"
