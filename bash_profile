@@ -200,6 +200,8 @@
   # Point Vim to newest (brewed) version
   alias vim="/usr/local/Cellar/vim/7.4.027/bin/vim"
 
+  # Open Downloads in Finder
+  alias down="open ~/Downloads"
   # LS
   alias l="ls -lah"
 
