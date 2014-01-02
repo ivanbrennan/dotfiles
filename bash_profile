@@ -1,6 +1,6 @@
 #!bin/bash
 
-# ::::::::: Prompt ::::::::::::::::::::::::::: {{{
+# ::::::::: Prompt ::::::::::::::::::::::::::: {{{1
 
   # Output the active git branch
   function parse_git_branch {
@@ -28,11 +28,9 @@
   # For more prompt coolness, check out Halloween Bash:
   # http://xta.github.io/HalloweenBash/
 
-# }}}
+# ::::::::: Environment Variables :::::::::::: {{{1
 
-# ::::::::: Environment Variables :::::::::::: {{{
-
-  # Library Paths {{{
+  # Library Paths {{{2
 
     # These variables tell your shell where they can find certain
     # required libraries so other programs can reliably call the
@@ -51,9 +49,7 @@
     # don't have NODE or Python installed. Eventually you will and
     # then you don't have to update your bash_profile
 
-  # }}}
-
-  # Configurations {{{
+  # Configurations {{{2
 
     # GIT_MERGE_AUTO_EDIT
     # This variable configures git to not require a message when you merge.
@@ -75,11 +71,9 @@
     # export GIT_EDITOR="subl -w"
     # export EDITOR="subl -w"
 
-  # }}}
+  # Paths {{{2
 
-  # Paths {{{
-
-    # USR_PATHS {{{
+    # USR_PATHS {{{3
     # The USR_PATHS variable will just store all relevant /usr paths for easier usage
     # Each path is seperate via a ":" and we always use absolute paths.
 
@@ -104,24 +98,14 @@
     # Read http://blog.seldomatt.com/blog/2012/10/08/bash-and-the-one-true-path/ for more on that.
     #export PATH="$USR_PATHS:$PYTHON_SHARE:$PATH"
 
-    # If you go into your shell and type: $PATH you will see the output of your current path.
-    # For example, mine is:
-    # /Users/avi/.rvm/gems/ruby-1.9.3-p392/bin:/Users/avi/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/avi/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/avi/.rvm/bin:/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/local/mysql/bin:/usr/local/share/python:/bin:/usr/sbin:/sbin:
-    # }}}
-
-    # CDPATH {{{
+    # CDPATH {{{3
     # DON'T EXPORT THIS, as it can screw up scripts.
     # Quickly navigate to certain directories in the interactive shell.
     CDPATH=".:~/Development:~"
-    # }}}
 
-  # }}}
+# ::::::::: Functions :::::::::::::::::::::::: {{{1
 
-# }}}
-
-# ::::::::: Functions :::::::::::::::::::::::: {{{
-
-  # Run just one MacVim {{{
+  # Run just one MacVim {{{2
   function ivim {
     if [ -n "$1" ] ; then
       command mvim --remote-silent "$@"
@@ -131,16 +115,14 @@
       command mvim
     fi
   }
-  # }}}
 
-  # cd into the desktop from anywhere {{{
+  # cd into the desktop from anywhere {{{2
   # USE: desktop subfolder
   function desktop {
     cd /Users/$USER/Desktop/$@
   }
-  # }}}
 
-  # Easily grep for a matching process {{{
+  # Easily grep for a matching process {{{2
   # Is this any different from pgrep?
   # USE: psg postgres
   function psg {
@@ -148,9 +130,8 @@
     REST=`echo $1 | sed -e 's/^.\(.*\)/\1/'`
     ps aux | grep "[$FIRST]$REST"
   }
-  # }}}
 
-  # Extract archive based on extension {{{
+  # Extract archive based on extension {{{2
   # USE: extract imazip.zip
   #      extract imatar.tar
   function extract () {
@@ -172,40 +153,35 @@
           echo "'$1' is not a valid file"
       fi
   }
-  # }}}
 
-  # Easily grep for a matching file {{{
+  # Easily grep for a matching file {{{2
   # USE: lg filename
   function lg {
   FIRST=`echo $1 | sed -e 's/^\(.\).*/\1/'`
   REST=`echo $1 | sed -e 's/^.\(.*\)/\1/'`
   ls -la | grep "[$FIRST]$REST"
   }
-  # }}}
 
-# }}}
+# ::::::::: Aliases :::::::::::::::::::::::::: {{{1
 
-# ::::::::: Aliases :::::::::::::::::::::::::: {{{
-
-  # Source / Edit this file
+  # Source / Edit this file {{{2
   alias sbs="source ~/.bash_profile"
   alias vbs="ivim ~/.bash_profile"
 
-  # CD to dotfiles
-  alias dots="cd ~/Development/resources/dotfiles"
-
-  # CD to .vim
-  alias vims="cd ~/.vim"
-
-  # Point Vim to newest (brewed) version
-  alias vim="/usr/local/Cellar/vim/7.4.027/bin/vim"
-
-  # Open Downloads in Finder
-  alias down="open ~/Downloads"
   # LS
   alias l="ls -lah"
 
-  # Git
+  # CD {{{2
+  alias dots="cd ~/Development/resources/dotfiles"
+  alias vims="cd ~/.vim"
+
+  # Open Downloads in Finder
+  alias down="open ~/Downloads"
+
+  # Brewed Vim version
+  alias vim="/usr/local/Cellar/vim/7.4.027/bin/vim"
+
+  # Git {{{2
   alias gst="git status"
   alias gl="git pull"
   alias gp="git push"
@@ -215,33 +191,30 @@
   alias gb="git branch"
   alias gba="git branch -a"
 
-# }}}
+# ::::::::: Final Config and Plugins ::::::::: {{{1
 
-# ::::::::: Final Config and Plugins ::::::::: {{{
-
-  # Git Bash Completion
+  # Git Bash Completion {{{2
   # Activate bash git completion if installed via homebrew
   if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
   fi
 
-  # PATH {{{
+  # PATH {{{2
     # This is currently working
     export PATH=/usr/local/bin:/Users/ivan/.rvm/bin:$PATH
 
     # Would this be better? (Note: USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin")
     #export PATH="$USR_PATHS:$PATH"
-  # }}}
 
   # Case insensitive tab autocomplete
   bind "set completion-ignore-case on"
 
-  # Coloring {{{
+  # Coloring {{{2
     # Enable coloring in the terminal
     export CLICOLOR=1
     # Specify how to color specific items
     export LSCOLORS=hxFxCxDxBxegedabagaced
-    # Color designators: {{{
+    # Color designators: {{{3
       # a black
       # b red
       # c green
@@ -259,12 +232,7 @@
       # G bold cyan
       # H bold light grey; looks like bright white
       # x default foreground or background
-
-      # Note that the above are standard ANSI colors. The actual
-      # display may differ depending on the color capabilities of
-      # the terminal in use.
-    # }}}
-    # Order of attributes: {{{
+    # Order of attributes: {{{3
       #  1. directory
       #  2. symbolic link
       #  3. socket
@@ -276,16 +244,11 @@
       #  9. executable with setgid bit set
       # 10. directory writable to others, with sticky bit
       # 11. directory writable to others, without sticky bit
-      #
-      # The default is "exfxcxdxbxegedabagacad", i.e. blue foreground
+      # Default is "exfxcxdxbxegedabagacad", i.e. blue foreground
       # and default background for regular directories, black
       # foreground and red background for setuid executables, etc.
-    # }}}
-  # }}}
 
-# }}}
-
-# RVM
+# RVM {{{1
 # Mandatory loading of RVM into the shell
 # This must be the last line of your bash_profile always
 
