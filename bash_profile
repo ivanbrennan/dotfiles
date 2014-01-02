@@ -62,10 +62,10 @@
     # Editors - MacVim 7.4 option
     # Tells your shell that when a program requires various editors, use MacVim.
     # The -w flag tells your shell to wait until sublime exits
-    export VISUAL="vom -w"
-    export SVN_EDITOR="vom -w"
-    export GIT_EDITOR="vom -w"
-    export EDITOR="vom -w"
+    export VISUAL="mvim -f"
+    export SVN_EDITOR="mvim -f"
+    export GIT_EDITOR="mvim -f"
+    export EDITOR="mvim -f"
 
     # Editors - Sublime option
     # Tells your shell that when a program requires various editors, use sublime.
