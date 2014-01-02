@@ -176,7 +176,7 @@
   alias vims="cd ~/.vim"
 
   # Open Downloads in Finder
-  alias down="open ~/Downloads"
+  alias dld="open ~/Downloads"
 
   # Brewed Vim version
   alias vim="/usr/local/Cellar/vim/7.4.027/bin/vim"
