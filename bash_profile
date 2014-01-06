@@ -168,9 +168,11 @@
   alias sbs="source ~/.bash_profile"
   alias vbs="ivim ~/.bash_profile"
 
+  # Brewed Vim version
+  alias vim="/usr/local/Cellar/vim/7.4.027/bin/vim"
+
   # Edit vimrc
   alias vmc="ivim ~/.vimrc"
-
 
   # LS
   alias l="ls -lah"
@@ -178,12 +180,10 @@
   # CD {{{2
   alias dots="cd ~/Development/resources/dotfiles"
   alias vims="cd ~/.vim"
+  alias cellar="cd /usr/local/Cellar"
 
   # Open Downloads in Finder
   alias dld="open ~/Downloads"
-
-  # Brewed Vim version
-  alias vim="/usr/local/Cellar/vim/7.4.027/bin/vim"
 
   # Git {{{2
   alias gst="git status"
