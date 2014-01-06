@@ -168,6 +168,10 @@
   alias sbs="source ~/.bash_profile"
   alias vbs="ivim ~/.bash_profile"
 
+  # Edit vimrc
+  alias vmc="ivim ~/.vimrc"
+
+
   # LS
   alias l="ls -lah"
 

@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'yaml'
 require 'irb/completion'
+require 'interactive_editor'
 
 alias q exit
 
