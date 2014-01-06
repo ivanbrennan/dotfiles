@@ -1,8 +1,11 @@
+[user]
+  name = ivanbrennan
+  email = ivan.brennan@gmail.com
 [include]
   path = ~/.gitconfig.local
 [core]
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  excludesfile = /Users/ivan/.gitignore
+	excludesfile = /Users/ivan/.gitignore_global
 [alias]
   st = status
   ci = commit
