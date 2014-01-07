@@ -105,6 +105,24 @@
 
 # ::::::::: Functions :::::::::::::::::::::::: {{{1
 
+  # Toggle hidden files {{{2
+  function hidden {
+    if [[ $( defaults read com.apple.finder AppleShowAllFiles ) == "NO" ]]
+      # For Mavericks, condition will have to change
+    then
+      defaults write com.apple.finder AppleShowAllFiles YES
+      # For Mavericks, change this to:
+      #defaults write com.apple.finder AppleShowAllFiles -boolean true
+      echo "Showing hidden"
+    else
+      defaults write com.apple.finder AppleShowAllFiles NO
+      # For Mavericks, change this to:
+      #defaults delete com.apple.finder AppleShowAllFiles
+      echo "Hiding hidden"
+    fi
+    killall -HUP Finder
+  }
+
   # Run just one MacVim {{{2
   function ivim {
     if [ -n "$1" ] ; then
