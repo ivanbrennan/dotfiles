@@ -270,7 +270,7 @@
       # and default background for regular directories, black
       # foreground and red background for setuid executables, etc.
 
-# RVM {{{1
+# ::::::::: RVM :::::::::::::::::::::::::::::: {{{1
 # Mandatory loading of RVM into the shell
 # This must be the last line of your bash_profile always
 
