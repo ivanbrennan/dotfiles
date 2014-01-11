@@ -124,7 +124,7 @@
   }
 
   # Run just one MacVim {{{2
-  function ivim {
+  function mviv {
     if [ -n "$1" ] ; then
       command mvim --remote-silent "$@"
     elif [ -n "$( mvim --serverlist )" ] ; then
@@ -184,13 +184,13 @@
 
   # Source / Edit this file {{{2
   alias sbs="source ~/.bash_profile"
-  alias vbs="ivim ~/.bash_profile"
+  alias vbs="mvim ~/.bash_profile"
 
   # Brewed Vim version
   alias vim="/usr/local/Cellar/vim/7.4.027/bin/vim"
 
   # Edit vimrc
-  alias vmc="ivim ~/.vimrc"
+  alias vmc="mvim ~/.vimrc"
 
   # LS
   alias l="ls -lah"
