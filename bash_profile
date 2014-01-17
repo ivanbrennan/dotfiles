@@ -196,6 +196,8 @@
   alias l="ls -lah"
 
   # CD {{{2
+  alias cd..="cd .."
+  alias cd-="cd -"
   alias dots="cd ~/Development/resources/dotfiles"
   alias vims="cd ~/.vim"
   alias cellar="cd /usr/local/Cellar"
