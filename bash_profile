@@ -124,7 +124,7 @@
   }
 
   # Run just one MacVim {{{2
-  function mviv {
+  function ivim {
     if [ -n "$1" ] ; then
       command mvim --remote-silent "$@"
     elif [ -n "$( mvim --serverlist )" ] ; then
@@ -220,11 +220,11 @@
   # Git Bash Completion {{{2
   # Activate bash git completion if installed via homebrew
   if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
+    source `brew --prefix`/etc/bash_completion
   fi
 
   # PATH {{{2
-    # This is currently working
+    # This stopped working 1/17/14
     export PATH=/usr/local/bin:/Users/ivan/.rvm/bin:$PATH
 
     # Would this be better? (Note: USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin")
