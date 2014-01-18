@@ -1,6 +1,6 @@
 # Load .bash_profile if it exists
 if [ -f ~/.bash_profile ]; then
-  source ~/.bash_profile
+  . ~/.bash_profile
 fi
 
 ### Added by the Heroku Toolbelt

@@ -182,45 +182,17 @@
 
 # ::::::::: Aliases :::::::::::::::::::::::::: {{{1
 
-  # Source / Edit this file {{{2
-  alias sbs="source ~/.bash_profile"
-  alias vbs="mvim ~/.bash_profile"
-
-  # Brewed Vim version
-  alias vim="/usr/local/Cellar/vim/7.4.027/bin/vim"
-
-  # Edit vimrc
-  alias vmc="mvim ~/.vimrc"
-
-  # LS
-  alias l="ls -lah"
-
-  # CD {{{2
-  alias cd..="cd .."
-  alias cd-="cd -"
-  alias dots="cd ~/Development/resources/dotfiles"
-  alias vims="cd ~/.vim"
-  alias cellar="cd /usr/local/Cellar"
-
-  # Open Downloads in Finder
-  alias dld="open ~/Downloads"
-
-  # Git {{{2
-  alias gst="git status"
-  alias gl="git pull"
-  alias gp="git push"
-  alias gd="git diff | mate"
-  alias gc="git commit -v"
-  alias gca="git commit -v -a"
-  alias gb="git branch"
-  alias gba="git branch -a"
+  # Source bash_aliases
+  if [ -f ~/.bash_aliases ] ; then
+    . ~/.bash_aliases
+  fi
 
 # ::::::::: Final Config and Plugins ::::::::: {{{1
 
   # Git Bash Completion {{{2
   # Activate bash git completion if installed via homebrew
-  if [ -f `brew --prefix`/etc/bash_completion ]; then
-    source `brew --prefix`/etc/bash_completion
+  if [ -f `brew --prefix`/etc/bash_completion ] ; then
+    . `brew --prefix`/etc/bash_completion
   fi
 
   # PATH {{{2
