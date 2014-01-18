@@ -17,7 +17,7 @@
     local        WHITE="\[\033[0;37m\]"
     local          OFF="\[\033[0m\]"
 
-    export PS1="\[╭╺[\[\033[1;34m\]\u\[\033[0m\]][\[\033[1;34m\]\h\[\033[0m\]]\[\033[0;31m\]\$(parse_git_branch) \[\033[1;34m\]\w\[\e[0m\]\[\e[m\n╰╺⧉\[\033[0m\]  "
+    export PS1="\[╭╺[\[\033[0;34m\]\u\[\033[0m\]][\[\033[0;34m\]\h\[\033[0m\]]\[\033[0;31m\]\$(parse_git_branch) \[\033[0;34m\]\w\[\e[0m\]\[\e[m\n╰╺⧉\[\033[0m\]  "
     export PS2="   > "
     export PS4='   + '
     }
@@ -209,7 +209,7 @@
     # Enable coloring in the terminal
     export CLICOLOR=1
     # Specify how to color specific items
-    export LSCOLORS=hxFxCxDxBxegedabagaced
+    export LSCOLORS=hxCxcxDxbxegedabagaced
     # Color designators: {{{3
       # a black
       # b red
