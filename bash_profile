@@ -196,7 +196,7 @@
   fi
 
   # PATH {{{2
-    # This stopped working 1/17/14
+    # This is working
     export PATH=/usr/local/bin:/Users/ivan/.rvm/bin:$PATH
 
     # Would this be better? (Note: USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin")
