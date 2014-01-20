@@ -180,6 +180,12 @@
   ls -la | grep "[$FIRST]$REST"
   }
 
+  # Compress PDF with Ghostscript
+  # USE: ghost filename
+  function ghost () {
+    gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="compressed-$1" "$1"
+  }
+
 # ::::::::: Aliases :::::::::::::::::::::::::: {{{1
 
   # Source bash_aliases
