@@ -105,6 +105,12 @@
 
 # ::::::::: Functions :::::::::::::::::::::::: {{{1
 
+  # Show PATH {{{2
+  function path {
+    echo 'PATH:'
+    echo "$PATH" | tr ":" "\n"
+  }
+
   # Toggle hidden files {{{2
   function hidden {
     if [[ $( defaults read com.apple.finder AppleShowAllFiles ) == "NO" ]]
