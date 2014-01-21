@@ -125,9 +125,9 @@
 
   # Run just one MacVim {{{2
   function ivim {
-    if [ -n "$1" ] ; then
+    if [ -n "$1" ]; then
       command mvim --remote-silent "$@"
-    elif [ -n "$( mvim --serverlist )" ] ; then
+    elif [ -n "$( mvim --serverlist )" ]; then
       command mvim --remote-send ":call foreground()<CR>:enew<CR>:<BS>"
     else
       command mvim
@@ -153,7 +153,7 @@
   # USE: extract imazip.zip
   #      extract imatar.tar
   function extract () {
-      if [ -f $1 ] ; then
+      if [ -f $1 ]; then
           case $1 in
               *.tar.bz2)  tar xjf $1      ;;
               *.tar.gz)   tar xzf $1      ;;
@@ -189,7 +189,7 @@
 # ::::::::: Aliases :::::::::::::::::::::::::: {{{1
 
   # Source bash_aliases
-  if [ -f ~/.bash_aliases ] ; then
+  if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
   fi
 
@@ -197,7 +197,7 @@
 
   # Git Bash Completion {{{2
   # Activate bash git completion if installed via homebrew
-  if [ -f `brew --prefix`/etc/bash_completion ] ; then
+  if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
   fi
 
