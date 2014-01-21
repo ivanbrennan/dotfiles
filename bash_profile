@@ -19,7 +19,7 @@
 
     export PS1="\[╭╺[\[\033[0;34m\]\u\[\033[0m\]][\[\033[0;34m\]\h\[\033[0m\]]\[\033[0;31m\]\$(parse_git_branch) \[\033[0;34m\]\w\[\e[0m\]\[\e[m\n╰╺⧉\[\033[0m\]  "
     export PS2="   > "
-    export PS4='   + '
+    export PS4="   + "
     }
 
   # Call the prompt function
