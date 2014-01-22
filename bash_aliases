@@ -1,6 +1,7 @@
 # Source / Edit bash_profile
 alias sbs="source ~/.bash_profile"
 alias vbs="mvim ~/.bash_profile"
+alias vbc="mvim ~/.bashrc"
 
 # Edit vimrc
 alias vmc="mvim ~/.vimrc"
