@@ -48,9 +48,6 @@
   # Call the prompt function
   prompt
 
-  # For more prompt coolness, check out Halloween Bash:
-  # http://xta.github.io/HalloweenBash/
-
 # ::::::::: Functions :::::::::::::::::::::::: {{{1
 
   # Show PATH {{{2
