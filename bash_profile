@@ -36,13 +36,11 @@
   function prompt {
     # some chars for reference:  ⧉ ℔ λ ⦔ Ω №  ✓
     # define some local colors
+    local         BLUE="\[\033[0;34m\]"
     local          RED="\[\033[0;31m\]"
-    local    LIGHT_RED="\[\033[1;31m\]"
-    local        BLACK="\[\033[0;30m\]"
-    local        WHITE="\[\033[0;37m\]"
     local          OFF="\[\033[0m\]"
 
-    export PS1="\[╭╺[\[\033[0;34m\]\u\[\033[0m\]][\[\033[0;34m\]\h\[\033[0m\]]\[\033[0;31m\]\$(parse_git_branch) \[\033[0;34m\]\w\[\e[0m\]\[\e[m\n╰╺⧉\[\033[0m\]  "
+    export PS1="\[╭╺[$BLUE\u$OFF][$BLUE\h$OFF]$RED\$(parse_git_branch) $BLUE\w$OFF\[\e[m\n╰╺⧉ "
     export PS2="   > "
     export PS4="   + "
     }
