@@ -85,12 +85,6 @@
     fi
   }
 
-  # CD into the desktop from anywhere {{{2
-  # USE: desk subfolder
-  function desk {
-    cd "/Users/$USER/Desktop/$@"
-  }
-
   # Easily grep for a matching process {{{2
   # Is this any different from pgrep?
   # USE: psg postgres

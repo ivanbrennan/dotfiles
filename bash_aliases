@@ -15,6 +15,7 @@ alias cd-="cd -"
 alias dots="cd ~/Development/resources/dotfiles"
 alias vims="cd ~/.vim"
 alias cellar="cd /usr/local/Cellar"
+alias desk="cd ~/Desktop"
 
 # Open Downloads in Finder
 alias dld="open ~/Downloads"
