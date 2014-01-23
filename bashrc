@@ -64,8 +64,5 @@
       ### Added by the Heroku Toolbelt
       export PATH="/usr/local/heroku/bin:$PATH"
 
-      # Add Postgres.app to PATH (not sure if this should be exported)
-      PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
-
       # Add RVM to PATH for scripting
       PATH=$PATH:$HOME/.rvm/bin
