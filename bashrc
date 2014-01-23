@@ -3,9 +3,9 @@
 # bashrc is meant for non-login invocations. It should
 # not print any output - that makes tools like scp fail.
 
-# ::::::::: Environment Variables :::::::::::: {{{1
+# ::::::::: Environment Variables ::::::::::::
 
-  # Library Paths {{{2
+  # Library Paths {{{1
 
     # These variables tell your shell where they can find certain
     # required libraries so other programs can reliably call the
@@ -14,7 +14,7 @@
     # NODE_PATH from Homebrew I believe
     export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 
-  # Configurations {{{2
+  # Configurations {{{1
 
     # GIT_MERGE_AUTO_EDIT
     # This variable configures git to not require a message when you merge.
@@ -28,9 +28,9 @@
     export GIT_EDITOR="mvim -f"
     export EDITOR="mvim -f"
 
-  # Paths {{{2
+  # Paths {{{1
 
-    # USR_PATHS {{{3
+    # USR_PATHS {{{2
 
       # The USR_PATHS variable will store all relevant /usr paths for easier usage
       # Each path is seperate via a ":" and we always use absolute paths.
@@ -49,12 +49,12 @@
       # We build our final PATH by combining the variables defined above
       # along with any previous values in the PATH variable.
 
-    # CDPATH {{{3
+    # CDPATH {{{2
 
       # DON'T EXPORT THIS, as it can screw up scripts.
       CDPATH=".:~/Development:~"
 
-    # PATH {{{3
+    # PATH {{{2
 
       export PATH="/usr/local/bin:/Users/ivan/.rvm/bin:$PATH"
 
@@ -63,6 +63,9 @@
 
       ### Added by the Heroku Toolbelt
       export PATH="/usr/local/heroku/bin:$PATH"
+
+      # Add Postgres.app to PATH (not sure if this should be exported)
+      PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
 
       # Add RVM to PATH for scripting
       PATH=$PATH:$HOME/.rvm/bin
