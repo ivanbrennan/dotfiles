@@ -18,6 +18,12 @@ alias vims="cd ~/.vim"
 alias cellar="cd /usr/local/Cellar"
 alias desk="cd ~/Desktop"
 
+# MV
+alias mvv="mv -v"
+
+# RM
+alias rmi="rm -i"
+
 # Open Downloads in Finder
 alias dld="open ~/Downloads"
 
