@@ -203,35 +203,35 @@
 	<key>Cursor Color</key>
 	<dict>
 		<key>Blue Component</key>
-		<real>0.73333334922790527</real>
+		<real>0.81012040376663208</real>
 		<key>Color Space</key>
 		<string>Calibrated</string>
 		<key>Green Component</key>
-		<real>0.73333334922790527</real>
+		<real>0.81008827686309814</real>
 		<key>Red Component</key>
-		<real>0.73333334922790527</real>
+		<real>0.81014335155487061</real>
 	</dict>
 	<key>Cursor Text Color</key>
 	<dict>
 		<key>Blue Component</key>
-		<real>1</real>
+		<real>0.071055777370929718</real>
 		<key>Color Space</key>
 		<string>Calibrated</string>
 		<key>Green Component</key>
-		<real>1</real>
+		<real>0.071054570376873016</real>
 		<key>Red Component</key>
-		<real>1</real>
+		<real>0.071056701242923737</real>
 	</dict>
 	<key>Foreground Color</key>
 	<dict>
 		<key>Blue Component</key>
-		<real>0.73333334922790527</real>
+		<real>0.85099005699157715</real>
 		<key>Color Space</key>
 		<string>Calibrated</string>
 		<key>Green Component</key>
-		<real>0.73333334922790527</real>
+		<real>0.8509756326675415</real>
 		<key>Red Component</key>
-		<real>0.73333334922790527</real>
+		<real>0.8510010838508606</real>
 	</dict>
 	<key>Selected Text Color</key>
 	<dict>
