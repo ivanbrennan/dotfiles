@@ -131,6 +131,17 @@
     gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="compressed-$1" "$1"
   }
 
+  # Start / Stop PostgreSQL server {{{2
+  # USE: ghost filename
+  function pgstart {
+    pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+  }
+
+  # USE: ghost filename
+  function pgstop {
+    pg_ctl -D /usr/local/var/postgres stop -s -m fast
+  }
+
 # ::::::::: Final Config and Plugins ::::::::: {{{1
 
   # Case insensitive tab autocomplete {{{2

@@ -38,6 +38,8 @@ Thumbs.db
 
 # Vim files
 ###########
-*.swp
+*.sw?
 *~
+*.un~
+*.md~
 .netrwhist
