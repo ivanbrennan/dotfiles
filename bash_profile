@@ -133,12 +133,12 @@
 
   # Start / Stop PostgreSQL server {{{2
   # USE: ghost filename
-  function pgstart {
+  function pstart {
     pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
   }
 
   # USE: ghost filename
-  function pgstop {
+  function pstop {
     pg_ctl -D /usr/local/var/postgres stop -s -m fast
   }
 
