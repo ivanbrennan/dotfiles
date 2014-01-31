@@ -38,4 +38,5 @@ alias gb="git branch"
 alias gba="git branch -a"
 
 # White noise
+alias rain="open -a safari http://www.rainymood.com"
 alias wnoise="open -a safari http://playnoise.com"
