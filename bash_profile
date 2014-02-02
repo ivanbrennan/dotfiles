@@ -59,16 +59,11 @@
   # Toggle hidden files {{{2
   function hidden {
     if [[ $( defaults read com.apple.finder AppleShowAllFiles ) == "NO" ]]
-      # For Mavericks, condition will have to change
     then
-      defaults write com.apple.finder AppleShowAllFiles YES
-      # For Mavericks, change this to:
-      #defaults write com.apple.finder AppleShowAllFiles -boolean true
+      defaults write com.apple.finder AppleShowAllFiles TRUE
       echo "Showing hidden"
     else
-      defaults write com.apple.finder AppleShowAllFiles NO
-      # For Mavericks, change this to:
-      #defaults delete com.apple.finder AppleShowAllFiles
+      defaults write com.apple.finder AppleShowAllFiles FALSE
       echo "Hiding hidden"
     fi
     killall -HUP Finder

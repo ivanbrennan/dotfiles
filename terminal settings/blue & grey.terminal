@@ -106,10 +106,10 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGGBlYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
 	AAGGoKQHCBESVSRudWxs1AkKCwwNDg8QVk5TU2l6ZVhOU2ZGbGFnc1ZOU05hbWVWJGNs
-	YXNzI0A4AAAAAAAAEBCAAoADVk1vbmFjb9ITFBUWWiRjbGFzc25hbWVYJGNsYXNzZXNW
-	TlNGb250ohUXWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RobVHJvb3SAAQgRGiMt
-	Mjc8QktSW2JpcnR2eH+Ej5ifoqu9wMUAAAAAAAABAQAAAAAAAAAcAAAAAAAAAAAAAAAA
-	AAAAxw==
+	YXNzI0AxAAAAAAAAEBCAAoADW0luY29uc29sYXRh0hMUFRZaJGNsYXNzbmFtZVgkY2xh
+	c3Nlc1ZOU0ZvbnSiFRdYTlNPYmplY3RfEA9OU0tleWVkQXJjaGl2ZXLRGhtUcm9vdIAB
+	CBEaIy0yNzxCS1JbYmlydHZ4hImUnaSnsMLFygAAAAAAAAEBAAAAAAAAABwAAAAAAAAA
+	AAAAAAAAAADM
 	</data>
 	<key>FontAntialias</key>
 	<true/>
@@ -153,26 +153,34 @@
 	<true/>
 	<key>keyMapBoundKeys</key>
 	<dict>
+		<key>$F704</key>
+		<string>[1;2P</string>
+		<key>$F705</key>
+		<string>[1;2Q</string>
+		<key>$F706</key>
+		<string>[1;2R</string>
+		<key>$F707</key>
+		<string>[1;2S</string>
 		<key>$F708</key>
-		<string>[25~</string>
+		<string>[15;2~</string>
 		<key>$F709</key>
-		<string>[26~</string>
+		<string>[17;2~</string>
 		<key>$F70A</key>
-		<string>[28~</string>
+		<string>[18;2~</string>
 		<key>$F70B</key>
-		<string>[29~</string>
+		<string>[19;2~</string>
 		<key>$F70C</key>
-		<string>[31~</string>
+		<string>[20;2~</string>
 		<key>$F70D</key>
-		<string>[22~</string>
+		<string>[21;2~</string>
 		<key>$F70E</key>
-		<string>[33~</string>
+		<string>[23;2~</string>
 		<key>$F70F</key>
-		<string>[34~</string>
+		<string>[24;2~</string>
 		<key>$F729</key>
-		<string>[H</string>
+		<string>[1;2H</string>
 		<key>$F72B</key>
-		<string>[F</string>
+		<string>[1;2F</string>
 		<key>$F72C</key>
 		<string>[5~</string>
 		<key>$F72D</key>
@@ -228,9 +236,9 @@
 		<key>F72D</key>
 		<string>scrollPageDown:</string>
 		<key>^F700</key>
-		<string>[A</string>
+		<string>[1;5A</string>
 		<key>^F701</key>
-		<string>[B</string>
+		<string>[1;5B</string>
 		<key>~F702</key>
 		<string>b</string>
 		<key>~F703</key>
