@@ -1,4 +1,4 @@
 dotfiles
 ========
 
-ivanbrennan dotfiles and configuration options
+dotfiles and configuration options
