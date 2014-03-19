@@ -17,6 +17,7 @@ alias dots="cd ~/Development/resources/dotfiles"
 alias vims="cd ~/.vim"
 alias cellar="cd /usr/local/Cellar"
 alias desk="cd ~/Desktop"
+alias hand="cd ~/Development/code/handybook"
 
 # MV
 alias mvv="mv -v"
