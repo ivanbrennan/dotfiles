@@ -40,7 +40,7 @@
     local          RED="\[\033[0;31m\]"
     local          OFF="\[\033[0m\]"
 
-    export PS1="\[╭╺[$BLUE\u$OFF][$BLUE\h$OFF]$RED\$(parse_git_branch) $BLUE\w$OFF\[\e[m\n╰╺⧉  "
+    export PS1="\[╭╺[$BLUE\u$OFF][$BLUE\h$OFF][$BLUE\A$OFF]$RED\$(parse_git_branch) $BLUE\w$OFF\[\e[m\n╰╺⧉  "
     export PS2="   > "
     export PS4="   + "
     }

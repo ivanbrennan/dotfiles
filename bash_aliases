@@ -38,6 +38,9 @@ alias gca="git commit -v -a"
 alias gb="git branch"
 alias gba="git branch -a"
 
+# Rails
+alias psr="ps aux | grep rails"
+
 # White noise
 alias rain="open -a safari http://www.rainymood.com"
-alias wnoise="open -a safari http://playnoise.com"
+alias wnoise="open -a safari http://soundrown.com"
