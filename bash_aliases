@@ -1,11 +1,11 @@
 # Source / Edit bash_profile
 alias sbs="source ~/.bash_profile"
-alias vbs="mvim ~/.bash_profile"
-alias vbc="mvim ~/.bashrc"
-alias vba="mvim ~/.bash_aliases"
+alias vbs="vim ~/.bash_profile"
+alias vbc="vim ~/.bashrc"
+alias vba="vim ~/.bash_aliases"
 
 # Edit vimrc
-alias vmc="mvim ~/.vimrc"
+alias vmc="vim ~/.vimrc"
 
 # LS
 alias l="ls -lah"

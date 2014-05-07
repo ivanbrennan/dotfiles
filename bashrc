@@ -23,10 +23,10 @@
     # Editors - MacVim 7.4 option
     # Tells your shell that when a program requires various editors, use MacVim.
     # The -f flag tells your shell to wait until MacVim exits
-    export VISUAL="mvim -f"
-    export SVN_EDITOR="mvim -f"
-    export GIT_EDITOR="mvim -f"
-    export EDITOR="mvim -f"
+    export VISUAL="vim"
+    export SVN_EDITOR="vim"
+    export GIT_EDITOR="vim"
+    export EDITOR="vim"
 
   # Paths {{{1
 
