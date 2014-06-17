@@ -137,6 +137,12 @@
     pg_ctl -D /usr/local/var/postgres stop -s -m fast
   }
 
+  # ssh tabs {{{2
+  function ssh() {
+    echo -en "\033]0;$*\007"
+    /usr/bin/ssh $@
+  }
+
 # ::::::::: Final Config and Plugins ::::::::: {{{1
 
   # Case insensitive tab autocomplete {{{2
