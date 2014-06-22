@@ -9,4 +9,10 @@ altscreen on
 hardstatus alwayslastline
 hardstatus string "%{= kG}%-Lw%{= kW}%50> %n*%f %t%{= kG}%+Lw%< %{= kG}%-=%D %m/%d/%y | %C:%s %A | %1`%{-}"
 
-screen -t shell -ln 0
+screen -t redis -ln 0 redis-server
+screen -t sidekiq -ln 1 sidekiq
+screen -t server -ln 2 rails s
+screen -t console -ln 3 rails c
+screen -t rspec -ln 4
+screen -t git -ln 5
+screen -t vim -ln 6 vim

@@ -7,6 +7,10 @@ alias vba="vim ~/.bash_aliases"
 # Edit vimrc
 alias vmc="vim ~/.vimrc"
 
+# Edit screenrc
+alias vsc="vim ~/.screenrc"
+alias vhb="vim ~/.screenhb"
+
 # LS
 alias l="ls -lah"
 
