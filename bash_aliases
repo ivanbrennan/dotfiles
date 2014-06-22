@@ -22,6 +22,7 @@ alias vims="cd ~/.vim"
 alias cellar="cd /usr/local/Cellar"
 alias desk="cd ~/Desktop"
 alias hand="cd ~/Development/code/handybook"
+alias hb="cd ~/Development/code/handybook && screen -c ~/.screenhb"
 
 # MV
 alias mvv="mv -v"
