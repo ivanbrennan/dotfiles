@@ -6,9 +6,13 @@ shell -$SHELL
 # tidy scrollback buffer
 altscreen on
 
-# statusline
+# # statusline
 hardstatus alwayslastline
-hardstatus string "%{= kG}%-Lw%{= kW}%50> %n*%f %t%{= kG}%+Lw%< %{= kG}%-=%D %m/%d/%y | %C:%s %A | %1`%{-}"
+hardstatus string "%{= kG}%-Lw%{= kW}%50> %n%f %t%{= kG}%+Lw%< %{= kG}%-=%D %m/%d/%y | %C:%s %A | %1`%{-}"
 
-# zombies
-zombie kr onerror
+# # zombies
+# zombie kr
+
+# # unbind
+# bind ^[[1;5A
+# bind ^[[1;5B
