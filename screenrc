@@ -4,11 +4,11 @@ startup_message off
 shell -$SHELL
 
 # scrollback buffer
-# # altscreen on
+altscreen on
 defscrollback 10000
 
-caption always "%{=b Wk} %-w%{=b Wb}%n %t%{-}%+w %41=%H :: %l  %-= %= %S "
 # caption always "%{+ wk} %-w%{+b wk}%n %t%{-}%+w %{+b} %41=%H :: %l %-= %= %S "
+caption always "%{=b Wk} %-w%{=b Wb}%n %t%{-}%+w %=%H :: %l  %-= %= %S "
 
 # zombies
 zombie kr
