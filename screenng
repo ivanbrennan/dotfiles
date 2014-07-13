@@ -1,0 +1,5 @@
+source ~/.screenrc
+
+screen -t server -ln 0
+screen -t test -ln 1
+screen -t term -ln 2
