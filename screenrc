@@ -3,15 +3,16 @@ startup_message off
 # run login shells
 shell -$SHELL
 
-# tidy scrollback buffer
-altscreen on
+# scrollback buffer
+# # altscreen on
+defscrollback 10000
 
 # # statusline
 hardstatus alwayslastline
 hardstatus string "%{= kG}%-Lw%{= kW}%50> %n%f %t%{= kG}%+Lw%< %{= kG}%-=%D %m/%d/%y | %C:%s %A | %1`%{-}"
 
-# # zombies
-# zombie kr
+# zombies
+zombie kr
 
 # # unbind
 # bind ^[[1;5A
