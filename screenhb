@@ -5,7 +5,7 @@ screen -t redis -ln 1 redis-server
 screen -t sidekiq -ln 2 sidekiq
 screen -t thin -ln 3 rails s
 screen -t console -ln 4 rails c
-screen -t vim -ln 5
-screen -t rspec -ln 6
+screen -t rspec -ln 5
+screen -t vim -ln 6
 screen -t git -ln 7
 screen -t ssh -ln 8
