@@ -36,9 +36,9 @@
   function prompt {
     # some chars for reference:  ⧉ ℔ λ ⦔ Ω №  ✓
     # define some local colors
-    local         BLUE="\[\033[0;34m\]"
-    local          RED="\[\033[0;31m\]"
-    local          OFF="\[\033[0m\]"
+    local BLUE="\[\033[0;34m\]"
+    local  RED="\[\033[0;31m\]"
+    local  OFF="\[\033[0m\]"
 
     export PS1="\[╭╺[$BLUE\u$OFF][$BLUE\h$OFF][$BLUE\A$OFF]$RED\$(parse_git_branch) $BLUE\w$OFF\[\e[m\n╰╺⧉  "
     export PS2="   > "
