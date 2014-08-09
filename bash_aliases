@@ -12,7 +12,7 @@ alias vsc="vim ~/.screenrc"
 alias vhb="vim ~/.screenhb"
 
 # LS
-alias l="ls -lah"
+alias l="ls -lAh"
 
 # CD
 alias cd..="cd .."
@@ -48,9 +48,13 @@ alias gca="git commit -v -a"
 alias gb="git branch"
 alias gba="git branch -a"
 
-# Rails
-alias psr="ps aux | grep rails"
+# Servers
+alias msta="mysql.server start"
+alias msto="mysql.server stop"
+alias redd="redis-server ~/.redis/redis.conf"
+alias sidd="sidekiq -d"
 
-# White noise
-alias rain="open -a safari http://www.rainymood.com"
-alias wnoise="open -a safari http://soundrown.com"
+# Commands
+alias psg="ps aux | grep "
+alias psr="ps aux | grep rails"
+alias lsr="lsof -i :3000"
