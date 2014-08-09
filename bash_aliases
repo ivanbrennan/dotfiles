@@ -35,6 +35,9 @@ alias mvv="mv -v"
 # RM
 alias rmi="rm -i"
 
+# Rails
+alias grails="ps aux | grep '[r]ails'"
+
 # Open Downloads in Finder
 alias dld="open ~/Downloads"
 
@@ -47,16 +50,3 @@ alias gc="git commit -v"
 alias gca="git commit -v -a"
 alias gb="git branch"
 alias gba="git branch -a"
-
-# Servers
-alias msta="mysql.server start"
-alias msto="mysql.server stop"
-alias redd="redis-server ~/.redis/redis.conf"
-alias sidd="sidekiq -d"
-
-# Commands
-alias psg="ps aux | grep "
-alias psr="ps aux | grep rails"
-alias lsr="lsof -i :3000"
-alias krs="kill $(lsof -i :3000 -t)"
-alias krsk="kill -9 $(lsof -i :3000 -t)"

@@ -81,7 +81,6 @@
   }
 
   # Easily grep for a matching process {{{2
-  # Is this any different from pgrep?
   # USE: psg postgres
   function psg {
     FIRST=`echo $1 | sed -e 's/^\(.\).*/\1/'`
@@ -127,14 +126,129 @@
   }
 
   # Start / Stop PostgreSQL server {{{2
-  # USE: ghost filename
-  function pstart {
+  function psta {
     pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
   }
 
-  # USE: ghost filename
-  function pstop {
+  function psto {
     pg_ctl -D /usr/local/var/postgres stop -s -m fast
+  }
+
+  # Start / Stop MySQL server {{{2
+  function mrun {
+    [[ `pgrep mysql | wc -l` -eq 1 ]]
+  }
+
+  function msta {
+    if ! mrun; then
+      mysql.server start
+    else
+      echo "MySQL is alreay running"
+    fi
+  }
+
+  function msto {
+    if mrun; then
+      mysql.server stop
+    else
+      echo "MySQL is not running"
+    fi
+  }
+
+  function mstat {
+    if mrun; then
+      echo "MySQL is running"
+    else
+      echo "MySQL is not running"
+    fi
+  }
+
+  # Start / Stop Redis server {{{2
+  function rrun {
+    ps -p $(lsof -i :6379 -t) &> /dev/null
+  }
+
+  function rsta {
+    if ! rrun; then
+      redis-server ~/.redis/redis.conf
+      echo "Redis daemon started"
+    else
+      echo "Redis daemon is already running"
+    fi
+  }
+
+  function rsto {
+    if rrun; then
+      kill $(lsof -i :6379 -t)
+      echo "Redis daemon stopped"
+    else
+      echo "Redis daemon is not running"
+    fi
+  }
+
+  function rstat {
+    if rrun; then
+      echo "Redis daemon is running"
+    else
+      echo "Redis daemon is not running"
+    fi
+  }
+
+  # Start / Stop Sidekiq server {{{2
+  function srun {
+    cat tmp/pids/sidekiq.pid &> /dev/null
+  }
+
+  function ssta {
+    if ! srun; then
+      sidekiq -d
+      echo "Sidekiq daemon started"
+    else
+      echo "Sidekiq daemon is already running"
+    fi
+  }
+
+  function ssto {
+    if srun; then
+      kill $(cat tmp/pids/sidekiq.pid)
+      echo "Sidekiq daemon stopped"
+    else
+      echo "Sidekiq daemon is not running"
+    fi
+  }
+
+  function sstat {
+    if srun; then
+      echo "Sidekiq daemon is running"
+    else
+      echo "Sidekiq daemon is not running"
+    fi
+  }
+
+  # Start / Stop all servers {{{2
+  function mista {
+    msta && rsta && ssta
+  }
+
+  function misto {
+    ssto && rsto && msto
+  }
+
+  function mistat {
+    mstat && rstat && sstat
+  }
+
+  # Kill / Force-kill Rails server {{{2
+  function krs {
+    if ps -p $(lsof -i :3000 -t) > /dev/null; then
+      kill $(lsof -i :3000 -t)
+    fi
+  }
+
+  function krsk {
+    if ps -p $(lsof -i :3000 -t) > /dev/null; then
+      kill -9 $(lsof -i :3000 -t)
+    fi
   }
 
   # ssh tabs {{{2
