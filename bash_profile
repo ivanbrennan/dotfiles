@@ -143,12 +143,12 @@
     pg_ctl -D /usr/local/var/postgres stop -s -m fast
   }
 
-  # Start / Stop MySQL server {{{2
+  # MySQL server {{{2
   function msta {
     if ! running mysql; then
       mysql.server start
     else
-      echo "MySQL is alreay running"
+      echo "MySQL already running"
     fi
   }
 
@@ -156,136 +156,132 @@
     if running mysql; then
       mysql.server stop
     else
-      echo "MySQL is not running"
+      echo "MySQL not running"
     fi
   }
 
   function mstat {
     if running mysql; then
-      echo "MySQL is running"
+      echo "MySQL running"
     else
-      echo "MySQL is not running"
+      echo "MySQL not running"
     fi
   }
 
-  # Start / Stop Redis server {{{2
-  function rsta {
+  # Redis server {{{2
+  function resta {
     if ! running redis; then
       redis-server ~/.redis/redis.conf
-      until running redis
-      do
+      until running redis; do
         sleep 1
       done
-      if running redis; then echo "Redis daemon started"; fi
+      echo "Redis daemon started"
     else
-      echo "Redis daemon is already running"
+      echo "Redis daemon already running"
     fi
   }
 
-  function rsto {
+  function resto {
     if running redis; then
       kill $(rpid redis)
-      while running redis
-      do
+      while running redis; do
         sleep 1
       done
-      if ! running redis; then echo "Redis daemon stopped"; fi
+      echo "Redis daemon stopped"
     else
-      echo "Redis daemon is not running"
+      echo "Redis daemon not running"
     fi
   }
 
-  function rstat {
+  function restat {
     if running redis; then
-      echo "Redis daemon is running"
+      echo "Redis daemon running"
     else
-      echo "Redis daemon is not running"
+      echo "Redis daemon not running"
     fi
   }
 
-  # Start / Stop Sidekiq server {{{2
-  function ssta {
+  # Sidekiq {{{2
+  function sksta {
     if ! running sidekiq; then
       sidekiq -d
-      until running sidekiq
-      do
+      until running sidekiq; do
         sleep 1
       done
-      if running sidekiq; then echo "Sidekiq daemon started"; fi
+      echo "Sidekiq daemon started"
     else
-      echo "Sidekiq daemon is already running"
+      echo "Sidekiq daemon already running"
     fi
   }
 
-  function ssto {
+  function sksto {
     if running sidekiq; then
       kill $(rpid sidekiq)
-      while running sidekiq
-      do
+      while running sidekiq; do
         sleep 1
       done
-      if ! running sidekiq; then echo "Sidekiq daemon stopped"; fi
+      echo "Sidekiq daemon stopped"
     else
-      echo "Sidekiq daemon is not running"
+      echo "Sidekiq daemon not running"
     fi
   }
 
-  function sstat {
+  function skstat {
     if running sidekiq; then
-      echo "Sidekiq daemon is running"
+      echo "Sidekiq daemon running"
     else
-      echo "Sidekiq daemon is not running"
+      echo "Sidekiq daemon not running"
     fi
   }
 
-  # Kill Rails server {{{2
+  # Rails server {{{2
   function krs {
     if running 'rails s'; then
-      kill $(rpid 'rails s')
-      sleep 1
-      if ! running 'rails s'; then
-        echo "Rails server killed"
-      else
-        echo "Rails server survived (pid: $(rpid 'rails s'))"
-      fi
+      kill $1 $(rpid 'rails s')
+      for i in 1 2; do
+        if ! running 'rails s'; then
+          break
+        else
+          sleep 1
+        fi
+      done
+      reportkill
     else
-      echo "Rails server is not running"
+      echo "Rails server not running"
+    fi
+  }
+
+  function reportkill {
+    if ! running 'rails s'; then
+      echo "Rails server killed"
+    else
+      echo "Rails server survived (pid $(rpid 'rails s'))"
     fi
   }
 
   function krs9 {
-    if running 'rails s'; then
-      kill -9 $(rpid 'rails s')
-      sleep 1
-      if ! running 'rails s'; then
-        echo "Rails server killed"
-      else
-        echo "Rails server survived (pid $(rpid 'rails s'))"
-      fi
-    else
-      echo "Rails server is not running"
-    fi
+    krs '-9'
   }
 
-  function rlstat {
+  function rastat {
     if running 'rails s'; then
-      echo "Rails server is running"
+      echo "Rails server running"
     else
-      echo "Rails server is not running"
+      echo "Rails server not running"
     fi
   }
 
   # Start / Stop all servers {{{2
-  function mista {
-    msta && rsta && ssta
+  function asta {
+    msta && resta && sksta
   }
 
-  function misto {
-    ssto && rsto && msto
+  function asto {
+    sksto && resto && msto
   }
 
-  function mistat {
-    mstat && rstat && sstat
+  function astat {
+    mstat && restat && skstat
   }
 
   # ssh tabs {{{2
