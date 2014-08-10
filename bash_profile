@@ -28,12 +28,12 @@
 # ::::::::: Prompt ::::::::::::::::::::::::::: {{{1
 
   # Output the active git branch
-  function parse_git_branch {
+  parse_git_branch() {
     git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
   }
 
   # Build the prompt
-  function prompt {
+  prompt() {
     # some chars for reference:  ⧉ ℔ λ ⦔ Ω №  ✓
     # define some local colors
     local BLUE="\[\033[0;34m\]"
@@ -51,13 +51,13 @@
 # ::::::::: Functions :::::::::::::::::::::::: {{{1
 
   # Show PATH {{{2
-  function path {
+  path() {
     echo "PATH:"
     echo "$PATH" | tr ":" "\n"
   }
 
   # Toggle hidden files {{{2
-  function hidden {
+  hidden() {
     if [[ $( defaults read com.apple.finder AppleShowAllFiles ) == "NO" ]]
     then
       defaults write com.apple.finder AppleShowAllFiles TRUE
@@ -70,7 +70,7 @@
   }
 
   # Run just one MacVim {{{2
-  function ivim {
+  ivim() {
     if [ -n "$1" ]; then
       command mvim --remote-silent "$@"
     elif [ -n "$( mvim --serverlist )" ]; then
@@ -82,7 +82,7 @@
 
   # Easily grep for a matching process {{{2
   # USE: psg postgres
-  function psg {
+  psg() {
     FIRST=`echo $1 | sed -e 's/^\(.\).*/\1/'`
     REST=`echo $1 | sed -e 's/^.\(.*\)/\1/'`
     ps aux | grep "[$FIRST]$REST"
@@ -90,7 +90,7 @@
 
   # Easily grep for a matching file {{{2
   # USE: lg filename
-  function lg {
+  lg() {
   FIRST=`echo $1 | sed -e 's/^\(.\).*/\1/'`
   REST=`echo $1 | sed -e 's/^.\(.*\)/\1/'`
   ls -la | grep "[$FIRST]$REST"
@@ -99,7 +99,7 @@
   # Extract archive based on extension {{{2
   # USE: extract imazip.zip
   #      extract imatar.tar
-  function extract {
+  extract() {
       if [ -f $1 ]; then
           case $1 in
               *.tar.bz2)  tar xjf "$1"      ;;
@@ -121,199 +121,194 @@
 
   # Compress PDF with Ghostscript {{{2
   # USE: ghost filename
-  function ghost {
+  ghost() {
     gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="compressed-$1" "$1"
   }
 
   # process helpers {{{2
-  function running {
-    pgrep -f "$1" &> /dev/null
+  running() {
+    rpid "$1" > /dev/null
   }
 
-  function rpid {
+  rpid() {
     pgrep -f "$1" 2> /dev/null
   }
 
+  p_start() {
+    proc=$1; shift
+    name=$1; shift
+    if ! running "$proc"; then
+      "$@"
+    else
+      echo "$name already running"
+    fi
+  }
+
+  p_stop() {
+    proc=$1; shift
+    name=$1; shift
+    if running "$proc"; then
+      "$@"
+    else
+      echo "$name not running"
+    fi
+  }
+
+  p_status() {
+    proc=$1; shift
+    name=$1; shift
+    if running "$proc"; then
+      echo "$name alive"
+    else
+      echo "$name dead"
+    fi
+  }
+
   # Start / Stop PostgreSQL server {{{2
-  function psta {
+  pgsta() {
     pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
   }
 
-  function psto {
+  pgsto() {
     pg_ctl -D /usr/local/var/postgres stop -s -m fast
   }
 
   # MySQL server {{{2
-  function msta {
-    if ! running mysql; then
-      mysql.server start
-    else
-      echo "MySQL already running"
-    fi
+  msta() {
+    p_start mysql MySQL mysql.server start
   }
 
-  function msto {
-    if running mysql; then
-      mysql.server stop
-    else
-      echo "MySQL not running"
-    fi
+  msto() {
+    p_stop mysql MySQL mysql.server stop
   }
 
-  function mstat {
-    if running mysql; then
-      echo "MySQL alive"
-    else
-      echo "MySQL dead"
-    fi
+  mstat() {
+    p_status mysql MySQL
   }
 
   # Redis server {{{2
-  function resta {
-    if ! running redis; then
-      redis-server ~/.redis/redis.conf
-      until running redis; do
-        sleep 1
-      done
-      echo "Redis daemon spawned"
-    else
-      echo "Redis daemon already running"
-    fi
+  resta() {
+    p_start redis "Redis daemon" redis_start
   }
 
-  function resto {
-    if running redis; then
-      kill $(rpid redis)
-      while running redis; do
-        sleep 1
-      done
-      echo "Redis daemon slain"
-    else
-      echo "Redis daemon not running"
-    fi
+  resto() {
+    p_stop redis "Redis daemon" redis_stop
   }
 
-  function restat {
-    if running redis; then
-      echo "Redis daemon alive"
-    else
-      echo "Redis daemon dead"
-    fi
+  restat() {
+    p_status redis "Redis daemon"
+  }
+
+  redis_start() {
+    redis-server ~/.redis/redis.conf
+    until running redis; do
+      sleep 1
+    done
+    echo "Redis daemon spawned"
+  }
+
+  redis_stop() {
+    kill $(rpid redis)
+    while running redis; do
+      sleep 1
+    done
+    echo "Redis daemon slain"
   }
 
   # Sidekiq {{{2
-  function sksta {
-    if ! running sidekiq; then
-      sidekiq -d
-      until running sidekiq; do
-        sleep 1
-      done
-      echo "Sidekiq daemon spawned"
-    else
-      echo "Sidekiq daemon already running"
-    fi
+  sksta() {
+    p_start sidekiq "Sidekiq daemon" sidekiq_start
   }
 
-  function sksto {
-    if running sidekiq; then
-      kill $(rpid sidekiq)
-      while running sidekiq; do
-        sleep 1
-      done
-      echo "Sidekiq daemon slain"
-    else
-      echo "Sidekiq daemon not running"
-    fi
+  sksto() {
+    p_stop sidekiq "Sidekiq daemon" sidekiq_stop
   }
 
-  function skstat {
-    if running sidekiq; then
-      echo "Sidekiq daemon alive"
-    else
-      echo "Sidekiq daemon dead"
-    fi
+  skstat() {
+    p_status sidekiq "Sidekiq daemon"
+  }
+
+  sidekiq_start() {
+    sidekiq -d
+    until running sidekiq; do
+      sleep 1
+    done
+    echo "Sidekiq daemaon spawned"
+  }
+
+  sidekiq_stop() {
+    kill $(rpid sidekiq)
+    while running sidekiq; do
+      sleep 1
+    done
+    echo "Sidekiq daemon slain"
   }
 
   # Rails {{{2
-  function krs {
-    if running 'rails s'; then
-      kill $1 $(rpid 'rails s')
-      for i in 1 2; do
-        if ! running 'rails s'; then
-          break
-        else
-          sleep 1
-        fi
-      done
-      reportkill
-    else
-      echo "Rails server not running"
-    fi
+  krs() {
+    p_stop "rails s" "Rails server" rails_stop "server" $1
   }
 
-  function reportkill {
-    if ! running 'rails s'; then
-      echo "Rails server slain"
-    else
-      echo "Rails server survived (pid $(rpid 'rails s'))"
-    fi
-  }
-
-  function krs9 {
+  krs9() {
     krs '-9'
   }
 
-  function krc {
-    if running 'rails c'; then
-      kill $(rpid 'rails c')
-      while running 'rails c'; do
+  krc() {
+    p_stop "rails c" "Rails console" rails_stop "console"
+  }
+
+  rastat() {
+    p_status "rails s" "Rails server"
+  }
+
+  rastac() {
+    p_status "rails c" "Rails console"
+  }
+
+  rails_stop() {
+    kill $2 $(rpid "rails ${1:0:1}")
+    for i in 1 2; do
+      if ! running "rails ${1:0:1}"; then
+        break
+      else
         sleep 1
-      done
-      echo "Rails console slain"
-    else
-      echo "Rails console not running"
-    fi
+      fi
+    done
+    reportkill $1
   }
 
-  function rastat {
-    if running 'rails s'; then
-      echo "Rails server alive"
+  reportkill() {
+    if ! running "rails ${1:0:1}"; then
+      echo "Rails $1 slain"
     else
-      echo "Rails server dead"
-    fi
-  }
-
-  function rastac {
-    if running 'rails c'; then
-      echo "Rails console alive"
-    else
-      echo "Rails console dead"
+      pid=rpid "rails ${1:0:1}"
+      echo "Rails $1 survived (pid $pid)"
     fi
   }
 
   # All servers {{{2
-  function asta {
+  asta() {
     msta && resta && sksta
   }
 
-  function asto {
+  asto() {
     sksto && resto && msto
   }
 
-  function astat {
+  astat() {
     mstat && restat && skstat
   }
 
-  function astatt {
+  astatt() {
     mstat && restat && skstat && rastat && rastac
   }
 
-  function astop {
+  astop() {
     krc && krs && sksto && resto && msto
   }
 
   # ssh tabs {{{2
-  function ssh() {
+  ssh() {
     echo -en "\033]0;$*\007"
     /usr/bin/ssh $@
   }
