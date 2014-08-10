@@ -162,9 +162,9 @@
 
   function mstat {
     if running mysql; then
-      echo "MySQL running"
+      echo "MySQL alive"
     else
-      echo "MySQL not running"
+      echo "MySQL dead"
     fi
   }
 
@@ -175,7 +175,7 @@
       until running redis; do
         sleep 1
       done
-      echo "Redis daemon started"
+      echo "Redis daemon spawned"
     else
       echo "Redis daemon already running"
     fi
@@ -187,7 +187,7 @@
       while running redis; do
         sleep 1
       done
-      echo "Redis daemon stopped"
+      echo "Redis daemon slain"
     else
       echo "Redis daemon not running"
     fi
@@ -195,9 +195,9 @@
 
   function restat {
     if running redis; then
-      echo "Redis daemon running"
+      echo "Redis daemon alive"
     else
-      echo "Redis daemon not running"
+      echo "Redis daemon dead"
     fi
   }
 
@@ -208,7 +208,7 @@
       until running sidekiq; do
         sleep 1
       done
-      echo "Sidekiq daemon started"
+      echo "Sidekiq daemon spawned"
     else
       echo "Sidekiq daemon already running"
     fi
@@ -220,7 +220,7 @@
       while running sidekiq; do
         sleep 1
       done
-      echo "Sidekiq daemon stopped"
+      echo "Sidekiq daemon slain"
     else
       echo "Sidekiq daemon not running"
     fi
@@ -228,13 +228,13 @@
 
   function skstat {
     if running sidekiq; then
-      echo "Sidekiq daemon running"
+      echo "Sidekiq daemon alive"
     else
-      echo "Sidekiq daemon not running"
+      echo "Sidekiq daemon dead"
     fi
   }
 
-  # Rails server {{{2
+  # Rails {{{2
   function krs {
     if running 'rails s'; then
       kill $1 $(rpid 'rails s')
@@ -253,7 +253,7 @@
 
   function reportkill {
     if ! running 'rails s'; then
-      echo "Rails server killed"
+      echo "Rails server slain"
     else
       echo "Rails server survived (pid $(rpid 'rails s'))"
     fi
@@ -263,15 +263,35 @@
     krs '-9'
   }
 
-  function rastat {
-    if running 'rails s'; then
-      echo "Rails server running"
+  function krc {
+    if running 'rails c'; then
+      kill $(rpid 'rails c')
+      while running 'rails c'; do
+        sleep 1
+      done
+      echo "Rails console slain"
     else
-      echo "Rails server not running"
+      echo "Rails console not running"
     fi
   }
 
-  # Start / Stop all servers {{{2
+  function rastat {
+    if running 'rails s'; then
+      echo "Rails server alive"
+    else
+      echo "Rails server dead"
+    fi
+  }
+
+  function rastac {
+    if running 'rails c'; then
+      echo "Rails console alive"
+    else
+      echo "Rails console dead"
+    fi
+  }
+
+  # All servers {{{2
   function asta {
     msta && resta && sksta
   }
@@ -282,6 +302,14 @@
 
   function astat {
     mstat && restat && skstat
+  }
+
+  function astatt {
+    mstat && restat && skstat && rastat && rastac
+  }
+
+  function astop {
+    krc && krs && sksto && resto && msto
   }
 
   # ssh tabs {{{2
