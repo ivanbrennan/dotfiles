@@ -125,6 +125,15 @@
     gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="compressed-$1" "$1"
   }
 
+  # process helpers {{{2
+  function running {
+    pgrep -f "$1" &> /dev/null
+  }
+
+  function rpid {
+    pgrep -f "$1" 2> /dev/null
+  }
+
   # Start / Stop PostgreSQL server {{{2
   function psta {
     pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
@@ -135,12 +144,8 @@
   }
 
   # Start / Stop MySQL server {{{2
-  function mrun {
-    [[ `pgrep mysql | wc -l` -eq 1 ]]
-  }
-
   function msta {
-    if ! mrun; then
+    if ! running mysql; then
       mysql.server start
     else
       echo "MySQL is alreay running"
@@ -148,7 +153,7 @@
   }
 
   function msto {
-    if mrun; then
+    if running mysql; then
       mysql.server stop
     else
       echo "MySQL is not running"
@@ -156,7 +161,7 @@
   }
 
   function mstat {
-    if mrun; then
+    if running mysql; then
       echo "MySQL is running"
     else
       echo "MySQL is not running"
@@ -164,30 +169,34 @@
   }
 
   # Start / Stop Redis server {{{2
-  function rrun {
-    ps -p $(lsof -i :6379 -t) &> /dev/null
-  }
-
   function rsta {
-    if ! rrun; then
+    if ! running redis; then
       redis-server ~/.redis/redis.conf
-      echo "Redis daemon started"
+      until running redis
+      do
+        sleep 1
+      done
+      if running redis; then echo "Redis daemon started"; fi
     else
       echo "Redis daemon is already running"
     fi
   }
 
   function rsto {
-    if rrun; then
-      kill $(lsof -i :6379 -t)
-      echo "Redis daemon stopped"
+    if running redis; then
+      kill $(rpid redis)
+      while running redis
+      do
+        sleep 1
+      done
+      if ! running redis; then echo "Redis daemon stopped"; fi
     else
       echo "Redis daemon is not running"
     fi
   }
 
   function rstat {
-    if rrun; then
+    if running redis; then
       echo "Redis daemon is running"
     else
       echo "Redis daemon is not running"
@@ -195,33 +204,74 @@
   }
 
   # Start / Stop Sidekiq server {{{2
-  function srun {
-    cat tmp/pids/sidekiq.pid &> /dev/null
-  }
-
   function ssta {
-    if ! srun; then
+    if ! running sidekiq; then
       sidekiq -d
-      echo "Sidekiq daemon started"
+      until running sidekiq
+      do
+        sleep 1
+      done
+      if running sidekiq; then echo "Sidekiq daemon started"; fi
     else
       echo "Sidekiq daemon is already running"
     fi
   }
 
   function ssto {
-    if srun; then
-      kill $(cat tmp/pids/sidekiq.pid)
-      echo "Sidekiq daemon stopped"
+    if running sidekiq; then
+      kill $(rpid sidekiq)
+      while running sidekiq
+      do
+        sleep 1
+      done
+      if ! running sidekiq; then echo "Sidekiq daemon stopped"; fi
     else
       echo "Sidekiq daemon is not running"
     fi
   }
 
   function sstat {
-    if srun; then
+    if running sidekiq; then
       echo "Sidekiq daemon is running"
     else
       echo "Sidekiq daemon is not running"
+    fi
+  }
+
+  # Kill Rails server {{{2
+  function krs {
+    if running 'rails s'; then
+      kill $(rpid 'rails s')
+      sleep 1
+      if ! running 'rails s'; then
+        echo "Rails server killed"
+      else
+        echo "Rails server survived (pid: $(rpid 'rails s'))"
+      fi
+    else
+      echo "Rails server is not running"
+    fi
+  }
+
+  function krs9 {
+    if running 'rails s'; then
+      kill -9 $(rpid 'rails s')
+      sleep 1
+      if ! running 'rails s'; then
+        echo "Rails server killed"
+      else
+        echo "Rails server survived (pid $(rpid 'rails s'))"
+      fi
+    else
+      echo "Rails server is not running"
+    fi
+  }
+
+  function rlstat {
+    if running 'rails s'; then
+      echo "Rails server is running"
+    else
+      echo "Rails server is not running"
     fi
   }
 
@@ -236,19 +286,6 @@
 
   function mistat {
     mstat && rstat && sstat
-  }
-
-  # Kill / Force-kill Rails server {{{2
-  function krs {
-    if ps -p $(lsof -i :3000 -t) > /dev/null; then
-      kill $(lsof -i :3000 -t)
-    fi
-  }
-
-  function krsk {
-    if ps -p $(lsof -i :3000 -t) > /dev/null; then
-      kill -9 $(lsof -i :3000 -t)
-    fi
   }
 
   # ssh tabs {{{2
