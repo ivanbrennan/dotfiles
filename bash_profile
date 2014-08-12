@@ -208,7 +208,7 @@
   }
 
   redis_stop() {
-    kill $(rpid redis)
+    kill "$(rpid redis)"
     while running redis; do
       sleep 1
     done
@@ -237,7 +237,7 @@
   }
 
   sidekiq_stop() {
-    kill $(rpid sidekiq)
+    kill "$(rpid sidekiq)"
     while running sidekiq; do
       sleep 1
     done
@@ -246,7 +246,7 @@
 
   # Rails {{{2
   krs() {
-    p_stop "rails s" "Rails server" rails_stop "server" $1
+    p_stop "rails s" "Rails server" rails_stop "server" "$1"
   }
 
   krs9() {
@@ -266,7 +266,7 @@
   }
 
   rails_stop() {
-    kill $2 $(rpid "rails ${1:0:1}")
+    kill "$2" "$(rpid "rails ${1:0:1}")" 2> /dev/null
     for i in 1 2; do
       if ! running "rails ${1:0:1}"; then
         break
@@ -274,15 +274,14 @@
         sleep 1
       fi
     done
-    reportkill $1
+    reportkill "$1"
   }
 
   reportkill() {
     if ! running "rails ${1:0:1}"; then
       echo "Rails $1 slain"
     else
-      pid=rpid "rails ${1:0:1}"
-      echo "Rails $1 survived (pid $pid)"
+      echo "Rails $1 survived (pid $(rpid "rails ${1:0:1}"))"
     fi
   }
 
