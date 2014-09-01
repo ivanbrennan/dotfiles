@@ -27,11 +27,6 @@
 
 # ::::::::: Prompt ::::::::::::::::::::::::::: {{{1
 
-  # Output the active git branch
-  parse_git_branch() {
-    git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-  }
-
   # Build the prompt
   prompt() {
     # some chars for reference:  ⧉ ℔ λ ⦔ Ω №  ✓
@@ -40,7 +35,7 @@
     local  RED="\[\033[0;31m\]"
     local  OFF="\[\033[0m\]"
 
-    export PS1="\[╭╺($BLUE\u$OFF)($BLUE\h$OFF) $BLUE\A$OFF $RED\$(parse_git_branch) $BLUE\w$OFF\[\e[m\n╰╺⧉  "
+    export PS1="\[╭╺($BLUE\u$OFF)($BLUE\h$OFF) $BLUE\A$OFF $RED\$(__git_ps1) $BLUE\w$OFF\[\e[m\n╰╺⧉  "
     export PS2="   > "
     export PS4="   + "
     }
