@@ -29,6 +29,12 @@ alias sr="screen -r"
 alias hb="cd ~/Development/code/handybook && screen -S handybook -c ~/.screenhb"
 alias ng="cd ~/Development/code/angular-phonecat && screen -S angular -c ~/.screenng"
 
+# tmux
+alias mx="tmux"
+alias mxl="tmux ls"
+alias mxs="tmux new-session -s"
+alias mxa="tmux attach-session -t"
+
 # MV
 alias mvv="mv -v"
 
