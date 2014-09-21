@@ -3,6 +3,7 @@ alias sbs="source ~/.bash_profile"
 alias vbs="vim ~/.bash_profile"
 alias vbc="vim ~/.bashrc"
 alias vba="vim ~/.bash_aliases"
+alias vmx="vim ~/.tmux.conf"
 
 # Edit vimrc
 alias vmc="vim ~/.vimrc"

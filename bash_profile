@@ -35,7 +35,7 @@
     local  RED="\[\033[0;31m\]"
     local  OFF="\[\033[0m\]"
 
-    export PS1="\[╭╺($BLUE\u$OFF)($BLUE\h$OFF) $BLUE\A$OFF $RED\$(__git_ps1) $BLUE\w$OFF\[\e[m\n╰╺⧉  "
+    export PS1="\[╭╺($BLUE\h$OFF:$BLUE\u$OFF) $BLUE\w$RED\$(__git_ps1)\[\e[m\n╰╺⧉  "
     export PS2="   > "
     export PS4="   + "
     }
@@ -324,7 +324,23 @@
     export CLICOLOR=1
 
     # Specify how to color specific items
-    export LSCOLORS=hxCxcxDxbxegedabagaced
+    export LSCOLORS=DxCxcxDxbxegedabagaced
+
+    # Order of attributes: {{{3
+      #  1. directory
+      #  2. symbolic link
+      #  3. socket
+      #  4. pipe
+      #  5. executable
+      #  6. block special
+      #  7. character special
+      #  8. executable with setuid bit set
+      #  9. executable with setgid bit set
+      # 10. directory writable to others, with sticky bit
+      # 11. directory writable to others, without sticky bit
+      # Default is "exfxcxdxbxegedabagacad", i.e. blue foreground
+      # and default background for regular directories, black
+      # foreground and red background for setuid executables, etc.
 
     # Color designators: {{{3
       # a black
@@ -344,22 +360,6 @@
       # G bold cyan
       # H bold light grey; looks like bright white
       # x default foreground or background
-
-    # Order of attributes: {{{3
-      #  1. directory
-      #  2. symbolic link
-      #  3. socket
-      #  4. pipe
-      #  5. executable
-      #  6. block special
-      #  7. character special
-      #  8. executable with setuid bit set
-      #  9. executable with setgid bit set
-      # 10. directory writable to others, with sticky bit
-      # 11. directory writable to others, without sticky bit
-      # Default is "exfxcxdxbxegedabagacad", i.e. blue foreground
-      # and default background for regular directories, black
-      # foreground and red background for setuid executables, etc.
 
 # ::::::::: RVM :::::::::::::::::::::::::::::: {{{1
 
