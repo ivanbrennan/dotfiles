@@ -211,7 +211,7 @@
   }
 
   # Sidekiq {{{2
-  sksta() {
+  sista() {
     p_start sidekiq "Sidekiq daemon" sidekiq_start
   }
 
@@ -219,7 +219,7 @@
     p_stop sidekiq "Sidekiq daemon" sidekiq_stop
   }
 
-  skstat() {
+  sistat() {
     p_status sidekiq "Sidekiq daemon"
   }
 
@@ -282,7 +282,7 @@
 
   # All servers {{{2
   asta() {
-    msta && resta && sksta
+    msta && resta && sista
   }
 
   asto() {
@@ -290,11 +290,11 @@
   }
 
   astat() {
-    mstat && restat && skstat
+    mstat && restat && sistat
   }
 
   astatt() {
-    mstat && restat && skstat && rastat && rastac
+    mstat && restat && sistat && rastat && rastac
   }
 
   astop() {

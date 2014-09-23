@@ -28,6 +28,9 @@
     export GIT_EDITOR="vim"
     export EDITOR="vim"
 
+    # LESS - Don't clobber the alternate screen
+    export LESS="-X"
+
   # Paths {{{1
 
     # USR_PATHS {{{2
