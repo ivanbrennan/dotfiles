@@ -29,7 +29,7 @@
     export EDITOR="vim"
 
     # LESS - Don't clobber the alternate screen
-    export LESS="-X"
+    export LESS="-XR"
 
   # Paths {{{1
 
