@@ -27,6 +27,11 @@
 
 # ::::::::: Functions :::::::::::::::::::::::: {{{1
 
+  # Change iterm2 profile {{{2
+  it2prof() {
+    echo -e "\033]50;SetProfile=$1\a"
+  }
+
   # Show PATH {{{2
   path() {
     echo "PATH:"
@@ -316,7 +321,12 @@
 
     # Enable coloring in the terminal
     export CLICOLOR=1
-    export LSCOLORS="DxCxcxDxbxegedabagaced"
+    case "$THEME" in
+      "dark")
+        export LSCOLORS="BxGxBxDxBxEgEdxbxgxcxd";;
+      *)
+        export LSCOLORS="DxCxcxDxbxegedabagaced";;
+    esac
 
     # Order of attributes:
     #  1. directory
@@ -376,8 +386,36 @@
 
 # ::::::::: Prompt ::::::::::::::::::::::::::: {{{1
 
+    # Git prompt components
+    minutes_since_last_commit() {
+      now=`date +%s`
+      last_commit=`git log --pretty=format:'%at' -1`
+      seconds_since_last_commit=$((now-last_commit))
+      minutes_since_last_commit=$((seconds_since_last_commit/60))
+      echo $minutes_since_last_commit
+    }
+    grb_git_prompt() {
+      local g="$(__gitdir)"
+      if [ -n "$g" ]; then
+        local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
+        if [ "$MINUTES_SINCE_LAST_COMMIT" -gt 30 ]; then
+          local COLOR=${RED}
+        elif [ "$MINUTES_SINCE_LAST_COMMIT" -gt 10 ]; then
+          local COLOR=${YELLOW}
+        else
+          local COLOR=${GREEN}
+        fi
+        local SINCE_LAST_COMMIT="${COLOR}$(minutes_since_last_commit)m${NORMAL}"
+        # The __git_ps1 function inserts the current git branch where %s is
+        local GIT_PROMPT=`__git_ps1 "($WHITE%s$NORMAL|${SINCE_LAST_COMMIT})"`
+        echo ${GIT_PROMPT}
+      fi
+    }
+    prompt_dark() {
+      PS1="($BLUE\h$NORMAL:$BLUE\u$NORMAL) $BLUE\W$NORMAL\$(grb_git_prompt) ${WHITE}⧉$NORMAL "
+    }
     # Build the prompt
-    prompt() {
+    prompt_light() {
       # some chars for reference: <U+F8FF> ⧉ ℔ λ ⦔ Ω №  ✓
       # define some local colors
       local BLUE="\[\033[0;34m\]"
@@ -390,7 +428,12 @@
       }
 
     # Call the prompt function
-    prompt
+    case "$THEME" in
+      "dark")
+        prompt_dark;;
+      *)
+        prompt_light;;
+    esac
 
 
 # ::::::::: RVM :::::::::::::::::::::::::::::: {{{1
