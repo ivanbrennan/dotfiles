@@ -22,6 +22,7 @@
   sync = !legit sync \"$@\"
   publish = !legit publish \"$@\"
   graft = !legit graft \"$@\"
+  l = "!. ~/.githelpers && pretty_git_log"
 [color]
   ui = true
   diff = auto

@@ -323,7 +323,7 @@
     export CLICOLOR=1
     case "$THEME" in
       "dark")
-        export LSCOLORS="BxGxBxDxBxEgEdxbxgxcxd";;
+        export LSCOLORS="GxBxBxDxBxEgEdxbxgxcxd";;
       *)
         export LSCOLORS="DxCxcxDxbxegedabagaced";;
     esac
@@ -412,7 +412,7 @@
       fi
     }
     prompt_dark() {
-      PS1="(${BLUE}\h${NORMAL}:${BLUE}\u${NORMAL}) ${BLUE}\W${NORMAL}\$(grb_git_prompt) ${WHITE}⧉${NORMAL} "
+      PS1="\[╭╺(${GREEN}\h${NORMAL}:${BLUE}\u${NORMAL}) ${BLUE}\W${NORMAL}\$(grb_git_prompt) ${WHITE}\n╰╺⧉${NORMAL} "
     }
     # Build the prompt
     prompt_light() {
