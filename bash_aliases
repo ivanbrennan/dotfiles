@@ -1,7 +1,7 @@
 # Source / Edit bash_profile
 alias sbs=". ~/.bash_profile"
-alias dark="export THEME=dark && it2prof black && . ~/.bash_profile"
-alias light="unset THEME && it2prof white && . ~/.bash_profile"
+alias dark="darken"
+alias light="lighten"
 
 alias vbs="vim ~/.bash_profile"
 alias vbc="vim ~/.bashrc"

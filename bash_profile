@@ -28,11 +28,44 @@
 # ::::::::: Functions :::::::::::::::::::::::: {{{1
 
   # Change iterm2 profile {{{2
+  darken() {
+    if [ -n "$ITERM_PROFILE" ]; then
+      export THEME=dark
+      it2prof black
+      reload_profile
+    fi
+  }
+
+  lighten() {
+    if [ -n "$ITERM_PROFILE" ]; then
+      unset THEME
+      it2prof white
+      reload_profile
+    fi
+  }
+
+  reload_profile() {
+    if [ -f ~/.bash_profile ]; then
+      . ~/.bash_profile
+    fi
+  }
+
   it2prof() {
-    if [[ $TERM =~ "screen" ]]; then
+    if [[ "$TERM" =~ "screen" ]]; then
+      scrn_prof "$1"
+    else
+      # send escape sequence to change iTerm2 profile
+      echo -e "\033]50;SetProfile=$1\007"
+    fi
+  }
+
+  scrn_prof() {
+    if [ -n "$TMUX" ]; then
+      # tell tmux to send escape sequence to underlying terminal
       echo -e "\033Ptmux;\033\033]50;SetProfile=$1\007\033\\"
     else
-      echo -e "\033]50;SetProfile=$1\007"
+      # tell gnu screen to send escape sequence to underlying terminal
+      echo -e "\033P\033]50;SetProfile=$1\007\033\\"
     fi
   }
 
@@ -416,7 +449,7 @@
       fi
     }
     prompt_dark() {
-      PS1="\[╭╺(${GREEN}\h${NORMAL}:${BLUE}\u${NORMAL}) ${BLUE}\W${NORMAL} \$(grb_git_prompt) ${WHITE}\n╰╺⧉${NORMAL} "
+      PS1="\[╭╺(${GREEN}\h${NORMAL}:${BLUE}\u${NORMAL}) ${BLUE}\W${NORMAL} \$(grb_git_prompt) ${NORMAL}\n╰╺⧉  "
     }
     # Build the prompt
     prompt_light() {
