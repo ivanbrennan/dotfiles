@@ -29,7 +29,11 @@
 
   # Change iterm2 profile {{{2
   it2prof() {
-    echo -e "\033]50;SetProfile=$1\a"
+    if [[ $TERM =~ "screen" ]]; then
+      echo -e "\033Ptmux;\033\033]50;SetProfile=$1\007\033\\"
+    else
+      echo -e "\033]50;SetProfile=$1\007"
+    fi
   }
 
   # Show PATH {{{2
