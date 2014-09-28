@@ -412,17 +412,13 @@
       fi
     }
     prompt_dark() {
-      PS1="($BLUE\h$NORMAL:$BLUE\u$NORMAL) $BLUE\W$NORMAL\$(grb_git_prompt) ${WHITE}⧉$NORMAL "
+      PS1="(${BLUE}\h${NORMAL}:${BLUE}\u${NORMAL}) ${BLUE}\W${NORMAL}\$(grb_git_prompt) ${WHITE}⧉${NORMAL} "
     }
     # Build the prompt
     prompt_light() {
       # some chars for reference: <U+F8FF> ⧉ ℔ λ ⦔ Ω №  ✓
-      # define some local colors
-      local BLUE="\[\033[0;34m\]"
-      local  RED="\[\033[0;31m\]"
-      local  OFF="\[\033[0m\]"
 
-      export PS1="\[╭╺($BLUE\h$OFF:$BLUE\u$OFF) $BLUE\w$RED\$(__git_ps1)\[\e[m\n╰╺⧉  "
+      export PS1="\[╭╺(${BLUE}\h${NORMAL}:${BLUE}\u${NORMAL}) ${BLUE}\w${RED}\$(__git_ps1)\[\e[m\n╰╺⧉  "
       export PS2="   > "
       export PS4="   + "
       }
