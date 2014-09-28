@@ -1,5 +1,8 @@
 # Source / Edit bash_profile
-alias sbs="source ~/.bash_profile"
+alias sbs=". ~/.bash_profile"
+alias dark=". ~/.bash_dark.sh"
+alias light=". ~/.bash_light.sh"
+
 alias vbs="vim ~/.bash_profile"
 alias vbc="vim ~/.bashrc"
 alias vba="vim ~/.bash_aliases"

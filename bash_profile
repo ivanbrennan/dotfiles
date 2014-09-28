@@ -25,24 +25,6 @@
     . ~/.bash_aliases
   fi
 
-# ::::::::: Prompt ::::::::::::::::::::::::::: {{{1
-
-  # Build the prompt
-  prompt() {
-    # some chars for reference:  ⧉ ℔ λ ⦔ Ω №  ✓
-    # define some local colors
-    local BLUE="\[\033[0;34m\]"
-    local  RED="\[\033[0;31m\]"
-    local  OFF="\[\033[0m\]"
-
-    export PS1="\[╭╺($BLUE\h$OFF:$BLUE\u$OFF) $BLUE\w$RED\$(__git_ps1)\[\e[m\n╰╺⧉  "
-    export PS2="   > "
-    export PS4="   + "
-    }
-
-  # Call the prompt function
-  prompt
-
 # ::::::::: Functions :::::::::::::::::::::::: {{{1
 
   # Show PATH {{{2
@@ -309,6 +291,16 @@
 
 # ::::::::: Final Config and Plugins ::::::::: {{{1
 
+  # History {{{2
+    # Erase duplicates in history
+      export HISTCONTROL=erasedups
+
+    # Store 10k history entries
+      export HISTSIZE=10000
+
+    # Append to the history file when exiting instead of overwriting it
+      shopt -s histappend
+
   # Case insensitive tab autocomplete {{{2
   bind "set completion-ignore-case on"
 
@@ -318,13 +310,39 @@
     . `brew --prefix`/etc/bash_completion
   fi
 
-  # Coloring {{{2
+  # Colors {{{2
+    # grep
+    export GREP_OPTIONS="--color"
 
     # Enable coloring in the terminal
     export CLICOLOR=1
+    export LSCOLORS="DxCxcxDxbxegedabagaced"
 
-    # Specify how to color specific items
-    export LSCOLORS=DxCxcxDxbxegedabagaced
+    # Order of attributes:
+    #  1. directory
+    #  2. symbolic link
+    #  3. socket
+    #  4. pipe
+    #  5. executable
+    #  6. block special
+    #  7. character special
+    #  8. executable with setuid bit set
+    #  9. executable with setgid bit set
+    # 10. directory writable to others, with sticky bit
+    # 11. directory writable to others, without sticky bit
+    # Default is "exfxcxdxbxegedabagacad"
+
+    # Color designators:
+    # a black         A bold black (grey)
+    # b red           B bold red
+    # c green         C bold green
+    # d brown         D bold brown (yellow)
+    # e blue          E bold blue
+    # f magenta       F bold magenta
+    # g cyan          G bold cyan
+    # h light grey    H bold light grey (white)
+    # x default foreground or background
+
 
     # Order of attributes: {{{3
       #  1. directory
@@ -338,28 +356,42 @@
       #  9. executable with setgid bit set
       # 10. directory writable to others, with sticky bit
       # 11. directory writable to others, without sticky bit
-      # Default is "exfxcxdxbxegedabagacad", i.e. blue foreground
-      # and default background for regular directories, black
-      # foreground and red background for setuid executables, etc.
+      # Default is "exfxcxdxbxegedabagacad"
+
+    # Load .bash_colors if it exists
+    if [ -f ~/.bash_colors.sh ]; then
+      . ~/.bash_colors.sh
+    fi
 
     # Color designators: {{{3
-      # a black
-      # b red
-      # c green
-      # d brown
-      # e blue
-      # f magenta
-      # g cyan
-      # h light grey
-      # A bold black, usually shows up as dark grey
-      # B bold red
-      # C bold green
-      # D bold brown, usually shows up as yellow
-      # E bold blue
-      # F bold magenta
-      # G bold cyan
-      # H bold light grey; looks like bright white
+      # a black       A bold black (grey)
+      # b red         B bold red
+      # c green       C bold green
+      # d brown       D bold brown (yellow)
+      # e blue        E bold blue
+      # f magenta     F bold magenta
+      # g cyan        G bold cyan
+      # h light grey  H bold light grey (white)
       # x default foreground or background
+
+# ::::::::: Prompt ::::::::::::::::::::::::::: {{{1
+
+    # Build the prompt
+    prompt() {
+      # some chars for reference: <U+F8FF> ⧉ ℔ λ ⦔ Ω №  ✓
+      # define some local colors
+      local BLUE="\[\033[0;34m\]"
+      local  RED="\[\033[0;31m\]"
+      local  OFF="\[\033[0m\]"
+
+      export PS1="\[╭╺($BLUE\h$OFF:$BLUE\u$OFF) $BLUE\w$RED\$(__git_ps1)\[\e[m\n╰╺⧉  "
+      export PS2="   > "
+      export PS4="   + "
+      }
+
+    # Call the prompt function
+    prompt
+
 
 # ::::::::: RVM :::::::::::::::::::::::::::::: {{{1
 
