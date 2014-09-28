@@ -412,7 +412,7 @@
       fi
     }
     prompt_dark() {
-      PS1="\[╭╺(${GREEN}\h${NORMAL}:${BLUE}\u${NORMAL}) ${BLUE}\W${NORMAL}\$(grb_git_prompt) ${WHITE}\n╰╺⧉${NORMAL} "
+      PS1="\[╭╺(${GREEN}\h${NORMAL}:${BLUE}\u${NORMAL}) ${BLUE}\W${NORMAL} \$(grb_git_prompt) ${WHITE}\n╰╺⧉${NORMAL} "
     }
     # Build the prompt
     prompt_light() {
