@@ -3,6 +3,7 @@ alias sbs=". ~/.bash_profile"
 alias dark="darken"
 alias light="lighten"
 
+alias vi="vim"
 alias vbs="vim ~/.bash_profile"
 alias vbc="vim ~/.bashrc"
 alias vba="vim ~/.bash_aliases"
