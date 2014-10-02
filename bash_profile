@@ -27,21 +27,25 @@
 
 # ::::::::: Functions :::::::::::::::::::::::: {{{1
 
-  # Change iterm2 profile {{{2
+  # Change profile {{{2
   darken() {
+    export THEME=dark
     if [ -n "$ITERM_PROFILE" ]; then
-      export THEME=dark
       it2prof black
-      reload_profile
+    else
+      term_prof "blue & grey"
     fi
+    reload_profile
   }
 
   lighten() {
+    unset THEME
     if [ -n "$ITERM_PROFILE" ]; then
-      unset THEME
       it2prof white
-      reload_profile
+    else
+      term_prof "blue & white"
     fi
+    reload_profile
   }
 
   reload_profile() {
@@ -57,6 +61,10 @@
       # send escape sequence to change iTerm2 profile
       echo -e "\033]50;SetProfile=$1\007"
     fi
+  }
+
+  term_prof() {
+    osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"$1\""
   }
 
   scrn_prof() {
