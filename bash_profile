@@ -456,26 +456,17 @@
         echo ${GIT_PROMPT}
       fi
     }
-    prompt_dark() {
-      PS1="\[╭╺(${GREEN}\h${NORMAL}:${BLUE}\u${NORMAL}) ${BLUE}\W${NORMAL} \$(grb_git_prompt) ${NORMAL}\n╰╺⧉  "
-    }
     # Build the prompt
-    prompt_light() {
+    prompt() {
       # some chars for reference: <U+F8FF> ⧉ ℔ λ ⦔ Ω №  ✓
 
-      export PS1="\[╭╺(${BLUE}\h${NORMAL}:${BLUE}\u${NORMAL}) ${BLUE}\w${RED}\$(__git_ps1)\[\e[m\n╰╺⧉  "
+      export PS1="\[╭╺(${BLUE}\u${NORMAL}:\W${NORMAL}) \$(grb_git_prompt) ${NORMAL}\n╰╺⧉ "
       export PS2="   > "
       export PS4="   + "
       }
 
     # Call the prompt function
-    case "$THEME" in
-      "dark")
-        prompt_dark;;
-      *)
-        prompt_light;;
-    esac
-
+    prompt
 
 # ::::::::: RVM :::::::::::::::::::::::::::::: {{{1
 
