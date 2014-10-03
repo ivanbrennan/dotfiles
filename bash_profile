@@ -460,7 +460,7 @@
     prompt() {
       # some chars for reference: <U+F8FF> ⧉ ℔ λ ⦔ Ω №  ✓
 
-      export PS1="\[╭╺(${BLUE}\u${NORMAL}:\W${NORMAL}) \$(grb_git_prompt) ${NORMAL}\n╰╺⧉ "
+      export PS1="\[╭╺(${BLUE}\u${NORMAL}:${WHITE}\W${NORMAL}) \$(grb_git_prompt) ${NORMAL}\n╰╺⧉ "
       export PS2="   > "
       export PS4="   + "
       }
