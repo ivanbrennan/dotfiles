@@ -2667,7 +2667,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSColorPanelMode</key>
-	<string>3</string>
+	<string>6</string>
 	<key>NSColorPickerSlidersDefaults</key>
 	<string>3</string>
 	<key>NSFontPanelAttributes</key>
@@ -2675,7 +2675,7 @@
 	<key>NSFontPanelPreviewHeight</key>
 	<real>0.0</real>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Development/resources/dotfiles/terminal/profiles</string>
+	<string>~/Development/resources/dotfiles/terminal/colors</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{805, 448}</string>
 	<key>NSNavPanelExpandedStateForSaveMode</key>
@@ -2715,11 +2715,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>371 108 214 309 0 0 1440 878 </string>
+	<string>240 61 214 309 0 0 1440 878 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>815 21 459 268 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>6 393 924 485 0 0 1440 878 </string>
+	<string>85 220 924 485 0 0 1440 878 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>520 562 400 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
@@ -2727,9 +2727,9 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>171 367 650 501 0 0 1440 878 </string>
+	<string>4 453 1432 425 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>25 290 650 526 0 0 1440 878 </string>
+	<string>723 152 714 726 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>0 532 730 526 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -4323,20 +4323,20 @@
 			<key>Ansi 1 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>0.07696571946144104</real>
 				<key>Green Component</key>
 				<real>0.0</real>
 				<key>Red Component</key>
-				<real>0.60000002384185791</real>
+				<real>0.82454842329025269</real>
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>0.13556945323944092</real>
 				<key>Green Component</key>
-				<real>0.85098040103912354</real>
+				<real>0.64905273914337158</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.085142120718955994</real>
 			</dict>
 			<key>Ansi 11 Color</key>
 			<dict>
@@ -4413,11 +4413,11 @@
 			<key>Ansi 5 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.69803923368453979</real>
+				<real>0.79560238122940063</real>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.27147990465164185</real>
 				<key>Red Component</key>
-				<real>0.69803923368453979</real>
+				<real>0.33839446306228638</real>
 			</dict>
 			<key>Ansi 6 Color</key>
 			<dict>
@@ -4431,11 +4431,11 @@
 			<key>Ansi 7 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.31786838173866272</real>
+				<real>0.99999129772186279</real>
 				<key>Green Component</key>
-				<real>0.40555426478385925</real>
+				<real>0.99997437000274658</real>
 				<key>Red Component</key>
-				<real>0.24305009841918945</real>
+				<real>1</real>
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
@@ -5177,9 +5177,9 @@
 			<key>Ansi 15 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.99999129772186279</real>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.99997437000274658</real>
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
