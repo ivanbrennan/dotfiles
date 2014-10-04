@@ -13,7 +13,7 @@
 
 # ::::::::: Environtment Variables ::::::::::: {{{1
 
-  # Load .bashrc if it exists
+  # Source .bashrc if it exists
   if [ -f ~/.bashrc ]; then
     . ~/.bashrc
   fi
@@ -39,7 +39,7 @@
   }
 
   lighten() {
-    unset THEME
+    export THEME=light
     if [ -n "$ITERM_PROFILE" ]; then
       it2prof white
     else
@@ -366,12 +366,11 @@
 
     # Enable coloring in the terminal
     export CLICOLOR=1
-    case "$THEME" in
-      "dark")
-        export LSCOLORS="GxBxBxDxBxEgEdxbxgxcxd";;
-      *)
-        export LSCOLORS="DxCxcxDxbxegedabagaced";;
-    esac
+    if [[ "$THEME" =~ dark ]]; then
+      export LSCOLORS="GxBxBxDxBxEgEdxbxgxcxd"
+    else
+      export LSCOLORS="DxCxcxDxbxegedabagaced"
+    fi
 
     # Order of attributes:
     #  1. directory
@@ -413,7 +412,7 @@
       # 11. directory writable to others, without sticky bit
       # Default is "exfxcxdxbxegedabagacad"
 
-    # Load .bash_colors if it exists
+    # Source .bash_colors if it exists
     if [ -f ~/.bash_colors.sh ]; then
       . ~/.bash_colors.sh
     fi
