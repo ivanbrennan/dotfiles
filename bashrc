@@ -5,6 +5,11 @@
 
 # ::::::::: Environment Variables ::::::::::::
 
+  # Theme {{{1
+
+    # This variable determines vim background
+    export THEME=dark
+
   # Library Paths {{{1
 
     # These variables tell your shell where they can find certain
