@@ -451,17 +451,24 @@
         fi
         local SINCE_LAST_COMMIT="${COLOR}$(minutes_since_last_commit)m${NORMAL}"
         # The __git_ps1 function inserts the current git branch where %s is
-        local GIT_PROMPT=`__git_ps1 "($WHITE%s$NORMAL|${SINCE_LAST_COMMIT})"`
+        local GIT_PROMPT=`__git_ps1 "(${hi_color}%s$NORMAL|${SINCE_LAST_COMMIT})"`
         echo ${GIT_PROMPT}
       fi
     }
     # Build the prompt
     prompt() {
       # some chars for reference: <U+F8FF> ⧉ ℔ λ ⦔ Ω №  ✓
-
-      export PS1="\[╭╺(${BLUE}\u${NORMAL}:${WHITE}\W${NORMAL}) \$(grb_git_prompt) ${NORMAL}\n╰╺⧉ "
+      export PS1="\[╭╺(${BLUE}\u${NORMAL}:${hi_color}\W${NORMAL}) \$(grb_git_prompt) ${NORMAL}\n╰╺⧉ "
       export PS2="   > "
       export PS4="   + "
+      }
+
+      hi_color() {
+        if [[ "$THEME" =~ dark ]]; then
+          echo $WHITE
+        else
+          echo $BLACK
+        fi
       }
 
     # Call the prompt function
