@@ -11,7 +11,9 @@
   br = branch
   co = checkout
   df = diff
-  lg = log -p
+  dfc = diff --cached
+  lg = "!. ~/.githelpers && pretty_git_log"
+  lp = log -p
   who = shortlog -s --
   pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
   switch = !legit switch \"$@\"
@@ -22,7 +24,6 @@
   sync = !legit sync \"$@\"
   publish = !legit publish \"$@\"
   graft = !legit graft \"$@\"
-  l = "!. ~/.githelpers && pretty_git_log"
 [color]
   ui = true
   diff = auto
