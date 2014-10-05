@@ -14,20 +14,20 @@
 	<key>Ansi 1 Color</key>
 	<dict>
 		<key>Blue Component</key>
-		<real>0.37647059559822083</real>
+		<real>0.10605578869581223</real>
 		<key>Green Component</key>
-		<real>0.42352938652038574</real>
+		<real>0.062972657382488251</real>
 		<key>Red Component</key>
-		<real>1</real>
+		<real>0.90663623809814453</real>
 	</dict>
 	<key>Ansi 10 Color</key>
 	<dict>
 		<key>Blue Component</key>
-		<real>0.67277032136917114</real>
+		<real>0.56880974769592285</real>
 		<key>Green Component</key>
-		<real>1</real>
+		<real>0.87546992301940918</real>
 		<key>Red Component</key>
-		<real>0.80941480398178101</real>
+		<real>0.69699203968048096</real>
 	</dict>
 	<key>Ansi 11 Color</key>
 	<dict>
@@ -68,20 +68,20 @@
 	<key>Ansi 15 Color</key>
 	<dict>
 		<key>Blue Component</key>
-		<real>1</real>
+		<real>0.99999129772186279</real>
 		<key>Green Component</key>
-		<real>1</real>
+		<real>0.99997437000274658</real>
 		<key>Red Component</key>
 		<real>1</real>
 	</dict>
 	<key>Ansi 2 Color</key>
 	<dict>
 		<key>Blue Component</key>
-		<real>0.37647059559822083</real>
+		<real>0.074771061539649963</real>
 		<key>Green Component</key>
-		<real>1</real>
+		<real>0.71625900268554688</real>
 		<key>Red Component</key>
-		<real>0.65882349014282227</real>
+		<real>0.24681025743484497</real>
 	</dict>
 	<key>Ansi 3 Color</key>
 	<dict>
@@ -95,11 +95,11 @@
 	<key>Ansi 4 Color</key>
 	<dict>
 		<key>Blue Component</key>
-		<real>0.99607837200164795</real>
+		<real>0.98925203084945679</real>
 		<key>Green Component</key>
-		<real>0.7960783839225769</real>
+		<real>0.84463256597518921</real>
 		<key>Red Component</key>
-		<real>0.58823531866073608</real>
+		<real>0.53884398937225342</real>
 	</dict>
 	<key>Ansi 5 Color</key>
 	<dict>
@@ -140,11 +140,11 @@
 	<key>Ansi 9 Color</key>
 	<dict>
 		<key>Blue Component</key>
-		<real>0.69019609689712524</real>
+		<real>0.40044984221458435</real>
 		<key>Green Component</key>
-		<real>0.7137255072593689</real>
+		<real>0.43273359537124634</real>
 		<key>Red Component</key>
-		<real>1</real>
+		<real>0.96986830234527588</real>
 	</dict>
 	<key>Background Color</key>
 	<dict>
