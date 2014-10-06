@@ -39,6 +39,8 @@ alias mx="tmux"
 alias mxl="tmux ls"
 alias mxs="tmux new-session -s"
 alias mxa="tmux attach-session -t"
+alias hdv="hb-dev"
+alias hsv="hb-server"
 
 # MV
 alias mvv="mv -v"
