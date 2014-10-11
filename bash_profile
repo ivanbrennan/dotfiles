@@ -48,6 +48,16 @@
     reload_profile
   }
 
+  solarize() {
+    export THEME=dark
+    if [ -n "$ITERM_PROFILE" ]; then
+      it2prof solarized
+    else
+      term_prof "Solarized Dark"
+    fi
+    reload_profile
+  }
+
   reload_profile() {
     if [ -f ~/.bash_profile ]; then
       . ~/.bash_profile
