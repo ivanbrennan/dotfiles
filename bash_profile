@@ -443,25 +443,34 @@
     # Git prompt components
     minutes_since_last_commit() {
       now=`date +%s`
-      last_commit=`git log --pretty=format:'%at' -1`
-      seconds_since_last_commit=$((now-last_commit))
-      minutes_since_last_commit=$((seconds_since_last_commit/60))
-      echo $minutes_since_last_commit
+      last_commit=`git log --pretty=format:'%at' -1 2>/dev/null`
+      if [ "$?" -eq 0 ]; then
+        seconds_since_last_commit=$((now-last_commit))
+        minutes_since_last_commit=$((seconds_since_last_commit/60))
+        echo $minutes_since_last_commit
+      fi
+    }
+    minutes_color() {
+      if [ -z "$1" ]; then
+        return
+      elif [[ "$1" -gt 30 ]]; then
+        echo "${RED}"
+      elif [[  "$1" -gt 10  ]]; then
+        echo "${YELLOW}"
+      else
+        echo "${GREEN}"
+      fi
     }
     grb_git_prompt() {
       local g="$(__gitdir)"
       if [ -n "$g" ]; then
         local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
-        if [ "$MINUTES_SINCE_LAST_COMMIT" -gt 30 ]; then
-          local COLOR=${RED}
-        elif [ "$MINUTES_SINCE_LAST_COMMIT" -gt 10 ]; then
-          local COLOR=${YELLOW}
-        else
-          local COLOR=${GREEN}
+        if [ -n "$MINUTES_SINCE_LAST_COMMIT" ]; then
+          local COLOR=`minutes_color MINUTES_SINCE_LAST_COMMIT`
+          local SINCE_LAST_COMMIT="|${COLOR}$(minutes_since_last_commit)m${NORMAL}"
         fi
-        local SINCE_LAST_COMMIT="${COLOR}$(minutes_since_last_commit)m${NORMAL}"
         # The __git_ps1 function inserts the current git branch where %s is
-        local GIT_PROMPT=`__git_ps1 "(${hi_color}%s$NORMAL|${SINCE_LAST_COMMIT})"`
+        local GIT_PROMPT=`__git_ps1 "(${hi_color}%s$NORMAL${SINCE_LAST_COMMIT})"`
         echo ${GIT_PROMPT}
       fi
     }
