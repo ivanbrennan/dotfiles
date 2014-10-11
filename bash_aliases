@@ -1,7 +1,5 @@
 # Source / Edit bash_profile
 alias sbs=". ~/.bash_profile"
-alias dark="darken"
-alias light="lighten"
 
 alias vi="vim"
 alias vbs="vim ~/.bash_profile"
@@ -39,8 +37,6 @@ alias mx="tmux"
 alias mxl="tmux ls"
 alias mxs="tmux new-session -s"
 alias mxa="tmux attach-session -t"
-alias hdv="hb-dev"
-alias hsv="hb-server"
 
 # MV
 alias mvv="mv -v"

@@ -28,7 +28,7 @@
 # ::::::::: Functions :::::::::::::::::::::::: {{{1
 
   # Change profile {{{2
-  darken() {
+  dark() {
     export THEME=dark
     if [ -n "$ITERM_PROFILE" ]; then
       it2prof black
@@ -38,7 +38,7 @@
     reload_profile
   }
 
-  lighten() {
+  light() {
     export THEME=light
     if [ -n "$ITERM_PROFILE" ]; then
       it2prof white
@@ -48,7 +48,7 @@
     reload_profile
   }
 
-  solarize() {
+  solar() {
     export THEME=dark
     if [ -n "$ITERM_PROFILE" ]; then
       it2prof solarized
@@ -347,6 +347,30 @@
   ssh() {
     echo -en "\033]0;$*\007"
     /usr/bin/ssh $@
+  }
+
+  # tmux work sessions {{{2
+  hdv() {
+    if ! tmux has-session -t hb-dev 2>/dev/null
+    then
+      tmux new-session -d -s hb-dev   -n shell   -c ~/Development/code/handybook
+      tmux new-window     -t hb-dev:8 -n console -c ~/Development/code/handybook
+      tmux new-window     -t hb-dev:9 -n vim     -c ~/Development/code/handybook
+
+      tmux select-window  -t hb-dev:0
+    fi
+    tmux attach-session -t hb-dev
+  }
+  hsv() {
+    if ! tmux has-session -t hb-server 2>/dev/null
+    then
+      tmux new-session -d -s hb-server   -n shell   -c ~/Development/code/handybook
+      tmux new-window     -t hb-server:8 -n server  -c ~/Development/code/handybook
+      tmux new-window     -t hb-server:9 -n ssh     -c ~/Development/code/handybook
+
+      tmux select-window  -t hb-server:0
+    fi
+    tmux attach-session -t hb-server
   }
 
 # ::::::::: Final Config and Plugins ::::::::: {{{1
