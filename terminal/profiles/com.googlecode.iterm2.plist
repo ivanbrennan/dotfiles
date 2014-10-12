@@ -4811,7 +4811,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>815 21 459 268 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>23 391 924 485 0 0 1440 878 </string>
+	<string>510 393 924 485 0 0 1440 878 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>520 562 400 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
@@ -4819,7 +4819,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>720 -22 1440 900 0 0 1440 878 </string>
+	<string>0 0 1440 900 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>723 152 714 726 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -5900,6 +5900,20 @@
 					<key>Text</key>
 					<string>[29~</string>
 				</dict>
+				<key>0x20-0x60000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[34~</string>
+				</dict>
+				<key>0x2c-0x40000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[33~</string>
+				</dict>
 				<key>0x2d-0x40000</key>
 				<dict>
 					<key>Action</key>
@@ -6688,6 +6702,20 @@
 					<key>Text</key>
 					<string>[29~</string>
 				</dict>
+				<key>0x20-0x60000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[34~</string>
+				</dict>
+				<key>0x2c-0x40000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[33~</string>
+				</dict>
 				<key>0x2d-0x40000</key>
 				<dict>
 					<key>Action</key>
@@ -7169,7 +7197,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.031765438616275787</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -7487,6 +7515,20 @@
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[29~</string>
+				</dict>
+				<key>0x20-0x60000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[34~</string>
+				</dict>
+				<key>0x2c-0x40000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[33~</string>
 				</dict>
 				<key>0x2d-0x40000</key>
 				<dict>
@@ -8058,7 +8100,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-10-11T02:27:56Z</date>
+	<date>2014-10-12T02:39:44Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
