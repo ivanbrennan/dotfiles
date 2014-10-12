@@ -9,7 +9,7 @@
 
     # This variable determines vim background
     if [ -z "$THEME" ]; then
-      export THEME=dark
+      export THEME=light
     fi
 
   # Library Paths {{{1
