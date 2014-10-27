@@ -27,6 +27,9 @@ alias cellar="cd /usr/local/Cellar"
 alias desk="cd ~/Desktop"
 alias hb="cd ~/Development/code/handybook"
 
+# DF
+alias dfh="df -h"
+
 # Screen
 alias sls="screen -ls"
 alias sr="screen -r"
