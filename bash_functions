@@ -366,8 +366,11 @@ greplace() {
     search_pattern=$2
     replacement=$3
 
-    find . -name "$file_pattern" -exec grep -lw "$search_pattern" {} \; |
-    xargs sed -i '' "s/[[:<:]]$search_pattern[[:>:]]/$replacement/g"
+    # This is built for BSD grep and the sed bundled with OS X.
+    # GNU grep takes -Z instead of --null, and other versions of sed may not support the -i '' syntax.
+
+    find . -name "$file_pattern" -exec grep -lw --null "$search_pattern" {} + |
+    xargs -0 sed -i '' "s/[[:<:]]$search_pattern[[:>:]]/$replacement/g"
   fi
 }
 
