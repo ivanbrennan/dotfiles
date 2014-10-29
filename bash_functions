@@ -346,19 +346,19 @@ hsv() {
 
 # search and replace {{{1
 rupl() {
-  if [ "${#}" != 2 ]; then
+  if [ "$#" != 2 ]; then
     echo "Usage: rupl search_pattern replacement"
     return 1
   else
     search_pattern=$1
     replacement=$2
 
-    greplace '**.rb' "${search_pattern}" "${replacement}"
+    greplace '**.rb' "$search_pattern" "$replacement"
   fi
 }
 
 greplace() {
-  if [ "${#}" != 3 ]; then
+  if [ "$#" != 3 ]; then
     echo "Usage: greplace file_pattern search_pattern replacement"
     return 1
   else
@@ -366,9 +366,8 @@ greplace() {
     search_pattern=$2
     replacement=$3
 
-    find . -name "${file_pattern}" |
-    xargs grep -rwl "${search_pattern}" |
-    xargs sed -i '' "s/[[:<:]]${search_pattern}[[:>:]]/${replacement}/g"
+    find . -name "$file_pattern" -exec grep -lw "$search_pattern" {} \; |
+    xargs sed -i '' "s/[[:<:]]$search_pattern[[:>:]]/$replacement/g"
   fi
 }
 
