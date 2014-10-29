@@ -367,7 +367,7 @@ greplace() {
     replacement=$3
 
     find . -name "${file_pattern}" |
-    xargs grep -rl "\b${search_pattern}\b" |
+    xargs grep -rwl "${search_pattern}" |
     xargs sed -i '' "s/[[:<:]]${search_pattern}[[:>:]]/${replacement}/g"
   fi
 }
