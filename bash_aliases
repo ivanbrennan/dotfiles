@@ -25,7 +25,7 @@ alias dots="cd ~/Development/resources/dotfiles"
 alias vims="cd ~/.vim"
 alias cellar="cd /usr/local/Cellar"
 alias desk="cd ~/Desktop"
-alias hb="cd ~/Development/code/handybook"
+alias hb="cd ~/Development/code/handy"
 
 # DF
 alias dfh="df -h"
@@ -33,7 +33,6 @@ alias dfh="df -h"
 # Screen
 alias sls="screen -ls"
 alias sr="screen -r"
-alias hb="cd ~/Development/code/handybook && screen -S handybook -c ~/.screenhb"
 alias ng="cd ~/Development/code/angular-phonecat && screen -S angular -c ~/.screenng"
 
 # tmux
