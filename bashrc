@@ -64,6 +64,11 @@
       # DON'T EXPORT THIS, as it can screw up scripts.
       CDPATH=".:~/Development:~"
 
+    # USR_PATHS {{{2
+
+      # ANDROID SDK
+      export ANDROID_HOME="/usr/local/opt/android-sdk"
+
     # PATH {{{2
 
       export PATH="/usr/local/bin:/Users/ivan/.rvm/bin:$PATH"
