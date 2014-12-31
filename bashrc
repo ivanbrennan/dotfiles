@@ -12,6 +12,11 @@
       export THEME=dark
     fi
 
+  # Year {{{1
+
+  this_year=$(date +'%Y')
+  export YEAR=$this_year
+
   # Library Paths {{{1
 
     # These variables tell your shell where they can find certain
