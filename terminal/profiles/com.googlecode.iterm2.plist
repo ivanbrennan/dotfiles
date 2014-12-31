@@ -4811,7 +4811,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>815 21 459 268 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>87 246 924 485 0 0 1280 778 </string>
+	<string>243 599 924 485 0 0 1920 1200 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>520 562 400 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
@@ -4819,11 +4819,11 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1280 800 0 0 1280 778 </string>
+	<string>0 0 1920 1200 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>2421 656 650 526 1920 -277 1200 1920 </string>
+	<string>1920 -207 1194 1864 1920 -235 1200 1898 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>270 252 650 526 0 0 1280 778 </string>
+	<string>0 712 234 66 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>-419 -548 650 526 -1049 -800 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -8011,7 +8011,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.17411704361438751</real>
+			<real>0.070042066276073456</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -8102,7 +8102,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-10-22T02:17:36Z</date>
+	<date>2014-12-19T16:05:54Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
