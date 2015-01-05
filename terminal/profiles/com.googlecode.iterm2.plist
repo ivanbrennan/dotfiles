@@ -4759,9 +4759,9 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSColorPanelMode</key>
-	<string>6</string>
+	<string>1</string>
 	<key>NSColorPickerSlidersDefaults</key>
-	<string>3</string>
+	<string>1</string>
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
 	<key>NSFontPanelPreviewHeight</key>
@@ -4807,7 +4807,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>61 163 214 309 0 0 1440 878 </string>
+	<string>293 112 214 309 0 0 1440 878 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>815 21 459 268 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
@@ -7429,11 +7429,11 @@
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.54162740707397461</real>
+				<real>0.61176472902297974</real>
 				<key>Green Component</key>
-				<real>0.37286636233329773</real>
+				<real>0.45098039507865906</real>
 				<key>Red Component</key>
-				<real>0.046323690563440323</real>
+				<real>0.0</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
@@ -7912,7 +7912,7 @@
 			<key>Silence Bell</key>
 			<true/>
 			<key>Smart Cursor Color</key>
-			<false/>
+			<true/>
 			<key>Smart Selection Rules</key>
 			<array>
 				<dict>
