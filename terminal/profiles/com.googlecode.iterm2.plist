@@ -4759,7 +4759,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSColorPanelMode</key>
-	<string>3</string>
+	<string>6</string>
 	<key>NSColorPickerSlidersDefaults</key>
 	<string>3</string>
 	<key>NSFontPanelAttributes</key>
@@ -4767,7 +4767,7 @@
 	<key>NSFontPanelPreviewHeight</key>
 	<real>0.0</real>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Development/resources/dotfiles/terminal/colors</string>
+	<string>~/Pictures</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{805, 448}</string>
 	<key>NSNavPanelExpandedStateForSaveMode</key>
@@ -4807,11 +4807,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>783 52 214 309 0 0 1280 778 </string>
+	<string>81 124 214 309 0 0 1440 878 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>815 21 459 268 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>243 599 924 485 0 0 1920 1200 </string>
+	<string>321 111 924 485 0 0 1440 878 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>520 562 400 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
@@ -4819,13 +4819,13 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1920 1200 0 0 1920 1178 </string>
+	<string>720 4 720 874 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1920 -207 1194 1864 1920 -235 1200 1898 </string>
+	<string>723 352 650 526 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 712 234 66 0 0 1920 1200 </string>
+	<string>0 532 730 526 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>-419 -548 650 526 -1049 -800 1280 778 </string>
+	<string>114 343 730 527 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
 	<string>77 269 730 527 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
@@ -5201,7 +5201,7 @@
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>O2P</string>
+					<string>[25~</string>
 				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
@@ -6395,7 +6395,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.035426683723926544</real>
+			<real>0.044330157339572906</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -6615,20 +6615,20 @@
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.49803921580314636</real>
+				<real>0.49437925219535828</real>
 				<key>Green Component</key>
-				<real>0.49803921580314636</real>
+				<real>0.37356963753700256</real>
 				<key>Red Component</key>
-				<real>0.49803921580314636</real>
+				<real>0.33974188566207886</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>1</real>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>1</real>
 			</dict>
 			<key>Cursor Type</key>
 			<integer>2</integer>
@@ -7197,7 +7197,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.071498245000839233</real>
+			<real>0.016995655372738838</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -8011,7 +8011,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.070042066276073456</real>
+			<real>0.0</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -8102,7 +8102,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2014-12-19T16:05:54Z</date>
+	<date>2015-01-04T19:54:43Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
