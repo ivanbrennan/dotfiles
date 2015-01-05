@@ -7431,18 +7431,18 @@
 				<key>Blue Component</key>
 				<real>0.59546452760696411</real>
 				<key>Green Component</key>
-				<real>0.59546452760696411</real>
+				<real>0.41926246881484985</real>
 				<key>Red Component</key>
-				<real>0.59546452760696411</real>
+				<real>0.2513868510723114</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>1</real>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>1</real>
 			</dict>
 			<key>Cursor Type</key>
 			<integer>2</integer>
