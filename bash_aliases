@@ -55,3 +55,6 @@ alias dld="open ~/Downloads"
 
 # Git
 alias gst="git status"
+
+# Spork
+alias bork="spork &>/dev/null &"
