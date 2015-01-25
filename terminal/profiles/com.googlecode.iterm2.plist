@@ -4819,7 +4819,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>381 345 989 526 0 0 1440 878 </string>
+	<string>4 453 1432 425 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>723 352 650 526 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -7521,7 +7521,7 @@
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[34~</string>
+					<string>[35~</string>
 				</dict>
 				<key>0x2c-0x40000</key>
 				<dict>
@@ -7536,6 +7536,13 @@
 					<integer>11</integer>
 					<key>Text</key>
 					<string>0x1f</string>
+				</dict>
+				<key>0x2e-0x40000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[34~</string>
 				</dict>
 				<key>0x32-0x40000</key>
 				<dict>
@@ -8011,7 +8018,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.024734189733862877</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -8102,7 +8109,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-01-04T19:54:43Z</date>
+	<date>2015-01-25T13:48:13Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
