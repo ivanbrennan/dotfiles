@@ -4811,7 +4811,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>815 21 459 268 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>416 247 924 485 0 0 1440 900 </string>
+	<string>469 363 924 485 0 0 1440 878 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>520 562 400 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
@@ -4819,7 +4819,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>720 4 720 874 0 0 1440 900 </string>
+	<string>720 345 650 526 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>723 352 650 526 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -6707,7 +6707,7 @@
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[34~</string>
+					<string>[35~</string>
 				</dict>
 				<key>0x2c-0x40000</key>
 				<dict>
@@ -6719,9 +6719,16 @@
 				<key>0x2d-0x40000</key>
 				<dict>
 					<key>Action</key>
-					<integer>11</integer>
+					<integer>10</integer>
 					<key>Text</key>
-					<string>0x1f</string>
+					<string>[36~</string>
+				</dict>
+				<key>0x2e-0x40000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[34~</string>
 				</dict>
 				<key>0x32-0x40000</key>
 				<dict>
@@ -6806,6 +6813,13 @@
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[25~</string>
+				</dict>
+				<key>0xd-0x60000</key>
+				<dict>
+					<key>Action</key>
+					<integer>10</integer>
+					<key>Text</key>
+					<string>[37~</string>
 				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
@@ -7593,13 +7607,6 @@
 					<key>Text</key>
 					<string>0x7f</string>
 				</dict>
-				<key>0x5f-0x60000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[37~</string>
-				</dict>
 				<key>0x7f-0x40000</key>
 				<dict>
 					<key>Action</key>
@@ -8123,7 +8130,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-01-25T13:48:13Z</date>
+	<date>2015-01-27T13:48:50Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
