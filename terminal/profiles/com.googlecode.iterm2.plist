@@ -4759,15 +4759,15 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSColorPanelMode</key>
-	<string>1</string>
+	<string>3</string>
 	<key>NSColorPickerSlidersDefaults</key>
-	<string>1</string>
+	<string>3</string>
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
 	<key>NSFontPanelPreviewHeight</key>
 	<real>0.0</real>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Pictures</string>
+	<string>~/Development/resources/dotfiles/terminal/colors</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{805, 448}</string>
 	<key>NSNavPanelExpandedStateForSaveMode</key>
@@ -4807,11 +4807,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>293 112 214 309 0 0 1440 878 </string>
+	<string>783 52 214 309 0 0 1280 778 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>815 21 459 268 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>469 363 924 485 0 0 1440 878 </string>
+	<string>459 153 924 485 0 0 1920 1178 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>520 562 400 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
@@ -4819,13 +4819,13 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>720 4 720 874 0 0 1440 900 </string>
+	<string>351 471 650 526 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>723 352 650 526 0 0 1440 878 </string>
+	<string>196 421 650 526 0 0 1920 1178 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 532 730 526 0 0 1920 1058 </string>
+	<string>0 712 234 66 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>114 343 730 527 0 0 1440 878 </string>
+	<string>-419 -548 650 526 -1049 -800 1280 778 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
 	<string>77 269 730 527 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
@@ -6716,13 +6716,6 @@
 					<key>Text</key>
 					<string>[33~</string>
 				</dict>
-				<key>0x2d-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[36~</string>
-				</dict>
 				<key>0x2e-0x40000</key>
 				<dict>
 					<key>Action</key>
@@ -7544,13 +7537,6 @@
 					<key>Text</key>
 					<string>[33~</string>
 				</dict>
-				<key>0x2d-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[36~</string>
-				</dict>
 				<key>0x2e-0x40000</key>
 				<dict>
 					<key>Action</key>
@@ -8130,7 +8116,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-01-27T13:48:50Z</date>
+	<date>2015-01-28T15:01:37Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
