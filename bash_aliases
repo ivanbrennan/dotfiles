@@ -20,12 +20,12 @@ alias l="ls -lAh"
 # CD
 alias cd..="cd .."
 alias cd-="cd -"
-alias code="cd ~/Development/code"
-alias dots="cd ~/Development/resources/dotfiles"
-alias vims="cd ~/.vim"
-alias cellar="cd /usr/local/Cellar"
-alias desk="cd ~/Desktop"
-alias hb="cd ~/Development/code/handy"
+alias code="pushd ~/Development/code"
+alias dots="pushd ~/Development/resources/dotfiles"
+alias vims="pushd ~/Development/resources/vim"
+alias cellar="pushd /usr/local/Cellar"
+alias desk="pushd ~/Desktop"
+alias hb="pushd ~/Development/code/handy"
 
 # DF
 alias dfh="df -h"
