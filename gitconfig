@@ -11,7 +11,7 @@
   br = branch
   co = checkout
   df = diff
-  dst = diff --cached
+  ds = diff --cached
   lg = "!. ~/.githelpers && pretty_git_log"
   lp = log -p
   who = shortlog -s --
