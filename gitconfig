@@ -24,6 +24,7 @@
   sync = !legit sync \"$@\"
   publish = !legit publish \"$@\"
   graft = !legit graft \"$@\"
+  ctags = !.git/hooks/ctags
 [color]
   ui = true
   diff = auto
