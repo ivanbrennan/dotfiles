@@ -61,3 +61,7 @@ alias gst="git status"
 
 # Spork
 alias bork="spork &>/dev/null &"
+
+# iOS Simulator
+alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
+
