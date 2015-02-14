@@ -71,7 +71,7 @@
 
     # PATH {{{2
 
-      export PATH="/usr/local/bin:/Users/ivan/.rvm/bin:$PATH"
+      export PATH="/usr/local/bin:$PATH"
 
       # Would this be better? (Note: USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin")
       #export PATH="$USR_PATHS:$PATH"
@@ -79,5 +79,3 @@
       ### Added by the Heroku Toolbelt
       export PATH="/usr/local/heroku/bin:$PATH"
 
-      # Add RVM to PATH for scripting
-      PATH=$PATH:$HOME/.rvm/bin
