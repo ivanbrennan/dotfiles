@@ -172,3 +172,7 @@
     # Call the prompt function
     prompt
 
+# ::::::::: rbenv :::::::::::::::::::::::::::: {{{1
+
+    if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
