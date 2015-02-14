@@ -13,8 +13,8 @@
 
   # Year {{{1
 
-  this_year=$(date +'%Y')
-  export YEAR=$this_year
+  current_year=$(date +'%Y')
+  export YEAR=$current_year
 
   # Library Paths {{{1
 
