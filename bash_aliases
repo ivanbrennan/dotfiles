@@ -16,6 +16,7 @@ alias vhb="vim ~/.screenhb"
 
 # LS
 alias l="ls -lAh"
+alias la="ls -A"
 
 # CD
 alias cd..="cd .."
