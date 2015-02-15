@@ -1,7 +1,7 @@
 # Change profile {{{1
 dark() {
   export THEME=dark
-  if [ -n "$ITERM_PROFILE" ]; then
+  if [ -n ${ITERM_PROFILE+x} ]; then
     it2prof black
   else
     term_prof "blue & grey"
@@ -11,7 +11,7 @@ dark() {
 
 light() {
   export THEME=light
-  if [ -n "$ITERM_PROFILE" ]; then
+  if [ -n ${ITERM_PROFILE+x} ]; then
     it2prof white
   else
     term_prof "blue & white"
@@ -21,7 +21,7 @@ light() {
 
 solar() {
   export THEME=dark
-  if [ -n "$ITERM_PROFILE" ]; then
+  if [ -n ${ITERM_PROFILE+x} ]; then
     it2prof solarized
   else
     term_prof "Solarized Dark"
@@ -49,7 +49,7 @@ term_prof() {
 }
 
 scrn_prof() {
-  if [ -n "$TMUX" ]; then
+  if [ -n ${TMUX+x} ]; then
     # tell tmux to send escape sequence to underlying terminal
     echo -e "\033Ptmux;\033\033]50;SetProfile=$1\007\033\\"
   else
