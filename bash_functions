@@ -77,6 +77,15 @@ hidden() {
   killall -HUP Finder
 }
 
+# Toggle LESS -XR {{{1
+xr() {
+  if [ -z ${LESS+x} ]; then
+    export LESS="-XR"
+  else
+    unset LESS
+  fi
+}
+
 # Run just one MacVim {{{1
 ivim() {
   if [ -n "$1" ]; then
