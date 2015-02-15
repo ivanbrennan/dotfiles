@@ -40,6 +40,13 @@
     # Append to the history file when exiting instead of overwriting it
       shopt -s histappend
 
+  # Output Control {{{2
+    # Disable output control in interactive shells
+    # so Ctrl-S can be used in i-reverse-search
+    case "$-" in
+      *i*) stty -ixon;;
+    esac
+
   # Case insensitive tab autocomplete {{{2
   bind "set completion-ignore-case on"
 
