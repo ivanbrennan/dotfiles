@@ -1,21 +1,20 @@
-# bashrc for interactive bash(1) shells.
+# bashrc for interactive shells
 
-# bashrc is meant for non-login invocations. It should
-# not print any output - that makes tools like scp fail.
+# bashrc is meant for non-login shells. It should not
+# print any output, as that causes tools like scp fail.
 
 # ::::::::: Environment Variables ::::::::::::
 
   # Theme {{{1
 
-    # This variable determines vim background
     if [ -z "$THEME" ]; then
       export THEME=dark
     fi
 
   # Year {{{1
 
-  this_year=$(date +'%Y')
-  export YEAR=$this_year
+  current_year=$(date +'%Y')
+  export YEAR=$current_year
 
   # Library Paths {{{1
 
@@ -33,15 +32,11 @@
     export GIT_MERGE_AUTOEDIT="no"
 
     # Editors - MacVim 7.4 option
-    # Tells your shell that when a program requires various editors, use MacVim.
-    # The -f flag tells your shell to wait until MacVim exits
+    # Tells your shell that when a program requires various editors, use Vim.
     export VISUAL="vim"
     export SVN_EDITOR="vim"
     export GIT_EDITOR="vim"
     export EDITOR="vim"
-
-    # LESS - Don't clobber the alternate screen
-    export LESS="-XR"
 
   # Paths {{{1
 
@@ -71,7 +66,7 @@
 
     # PATH {{{2
 
-      export PATH="/usr/local/bin:/Users/ivan/.rvm/bin:$PATH"
+      export PATH="/usr/local/bin:$PATH"
 
       # Would this be better? (Note: USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin")
       #export PATH="$USR_PATHS:$PATH"
@@ -79,5 +74,3 @@
       ### Added by the Heroku Toolbelt
       export PATH="/usr/local/heroku/bin:$PATH"
 
-      # Add RVM to PATH for scripting
-      PATH=$PATH:$HOME/.rvm/bin

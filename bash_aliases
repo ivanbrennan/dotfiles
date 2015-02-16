@@ -16,6 +16,7 @@ alias vhb="vim ~/.screenhb"
 
 # LS
 alias l="ls -lAh"
+alias la="ls -A"
 
 # CD
 alias cd..="cd .."
@@ -58,6 +59,7 @@ alias dld="open ~/Downloads"
 
 # Git
 alias gst="git status"
+alias stag="git diff --cached"
 
 # Spork
 alias bork="spork &>/dev/null &"
