@@ -59,7 +59,7 @@ alias dld="open ~/Downloads"
 
 # Git
 alias gst="git status"
-alias stag="git diff --cached"
+alias gsc="git diff --cached"
 
 # Spork
 alias bork="spork &>/dev/null &"
