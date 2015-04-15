@@ -10,7 +10,7 @@
   st = status
   br = branch
   co = checkout
-  ap = add -p
+  adp = add -p
   df = diff
   ca = diff --cached
   lg = "!. ~/.githelpers && pretty_git_log"
