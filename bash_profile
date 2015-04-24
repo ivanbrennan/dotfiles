@@ -160,11 +160,20 @@
         echo ${GIT_PROMPT}
       fi
     }
+
     # Build the prompt
+    current_ps1() {
+      # some chars for reference: ⧉ ℔ ✓ ❮ ❯ ∷
+      if [[ "$1" =~ simple ]]; then
+        echo "\[${BLUE}\u${NORMAL}|${hi_color}\W${NORMAL} \$(grb_git_prompt) ${NORMAL}\n❯ "
+      else
+        echo "\[╭╺(${BLUE}\u${NORMAL}:${hi_color}\W${NORMAL}) \$(grb_git_prompt) ${NORMAL}\n╰╺⧉ "
+      fi
+    }
+
     prompt() {
-      # some chars for reference: <U+F8FF> ⧉ ℔ λ ⦔ Ω №  ✓
-      export PS1="\[╭╺(${BLUE}\u${NORMAL}:${hi_color}\W${NORMAL}) \$(grb_git_prompt) ${NORMAL}\n╰╺⧉ "
-      export PS2="   > "
+      export PS1=`current_ps1 simple`
+      export PS2="   ❯ "
       export PS4="   + "
       }
 
