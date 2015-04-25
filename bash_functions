@@ -100,6 +100,8 @@ ivim() {
 # Easily grep for a matching process {{{1
 # USE: psg postgres
 psg() {
+  local FIRST
+  local REST
   FIRST=`echo $1 | sed -e 's/^\(.\).*/\1/'`
   REST=`echo $1 | sed -e 's/^.\(.*\)/\1/'`
   ps aux | grep "[$FIRST]$REST"
@@ -108,6 +110,8 @@ psg() {
 # Easily grep for a matching file {{{1
 # USE: lg filename
 lg() {
+  local FIRST
+  local REST
   FIRST=`echo $1 | sed -e 's/^\(.\).*/\1/'`
   REST=`echo $1 | sed -e 's/^.\(.*\)/\1/'`
   ls -la | grep "[$FIRST]$REST"
@@ -152,6 +156,8 @@ rpid() {
 }
 
 p_start() {
+  local proc
+  local name
   proc=$1; shift
   name=$1; shift
   if ! running "$proc"; then
@@ -162,6 +168,8 @@ p_start() {
 }
 
 p_stop() {
+  local proc
+  local name
   proc=$1; shift
   name=$1; shift
   if running "$proc"; then
@@ -172,6 +180,8 @@ p_stop() {
 }
 
 p_status() {
+  local proc
+  local name
   proc=$1; shift
   name=$1; shift
   if running "$proc"; then
@@ -359,6 +369,8 @@ rupl() {
     echo "Usage: rupl search_pattern replacement"
     return 1
   else
+    local search_pattern
+    local replacement
     search_pattern=$1
     replacement=$2
 
@@ -371,6 +383,9 @@ greplace() {
     echo "Usage: greplace file_pattern search_pattern replacement"
     return 1
   else
+    local file_pattern
+    local search_pattern
+    local replacement
     file_pattern=$1
     search_pattern=$2
     replacement=$3

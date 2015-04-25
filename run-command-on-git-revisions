@@ -39,6 +39,7 @@ abort_if_dirty_repo() {
         echo "You have unstaged changes that would be lost! Aborting."
         exit 1
     fi
+    local untracked
     untracked=$(git ls-files --exclude-standard --others)
     if [ -n "$untracked" ]; then
         echo "You have untracked files that could be overwritten! Aborting."
@@ -59,6 +60,7 @@ usage() {
 }
 
 run_tests() {
+    local revs
     revs=`log_command git rev-list --reverse ${start_ref}..${end_ref}`
 
     for rev in $revs; do
