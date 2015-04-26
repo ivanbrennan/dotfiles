@@ -346,7 +346,7 @@ hdv() {
     tmux new-session -d -s hb-dev   -n shell   -c ~/Development/code/handy/handybook
     tmux new-window     -t hb-dev:9 -n vim     -c ~/Development/code/handy/handybook
 
-    tmux select-window  -t hb-dev:0
+    tmux select-window  -t hb-dev:9
   fi
   tmux attach-session -t hb-dev
 }
