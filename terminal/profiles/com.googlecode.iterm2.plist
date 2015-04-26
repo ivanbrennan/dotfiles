@@ -4623,7 +4623,7 @@
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DimInactiveSplitPanes</key>
-	<true/>
+	<false/>
 	<key>DimOnlyText</key>
 	<false/>
 	<key>DisableFullscreenTransparency</key>
@@ -5437,11 +5437,11 @@
 			<key>Name</key>
 			<string>white</string>
 			<key>Non Ascii Font</key>
-			<string>SauceCodePowerline-Regular 16</string>
+			<string>SauceCodePowerline-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SauceCodePowerline-Regular 15</string>
+			<string>SauceCodePowerline-Regular 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -6230,11 +6230,11 @@
 			<key>Name</key>
 			<string>black</string>
 			<key>Non Ascii Font</key>
-			<string>SauceCodePowerline-Regular 16</string>
+			<string>SauceCodePowerline-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SauceCodePowerline-Regular 15</string>
+			<string>SauceCodePowerline-Regular 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -7023,11 +7023,11 @@
 			<key>Name</key>
 			<string>Visor</string>
 			<key>Non Ascii Font</key>
-			<string>SauceCodePowerline-Regular 16</string>
+			<string>SauceCodePowerline-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SauceCodePowerline-Regular 15</string>
+			<string>SauceCodePowerline-Regular 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
