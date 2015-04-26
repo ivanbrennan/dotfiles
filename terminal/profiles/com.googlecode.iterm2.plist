@@ -4809,9 +4809,9 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>293 112 214 309 0 0 1440 878 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>815 21 459 268 0 0 1440 878 </string>
+	<string>838 4 459 268 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>330 282 924 485 0 0 1440 878 </string>
+	<string>270 354 924 485 0 0 1440 878 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>528 562 384 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
@@ -4819,7 +4819,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1440 900 0 0 1440 878 </string>
+	<string>0 346 650 526 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>395 178 650 526 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -5437,11 +5437,11 @@
 			<key>Name</key>
 			<string>white</string>
 			<key>Non Ascii Font</key>
-			<string>DroidSansMonoForPowerline 13</string>
+			<string>SauceCodePowerline-Regular 16</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SauceCodePowerline-Regular 14</string>
+			<string>SauceCodePowerline-Regular 15</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -6230,11 +6230,11 @@
 			<key>Name</key>
 			<string>black</string>
 			<key>Non Ascii Font</key>
-			<string>DroidSansMonoForPowerline 13</string>
+			<string>SauceCodePowerline-Regular 16</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SauceCodePowerline-Regular 14</string>
+			<string>SauceCodePowerline-Regular 15</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -7023,11 +7023,11 @@
 			<key>Name</key>
 			<string>Visor</string>
 			<key>Non Ascii Font</key>
-			<string>DroidSansMonoForPowerline 13</string>
+			<string>SauceCodePowerline-Regular 16</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SauceCodePowerline-Regular 14</string>
+			<string>SauceCodePowerline-Regular 15</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -7272,7 +7272,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-02-22T00:59:38Z</date>
+	<date>2015-04-25T22:28:07Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
