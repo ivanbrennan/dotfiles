@@ -47,3 +47,5 @@
 	tool = opendiff
 [init]
 	templatedir = ~/.git_template
+[advice]
+	statusHints = false
