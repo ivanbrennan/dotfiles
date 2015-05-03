@@ -10,10 +10,6 @@ alias vmx="vim ~/.tmux.conf"
 # Edit vimrc
 alias vmc="vim ~/.vimrc"
 
-# Edit screenrc
-alias vsc="vim ~/.screenrc"
-alias vhb="vim ~/.screenhb"
-
 # LS
 alias l="ls -lAh"
 alias la="ls -A"
