@@ -55,6 +55,7 @@ alias dld="open ~/Downloads"
 
 # Git
 alias gst="git status"
+alias gasp="git add -p db/schema.rb"
 
 # Spork
 alias bork="spork &>/dev/null &"
