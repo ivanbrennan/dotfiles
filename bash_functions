@@ -339,7 +339,7 @@ ssh() {
   /usr/bin/ssh $@
 }
 
-# tmux work sessions {{{1
+# tmux {{{1
 hdv() {
   if ! tmux has-session -t hb-dev 2>/dev/null
   then
@@ -361,6 +361,18 @@ hsv() {
     tmux select-window  -t hb-server:0
   fi
   tmux attach-session -t hb-server
+}
+
+gmit() {
+  if git rev-parse --git-dir >/dev/null 2>&1 && [ -n "${TMUX+x}" ]; then
+    local WIDTH=`tmux display-message -p '#{pane_width}'`
+    local HEIGHT=`tmux display-message -p '#{pane_height}'`
+    if [ ${WIDTH} -gt $(( ${HEIGHT} * 3 )) ]; then
+      $(tmux split-window -h -l 80 "git commit")
+    else
+      $(tmux split-window -v -p 30 "git commit")
+    fi
+  fi
 }
 
 # search and replace {{{1
