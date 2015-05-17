@@ -368,7 +368,7 @@ gmit() {
     local WIDTH=$( tmux display-message -p '#{pane_width}' )
     local HEIGHT=$( tmux display-message -p '#{pane_height}' )
     if [ ${WIDTH} -gt $(( ${HEIGHT} * 3 )) ]; then
-      $( tmux split-window -h -l 80 "git commit" )
+      $( tmux split-window -h -l 85 "git commit" )
     else
       $( tmux split-window -v -p 30 "git commit" )
     fi
