@@ -27,6 +27,9 @@ alias pdot="pushd ~/Development/resources/dotfiles"
 alias pvimc="pushd ~/Development/resources/dotvim"
 alias pcell="cd /usr/local/Cellar"
 
+# JB
+alias jb="jobs"
+
 # DF
 alias dfh="df -h"
 
