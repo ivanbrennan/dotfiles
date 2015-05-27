@@ -62,7 +62,7 @@
     # CDPATH {{{2
 
       # DON'T EXPORT THIS, as it can screw up scripts.
-      CDPATH=".:~/Development:~"
+      CDPATH=".:~/Development:~/Development/resources:~"
 
     # PATH {{{2
 
