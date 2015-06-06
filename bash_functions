@@ -97,6 +97,10 @@ ivim() {
   fi
 }
 
+# Launch gui emacs {{{1
+ema() {
+  /Applications/Emacs.app/Contents/MacOS/Emacs "$@"
+}
 # Easily grep for a matching process {{{1
 # USE: psg postgres
 psg() {
