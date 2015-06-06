@@ -66,7 +66,7 @@ path() {
 
 # Toggle hidden files {{{1
 hidden() {
-  if [[ $( defaults read com.apple.finder AppleShowAllFiles ) == "NO" ]]
+  if [[ $( defaults read com.apple.finder AppleShowAllFiles ) == "FALSE" ]]
   then
     defaults write com.apple.finder AppleShowAllFiles TRUE
     echo "Showing hidden"
