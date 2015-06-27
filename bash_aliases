@@ -33,5 +33,5 @@ alias rmi="rm -i"
 alias grails="ps aux | grep '[r]ails'"
 
 # Vim
-alias iv="vim"
+alias v="vim"
 
