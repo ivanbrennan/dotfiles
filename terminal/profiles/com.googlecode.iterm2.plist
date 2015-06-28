@@ -4811,7 +4811,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>838 4 459 268 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>270 354 924 485 0 0 1440 900 </string>
+	<string>219 195 924 485 0 0 1440 878 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>528 562 384 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
@@ -4819,9 +4819,9 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>720 4 720 874 0 0 1440 900 </string>
+	<string>720 345 650 526 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>395 178 650 526 0 0 1440 878 </string>
+	<string>171 329 650 526 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>0 352 650 526 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -5104,13 +5104,6 @@
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[30~</string>
-				</dict>
-				<key>0x20-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[29~</string>
 				</dict>
 				<key>0x20-0x60000</key>
 				<dict>
@@ -5897,13 +5890,6 @@
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[30~</string>
-				</dict>
-				<key>0x20-0x40000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[29~</string>
 				</dict>
 				<key>0x20-0x60000</key>
 				<dict>
@@ -7204,6 +7190,10 @@
 			<string>/Users/ivan</string>
 		</dict>
 	</array>
+	<key>NoSyncTimeOfLastPromo</key>
+	<real>455168952.58686101</real>
+	<key>NoSyncTimeOfLastPromoDownload</key>
+	<real>457145639.44307202</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -7272,7 +7262,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-05-05T01:47:29Z</date>
+	<date>2015-06-28T19:15:19Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -10828,6 +10818,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.0</string>
+	<string>2.1.1</string>
 </dict>
 </plist>
