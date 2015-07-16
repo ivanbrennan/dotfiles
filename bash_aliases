@@ -12,6 +12,8 @@ alias dfh="df -h"
 # Git
 alias gst="git status"
 alias gasp="git add -p db/schema.rb"
+alias gpr="clear && git log origin/development.. --reverse"
+alias gpc="git log origin/development.. -- | wc -l"
 
 # iOS Simulator
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
