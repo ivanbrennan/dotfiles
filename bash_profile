@@ -63,7 +63,7 @@
     # Enable coloring in the terminal
     export CLICOLOR=1
     if [[ "$THEME" =~ dark ]]; then
-      export LSCOLORS="GxBxBxDxBxEgEdxbxgxcxd"
+      export LSCOLORS="GxBxBxDxBxEgEaxbxgxcxd"
     else
       export LSCOLORS="DxfxCxDxbxegedabagaced"
     fi
