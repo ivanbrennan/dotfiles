@@ -18,9 +18,6 @@ alias gpc="git log origin/development.. -- | wc -l"
 # iOS Simulator
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
 
-# JB
-alias jb="jobs"
-
 # LS
 alias l="ls -lAh"
 alias la="ls -A"
