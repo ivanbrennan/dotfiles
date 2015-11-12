@@ -164,7 +164,7 @@
           local COLOR
           local SINCE_LAST_COMMIT
           COLOR=`minutes_color MINUTES_SINCE_LAST_COMMIT`
-          SINCE_LAST_COMMIT="|${COLOR}$(minutes_since_last_commit)m${NORMAL}"
+          SINCE_LAST_COMMIT=" ${COLOR}$(minutes_since_last_commit)m${NORMAL}"
         fi
         # The __git_ps1 function inserts the current git branch where %s is
         local GIT_PROMPT
@@ -177,9 +177,9 @@
     current_ps1() {
       # some chars for reference: ⧉ ℔ ✓ ❮ ❯ ∷
       if [[ "$1" =~ simple ]]; then
-        echo "\[${BLUE}\u${NORMAL}|${hi_color}\W${NORMAL} \$(grb_git_prompt) ${NORMAL}\n❯ "
+        echo "\[${BRIGHT_BLUE}\u${NORMAL}:${BRIGHT_GREEN}\W${NORMAL} \$(grb_git_prompt) ${NORMAL}\n❯ "
       else
-        echo "\[╭╺(${BLUE}\u${NORMAL}:${hi_color}\W${NORMAL}) \$(grb_git_prompt) ${NORMAL}\n╰╺⧉ "
+        echo "\[╭╺(${BRIGHT_BLUE}\u${NORMAL}:${BRIGHT_GREEN}\W${NORMAL}) \$(grb_git_prompt) ${NORMAL}\n╰╺⧉ "
       fi
     }
 
