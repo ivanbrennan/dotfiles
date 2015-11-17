@@ -4767,7 +4767,7 @@
 	<key>NSFontPanelPreviewHeight</key>
 	<real>0.0</real>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Pictures</string>
+	<string>~/Development/resources</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{805, 448}</string>
 	<key>NSNavPanelExpandedStateForSaveMode</key>
@@ -4789,7 +4789,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>322</string>
+		<string>319</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -4811,7 +4811,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>838 4 459 268 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>988 67 924 485 0 0 1920 1058 </string>
+	<string>278 100 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>528 562 384 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
@@ -4819,9 +4819,9 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>479 392 949 486 0 0 1440 878 </string>
+	<string>5 351 650 526 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>900 285 650 526 0 0 1920 1058 </string>
+	<string>560 189 650 526 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>0 352 650 526 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -5487,7 +5487,7 @@
 			<key>Silence Bell</key>
 			<true/>
 			<key>Smart Cursor Color</key>
-			<false/>
+			<true/>
 			<key>Smart Selection Rules</key>
 			<array>
 				<dict>
@@ -5586,7 +5586,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.042478736490011215</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -6372,7 +6372,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.029310744255781174</real>
+			<real>0.03663322702050209</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unlimited Scrollback</key>
@@ -8541,7 +8541,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>455168952.58686101</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>457232040.88659102</real>
+	<real>469454631.06718397</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -8606,11 +8606,11 @@
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>http://iterm2.com/appcasts/final.xml</string>
+	<string>https://iterm2.com/appcasts/final.xml</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-06-28T19:15:19Z</date>
+	<date>2015-11-17T12:03:47Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -12166,6 +12166,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.1.1</string>
+	<string>2.1.4</string>
 </dict>
 </plist>
