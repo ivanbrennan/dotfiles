@@ -260,7 +260,7 @@ sidekiq_start() {
   until running sidekiq; do
     sleep 1
   done
-  echo "Sidekiq daemaon spawned"
+  echo "Sidekiq daemon spawned"
 }
 
 sidekiq_stop() {
