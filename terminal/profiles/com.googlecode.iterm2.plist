@@ -4811,7 +4811,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>838 4 459 268 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>497 208 924 485 0 0 1440 877 </string>
+	<string>95 289 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>528 562 384 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
@@ -4819,9 +4819,9 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4 351 650 526 0 0 1440 877 </string>
+	<string>0 0 1440 900 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>560 189 650 526 0 0 1440 878 </string>
+	<string>46 351 650 526 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>0 352 650 526 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -5096,35 +5096,35 @@
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;5R</string>
+					<string>[1;3Z</string>
 				</dict>
 				<key>0x20-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[30~</string>
+					<string>[32;2u</string>
 				</dict>
 				<key>0x20-0x60000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[35~</string>
+					<string>[32;6u</string>
 				</dict>
 				<key>0x2c-0x40000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[33~</string>
+					<string>[44;5u</string>
 				</dict>
 				<key>0x2e-0x40000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[34~</string>
+					<string>[46;5u</string>
 				</dict>
 				<key>0x32-0x40000</key>
 				<dict>
@@ -5180,21 +5180,21 @@
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;5Q</string>
+					<string>[9;3u</string>
 				</dict>
 				<key>0xd-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[27~</string>
+					<string>[13;2u</string>
 				</dict>
 				<key>0xd-0x40000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[25~</string>
+					<string>[13;5u</string>
 				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
@@ -5882,35 +5882,35 @@
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;5R</string>
+					<string>[1;3Z</string>
 				</dict>
 				<key>0x20-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[30~</string>
+					<string>[32;2u</string>
 				</dict>
 				<key>0x20-0x60000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[35~</string>
+					<string>[32;6u</string>
 				</dict>
 				<key>0x2c-0x40000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[33~</string>
+					<string>[44;5u</string>
 				</dict>
 				<key>0x2e-0x40000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[34~</string>
+					<string>[46;5u</string>
 				</dict>
 				<key>0x32-0x40000</key>
 				<dict>
@@ -5966,21 +5966,21 @@
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[1;5Q</string>
+					<string>[9;3u</string>
 				</dict>
 				<key>0xd-0x20000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[27~</string>
+					<string>[13;2u</string>
 				</dict>
 				<key>0xd-0x40000</key>
 				<dict>
 					<key>Action</key>
 					<integer>10</integer>
 					<key>Text</key>
-					<string>[25~</string>
+					<string>[13;5u</string>
 				</dict>
 				<key>0xf700-0x220000</key>
 				<dict>
