@@ -4811,7 +4811,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>838 4 459 268 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>278 100 924 485 0 0 1440 877 </string>
+	<string>497 208 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>528 562 384 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
@@ -4819,7 +4819,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>5 351 650 526 0 0 1440 877 </string>
+	<string>4 351 650 526 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>560 189 650 526 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -8541,7 +8541,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>455168952.58686101</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>469454631.06718397</real>
+	<real>474075254.14029098</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -8610,7 +8610,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-11-17T12:03:47Z</date>
+	<date>2016-01-09T17:32:38Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
