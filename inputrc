@@ -1,4 +1,57 @@
 set keyseq-timeout 250
 
+# Shift-Space
+"\e[32;2u": " "
+# Ctrl-Shift-Space
+"\e[32;6u": " "
+
+# Alt-Tab
+"\e[9;3u": "\t"
+# Alt-Shift-Tab
+"\e[1;3Z": "\t"
+
+# Ctrl-,
+"\e[44;5u": ","
+# Ctrl-.
+"\e[46;5u": "."
+
+# Shift-Enter
+"\e[13;2u": "\n"
+# Ctrl-Enter
+"\e[13;5u": "\n"
+
+# Shift-Up
+"\e[1;2A": beginning-of-history
+# Ctrl-Up
+"\e[1;5A": beginning-of-history
+# Ctrl-Shift-Up
+"\e[1;6A": beginning-of-history
+# Alt-Up
+"\x1b\x1b\x5b\x41": beginning-of-history
+
+# Shift-Down
+"\e[1;2B": end-of-history
+# Ctrl-Down
+"\e[1;5B": end-of-history
+# Ctrl-Shift-Down
+"\e[1;6B": end-of-history
+# Alt-Down
+"\x1b\x1b\x5b\x42": end-of-history
+
+# Shift-Left
+"\e[1;2D": backward-word
+# Ctrl-Left
 "\e[1;5D": backward-word
+# Ctrl-Shift-Left
+"\e[1;6D": beginning-of-line
+# Alt-Left
+"\eB": backward-word
+
+# Shift-Right
+"\e[1;2C": forward-word
+# Ctrl-Right
 "\e[1;5C": forward-word
+# Ctrl-Shift-Right
+"\e[1;6C": end-of-line
+# Alt-Right
+"\e[1;5P": forward-word
