@@ -4,6 +4,7 @@ altscreen on                  # clean up after fullscreen apps
 defscrollback 10000
 zombie kr                     # kill/revive zombies
 termcapinfo xterm ti@:te@
+term "screen-256color"
 bind l focus right
 bind h focus left
 
