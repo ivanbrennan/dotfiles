@@ -13,6 +13,7 @@
 	dap = add -p
 	df = diff
 	ca = diff --cached
+	lst = log -1 --pretty=fuller
 	lg = "!. ~/.githelpers && pretty_git_log"
 	lp = log -p
 	who = shortlog -s --
