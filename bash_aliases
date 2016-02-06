@@ -19,6 +19,9 @@ alias l="CLICOLOR_FORCE=1 ls -lAh"
 alias la="CLICOLOR_FORCE=1 ls -A"
 alias cls="CLICOLOR_FORCE=1 ls"
 
+# LESS
+alias lessr="less -R"
+
 # MV
 alias mvv="mv -v"
 
