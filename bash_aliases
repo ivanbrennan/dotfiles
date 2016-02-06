@@ -15,8 +15,9 @@ alias gpc="git log origin/development.. -- | wc -l"
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
 
 # LS
-alias l="ls -lAh"
-alias la="ls -A"
+alias l="CLICOLOR_FORCE=1 ls -lAh"
+alias la="CLICOLOR_FORCE=1 ls -A"
+alias lc="CLICOLOR_FORCE=1 ls"
 
 # MV
 alias mvv="mv -v"
