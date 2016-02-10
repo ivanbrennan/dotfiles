@@ -363,7 +363,7 @@ hsv() {
   tmux attach-session -t hb-server
 }
 
-gmit() {
+glit() {
   if git rev-parse --git-dir >/dev/null 2>&1 && [ -n "${TMUX+x}" ]; then
     local WIDTH=$( tmux display-message -p '#{pane_width}' )
     local HEIGHT=$( tmux display-message -p '#{pane_height}' )
