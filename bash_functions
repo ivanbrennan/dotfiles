@@ -363,16 +363,32 @@ hsv() {
   tmux attach-session -t hb-server
 }
 
-glit() {
+if_git_tmux() {
   if git rev-parse --git-dir >/dev/null 2>&1 && [ -n "${TMUX+x}" ]; then
-    local WIDTH=$( tmux display-message -p '#{pane_width}' )
-    local HEIGHT=$( tmux display-message -p '#{pane_height}' )
-    if [ ${WIDTH} -gt $(( ${HEIGHT} * 3 )) ]; then
-      $( tmux split-window -h -l 85 "git commit" )
-    else
-      $( tmux split-window -v -p 30 "git commit" )
-    fi
+    "$@"
   fi
+}
+
+smartpane() {
+  local WIDTH=$( tmux display-message -p '#{pane_width}' )
+  local HEIGHT=$( tmux display-message -p '#{pane_height}' )
+  local RATIO=3
+
+  if [ ${WIDTH} -gt $(( ${HEIGHT} * ${RATIO} )) ]; then
+    local CHARS=85
+    $( tmux split-window -h -l ${CHARS} "$1" )
+  else
+    local PERCENT=30
+    $( tmux split-window -v -p ${PERCENT} "$1" )
+  fi
+}
+
+glit() {
+  if_git_tmux smartpane "gitsh"
+}
+
+gmit() {
+  if_git_tmux smartpane "git commit"
 }
 
 # search and replace {{{1
