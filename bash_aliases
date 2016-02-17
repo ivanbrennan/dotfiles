@@ -8,8 +8,8 @@ alias cd-="cd -"
 # Git
 alias gst="git status"
 alias gasp="git add -p db/schema.rb"
-alias gpr="git log origin/development.. --reverse"
-alias gpc="git log origin/development.. -- | wc -l"
+alias gpr="git log origin/master.. --reverse"
+alias gpc="git log origin/master.. -- | wc -l"
 
 # iOS Simulator
 alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
