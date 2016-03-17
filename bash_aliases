@@ -1,10 +1,6 @@
 # Source / Edit bash_profile
 alias sbs=". ~/.bash_profile"
 
-# CD
-alias cd..="cd .."
-alias cd-="cd -"
-
 # Git
 alias gst="git status"
 alias gasp="git add -p db/schema.rb"
