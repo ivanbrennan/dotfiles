@@ -26,6 +26,7 @@ alias rmi="rm -i"
 
 # Vim
 alias vi="vim"
+alias nvi="nvim"
 
 # GDB
 alias gdb="gdb -quiet"
