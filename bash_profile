@@ -52,8 +52,8 @@
 
   # Git Bash Completion {{{2
   # Activate bash git completion if installed via homebrew
-  if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
+  if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
   fi
 
   # Colors {{{2
