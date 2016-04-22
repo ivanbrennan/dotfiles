@@ -157,18 +157,20 @@
       g="$(__gitdir)"
 
       if [ -n "$g" ]; then
+        local COLOR
         local MINUTES_SINCE_LAST_COMMIT
+
+        COLOR=`hi_color`
         MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
 
         if [ -n "$MINUTES_SINCE_LAST_COMMIT" ]; then
-          local COLOR
           local SINCE_LAST_COMMIT
           COLOR=`minutes_color MINUTES_SINCE_LAST_COMMIT`
           SINCE_LAST_COMMIT=" ${COLOR}$(minutes_since_last_commit)m${NORMAL}"
         fi
         # The __git_ps1 function inserts the current git branch where %s is
         local GIT_PROMPT
-        GIT_PROMPT=`__git_ps1 "(${hi_color}%s$NORMAL${SINCE_LAST_COMMIT})"`
+        GIT_PROMPT=`__git_ps1 "(${COLOR}%s$NORMAL)"`
         echo ${GIT_PROMPT}
       fi
     }
