@@ -175,7 +175,7 @@
 
     # Build the prompt
     current_ps1() {
-      # some chars for reference: ⧉ ℔ ✓ ❮ ❯ ∷
+      # some chars for reference: ⧉ ℔ ✓ ❮ ❯ ∷ ▢
       if [[ "$1" =~ simple ]]; then
         echo "\[${BRIGHT_BLUE}\u${NORMAL}:${BRIGHT_GREEN}\W${NORMAL} \$(grb_git_prompt) ${NORMAL}\n❯ "
       else
