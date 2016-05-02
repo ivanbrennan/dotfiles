@@ -178,9 +178,9 @@
     # Build the prompt
     current_ps1() {
       if [[ "$1" =~ simple ]]; then
-        echo "\[${BRIGHT_BLUE}\u${NORMAL} : ${BRIGHT_GREEN}\W${NORMAL} \$(grb_git_prompt) ${NORMAL}\n❯ "
+        echo "\[${BRIGHT_BLUE}\u${NORMAL}@${BRIGHT_GREEN}\W${NORMAL} \$(grb_git_prompt) ${NORMAL}\n❯ "
       else
-        echo "\[╭╺(${BRIGHT_BLUE}\u${NORMAL}:${BRIGHT_GREEN}\W${NORMAL}) \$(grb_git_prompt) ${NORMAL}\n╰╺⧉ "
+        echo "\[╭╺(${BRIGHT_BLUE}\u${NORMAL}@${BRIGHT_GREEN}\W${NORMAL}) \$(grb_git_prompt) ${NORMAL}\n╰╺⧉ "
       fi
     }
 
