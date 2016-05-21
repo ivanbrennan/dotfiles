@@ -175,13 +175,8 @@
       fi
     }
 
-    # Build the prompt
-    current_ps1() {
-      echo "${BRIGHT_BLUE}\u${NORMAL}:${BRIGHT_GREEN}\W${NORMAL} \$(grb_git_prompt) ${NORMAL}\n❯ "
-    }
-
     prompt() {
-      export PS1=`current_ps1`
+      export PS1="${BRIGHT_BLUE}\u${NORMAL}:${BRIGHT_GREEN}\W${NORMAL} \$(grb_git_prompt) ${NORMAL}\n❯ "
       export PS2="   ❯ "
       export PS4="   + "
       }
