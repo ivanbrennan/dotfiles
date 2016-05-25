@@ -1,5 +1,5 @@
-#!/bin/bash
-#
+#!/usr/bin/env bash
+
 # Find all the rails projects from this directory down
 # and report the size of their log directory.
 

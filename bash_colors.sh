@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 DULL=0
 BRIGHT=1
 

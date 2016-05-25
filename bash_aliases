@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Source / Edit bash_profile
 alias sbs=". ~/.bash_profile"
 

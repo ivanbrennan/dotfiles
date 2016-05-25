@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Change profile {{{1
 dark() {
   export THEME=dark
@@ -269,6 +271,11 @@ sidekiq_stop() {
     sleep 1
   done
   echo "Sidekiq daemon slain"
+}
+
+# Usage {{{1
+server_help() {
+  echo x
 }
 
 # Rails {{{1

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # disable rubber-band scrolling
 defaults write -g               NSScrollViewRubberbanding -int  0
 defaults write com.apple.iTunes disable-elastic-scroll    -bool TRUE
