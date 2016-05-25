@@ -275,7 +275,12 @@ sidekiq_stop() {
 
 # Usage {{{1
 server_help() {
-  echo x
+  echo -e "MySQL: \tmysql.server start"
+  echo -e "\tmysql.server stop\n"
+  echo -e "Redis: \tredis-server ~/.redis/redis.conf"
+  echo -e "\tkill \"\$(rpid redis)\"\n"
+  echo -e "kiqs: \tsidekiq -d"
+  echo -e "\tkill \"\$(rpid sidekiq)\""
 }
 
 # Rails {{{1
