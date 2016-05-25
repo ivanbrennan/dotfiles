@@ -274,7 +274,7 @@ sidekiq_stop() {
 }
 
 # Usage {{{1
-server_help() {
+serverhelp() {
   echo -e "MySQL: \tmysql.server start"
   echo -e "\tmysql.server stop\n"
   echo -e "Redis: \tredis-server ~/.redis/redis.conf"
