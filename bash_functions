@@ -292,18 +292,6 @@ krs9() {
   krs '-9'
 }
 
-krc() {
-  p_stop "rails c" "Rails console" rails_stop "console"
-}
-
-rastat() {
-  p_status "rails s" "Rails server"
-}
-
-rastac() {
-  p_status "rails c" "Rails console"
-}
-
 rails_stop() {
   kill "$2" "$(rpid "rails ${1:0:1}")" 2> /dev/null
   for i in 1 2; do
