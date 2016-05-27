@@ -202,78 +202,27 @@ pgsto() {
   pg_ctl -D /usr/local/var/postgres stop -s -m fast
 }
 
-# MySQL server {{{1
-msta() {
-  p_start mysql MySQL mysql.server start
-}
-
-msto() {
-  p_stop mysql MySQL mysql.server stop
-}
-
+# server helpers {{{1
 mstat() {
   p_status mysql MySQL
-}
-
-# Redis server {{{1
-resta() {
-  p_start redis "Redis daemon" redis_start
-}
-
-resto() {
-  p_stop redis "Redis daemon" redis_stop
 }
 
 restat() {
   p_status redis "Redis daemon"
 }
 
-redis_start() {
-  redis-server ~/.redis/redis.conf
-  until running redis; do
-    sleep 1
-  done
-  echo "Redis daemon spawned"
-}
-
-redis_stop() {
-  kill "$(rpid redis)"
-  while running redis; do
-    sleep 1
-  done
-  echo "Redis daemon slain"
-}
-
-# Sidekiq {{{1
-sista() {
-  p_start sidekiq "Sidekiq daemon" sidekiq_start
-}
-
-sksto() {
-  p_stop sidekiq "Sidekiq daemon" sidekiq_stop
-}
-
 sistat() {
   p_status sidekiq "Sidekiq daemon"
 }
 
-sidekiq_start() {
-  sidekiq -d
-  until running sidekiq; do
-    sleep 1
-  done
-  echo "Sidekiq daemon spawned"
+astat() {
+  mstat && restat && sistat
 }
 
-sidekiq_stop() {
-  kill "$(rpid sidekiq)"
-  while running sidekiq; do
-    sleep 1
-  done
-  echo "Sidekiq daemon slain"
+astop() {
+  sksto && resto && msto
 }
 
-# Usage {{{1
 serverhelp() {
   echo -e "MySQL: \tmysql.server start"
   echo -e "\tmysql.server stop\n"
@@ -282,7 +231,6 @@ serverhelp() {
   echo -e "kiqs: \tsidekiq -d"
   echo -e "\tkill \"\$(rpid sidekiq)\""
 }
-
 # Rails {{{1
 krs() {
   p_stop "rails s" "Rails server" rails_stop "server" "$1"
@@ -310,27 +258,6 @@ reportkill() {
   else
     echo "Rails $1 survived (pid $(rpid "rails ${1:0:1}"))"
   fi
-}
-
-# All servers {{{1
-asta() {
-  msta && resta && sista
-}
-
-asto() {
-  sksto && resto && msto
-}
-
-astat() {
-  mstat && restat && sistat
-}
-
-astatt() {
-  mstat && restat && sistat && rastat && rastac
-}
-
-astop() {
-  krc && krs && sksto && resto && msto
 }
 
 # ssh tabs {{{1
