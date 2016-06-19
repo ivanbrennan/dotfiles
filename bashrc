@@ -8,7 +8,7 @@
   # Theme {{{1
 
     if [ -z "$THEME" ]; then
-      export THEME=dark
+      export THEME=light
     fi
 
   # Year {{{1
