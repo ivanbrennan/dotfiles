@@ -4759,7 +4759,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSColorPanelMode</key>
-	<string>1</string>
+	<string>7</string>
 	<key>NSColorPickerSlidersDefaults</key>
 	<string>1</string>
 	<key>NSFontPanelAttributes</key>
@@ -4767,7 +4767,9 @@
 	<key>NSFontPanelPreviewHeight</key>
 	<real>0.0</real>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Development/resources</string>
+	<string>~/Development/resources/dotfiles/terminal/colors</string>
+	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{712, 459}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{805, 448}</string>
 	<key>NSNavPanelExpandedStateForSaveMode</key>
@@ -4806,8 +4808,13 @@
 		<key>TB Size Mode</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>293 112 214 309 0 0 1440 878 </string>
+	<string>293 112 228 309 0 0 1440 877 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>838 33 459 134 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
@@ -4821,9 +4828,9 @@
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 1440 900 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>722 439 718 438 0 0 1440 877 </string>
+	<string>710 311 730 551 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>0 352 650 526 0 0 1440 878 </string>
+	<string>722 0 718 438 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>114 343 730 527 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -5032,11 +5039,11 @@
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.49437925219535828</real>
+				<real>0.29803922772407532</real>
 				<key>Green Component</key>
-				<real>0.37356963753700256</real>
+				<real>0.29803922772407532</real>
 				<key>Red Component</key>
-				<real>0.33974188566207886</real>
+				<real>0.29803922772407532</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
@@ -5487,7 +5494,7 @@
 			<key>Silence Bell</key>
 			<true/>
 			<key>Smart Cursor Color</key>
-			<true/>
+			<false/>
 			<key>Smart Selection Rules</key>
 			<array>
 				<dict>
@@ -5818,20 +5825,20 @@
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.61176472902297974</real>
+				<real>0.90196079015731812</real>
 				<key>Green Component</key>
-				<real>0.45098039507865906</real>
+				<real>0.90196079015731812</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.90196079015731812</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.098039217293262482</real>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.098039217293262482</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.098039217293262482</real>
 			</dict>
 			<key>Cursor Type</key>
 			<integer>2</integer>
@@ -6273,7 +6280,7 @@
 			<key>Silence Bell</key>
 			<true/>
 			<key>Smart Cursor Color</key>
-			<true/>
+			<false/>
 			<key>Smart Selection Rules</key>
 			<array>
 				<dict>
@@ -8543,7 +8550,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>477773770.64656103</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>483671781.82451499</real>
+	<real>487989436.88542002</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -8612,7 +8619,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-04-30T18:39:16Z</date>
+	<date>2016-06-19T00:28:25Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
