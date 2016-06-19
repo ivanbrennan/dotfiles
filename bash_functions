@@ -21,16 +21,6 @@ light() {
   reload_profile
 }
 
-solar() {
-  export THEME=dark
-  if [ -n "${ITERM_PROFILE+x}" ]; then
-    it2prof solarized
-  else
-    term_prof "Solarized Dark"
-  fi
-  reload_profile
-}
-
 reload_profile() {
   if [ -f ~/.bash_profile ]; then
     . ~/.bash_profile
