@@ -65,7 +65,7 @@
     if [[ "$THEME" =~ dark ]]; then
       export LSCOLORS="GxBxBxDxBxEgEaxbxgxcxd"
     else
-      export LSCOLORS="DxfxCxDxbxegedabagaced"
+      export LSCOLORS="exfxcxdxbxegedabagacad"
     fi
 
     # Order of attributes:

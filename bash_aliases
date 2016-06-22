@@ -14,8 +14,8 @@ alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/iO
 
 # LS
 alias l="CLICOLOR_FORCE=1 ls -lAh"
-alias la="CLICOLOR_FORCE=1 ls -A"
-alias cls="CLICOLOR_FORCE=1 ls"
+alias lsa="CLICOLOR_FORCE=1 ls -A"
+alias lsf="CLICOLOR_FORCE=1 ls -F"
 
 # LESS
 alias lessr="less -R"
