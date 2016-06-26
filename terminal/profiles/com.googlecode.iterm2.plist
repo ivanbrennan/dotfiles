@@ -4816,9 +4816,9 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>293 112 228 309 0 0 1440 877 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>838 33 459 134 0 0 1440 877 </string>
+	<string>876 74 459 94 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>13 56 924 485 0 0 1440 877 </string>
+	<string>516 392 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>528 562 384 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
@@ -4826,9 +4826,9 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>6 6 474 866 0 0 1440 877 </string>
+	<string>724 6 714 866 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>710 331 650 526 0 0 1440 877 </string>
+	<string>722 439 718 438 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>722 0 718 438 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -5437,11 +5437,11 @@
 			<key>Name</key>
 			<string>white</string>
 			<key>Non Ascii Font</key>
-			<string>SauceCodePowerline-Regular 14</string>
+			<string>SourceCodePro-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SauceCodePowerline-Regular 14</string>
+			<string>SourceCodePro-Regular 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -6223,11 +6223,11 @@
 			<key>Name</key>
 			<string>black</string>
 			<key>Non Ascii Font</key>
-			<string>SauceCodePowerline-Regular 15</string>
+			<string>SourceCodePro-Regular 15</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SauceCodePowerline-Medium 15</string>
+			<string>SourceCodePro-Regular 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -8550,7 +8550,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>477773770.64656103</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>488251967.72508699</real>
+	<real>488607472.67031997</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -8619,7 +8619,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-22T01:30:35Z</date>
+	<date>2016-06-26T04:17:43Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
