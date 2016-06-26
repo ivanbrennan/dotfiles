@@ -4759,7 +4759,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSColorPanelMode</key>
-	<string>3</string>
+	<string>7</string>
 	<key>NSColorPickerSlidersDefaults</key>
 	<string>3</string>
 	<key>NSFontPanelAttributes</key>
@@ -4818,7 +4818,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>876 74 459 94 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>516 392 924 485 0 0 1440 877 </string>
+	<string>28 392 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>528 562 384 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
@@ -4828,7 +4828,7 @@
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>724 6 714 866 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>722 439 718 438 0 0 1440 877 </string>
+	<string>722 363 650 501 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>722 0 718 438 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -5039,11 +5039,11 @@
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.26666668057441711</real>
+				<real>0.40000000596046448</real>
 				<key>Green Component</key>
-				<real>0.26666668057441711</real>
+				<real>0.40000000596046448</real>
 				<key>Red Component</key>
-				<real>0.26666668057441711</real>
+				<real>0.40000000596046448</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
