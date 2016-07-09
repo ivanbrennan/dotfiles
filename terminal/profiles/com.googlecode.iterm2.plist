@@ -5040,21 +5040,29 @@
 			<string>/bin/bash -l</string>
 			<key>Cursor Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.40000000596046448</real>
+				<real>0.28401297330856323</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.40000000596046448</real>
+				<real>0.28401285409927368</real>
 				<key>Red Component</key>
-				<real>0.40000000596046448</real>
+				<real>0.2840130627155304</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
-				<key>Blue Component</key>
+				<key>Alpha Component</key>
 				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.99983298778533936</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
 				<real>1</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.90469509363174438</real>
 			</dict>
 			<key>Cursor Type</key>
 			<integer>2</integer>
@@ -5824,6 +5832,8 @@
 			<integer>80</integer>
 			<key>Command</key>
 			<string>/bin/bash -l</string>
+			<key>Cursor Boost</key>
+			<real>0.0</real>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
