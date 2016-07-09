@@ -21,6 +21,16 @@ light() {
   reload_profile
 }
 
+remote() {
+  export THEME=remote
+  if [ -n "${ITERM_PROFILE+x}" ]; then
+    it2prof remote
+  else
+    term_prof Smyck
+  fi
+  reload_profile
+}
+
 reload_profile() {
   if [ -f ~/.bash_profile ]; then
     . ~/.bash_profile
