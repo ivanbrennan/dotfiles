@@ -4623,7 +4623,7 @@
 	<key>DimBackgroundWindows</key>
 	<false/>
 	<key>DimInactiveSplitPanes</key>
-	<false/>
+	<true/>
 	<key>DimOnlyText</key>
 	<false/>
 	<key>DisableFullscreenTransparency</key>
@@ -4727,9 +4727,9 @@
 	<key>HideTab</key>
 	<true/>
 	<key>HideTabCloseButton</key>
-	<false/>
+	<true/>
 	<key>HideTabNumber</key>
-	<false/>
+	<true/>
 	<key>HighlightTabLabels</key>
 	<true/>
 	<key>HotKeyBookmark</key>
@@ -4830,7 +4830,7 @@
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>932 178 650 502 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1161 510 650 502 0 0 1920 1057 </string>
+	<string>722 312 650 523 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>722 0 718 438 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -8664,17 +8664,23 @@
 	<key>Show Toolbelt</key>
 	<false/>
 	<key>ShowBookmarkName</key>
+	<false/>
+	<key>ShowFullScreenTabBar</key>
+	<false/>
+	<key>ShowNewOutputIndicator</key>
 	<true/>
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.10000000149011612</real>
+	<real>0.15237129407051284</real>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
 	<integer>6</integer>
+	<key>TabStyle</key>
+	<integer>0</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>ThreeFingerEmulates</key>
