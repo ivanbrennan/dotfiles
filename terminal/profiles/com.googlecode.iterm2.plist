@@ -4828,7 +4828,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>724 122 650 749 0 0 1440 877 </string>
+	<string>724 7 714 863 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>722 331 650 502 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -5616,7 +5616,17 @@
 					<key>partial</key>
 					<true/>
 					<key>regex</key>
-					<string>^.*(\w+)@([-a-zA-Z0-9.]+)</string>
+					<string>^.*?(\w+)@([-a-zA-Z0-9.]+)</string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>SetHostnameTrigger</string>
+					<key>parameter</key>
+					<string>\1@</string>
+					<key>partial</key>
+					<true/>
+					<key>regex</key>
+					<string>^(\w+)·</string>
 				</dict>
 			</array>
 			<key>Unlimited Scrollback</key>
@@ -6651,6 +6661,8 @@
 			<key>Bound Hosts</key>
 			<array>
 				<string>ibrennan@</string>
+				<string>handybook@</string>
+				<string>developer@</string>
 			</array>
 			<key>Character Encoding</key>
 			<integer>4</integer>
@@ -7238,7 +7250,28 @@
 			<key>Transparency</key>
 			<real>0.03663322702050209</real>
 			<key>Triggers</key>
-			<array/>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>SetHostnameTrigger</string>
+					<key>parameter</key>
+					<string>\1@\2</string>
+					<key>partial</key>
+					<true/>
+					<key>regex</key>
+					<string>^.*?(\w+)@([-a-zA-Z0-9.]+)</string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>SetHostnameTrigger</string>
+					<key>parameter</key>
+					<string>\1@</string>
+					<key>partial</key>
+					<true/>
+					<key>regex</key>
+					<string>^(\w+)·</string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
