@@ -5833,6 +5833,19 @@
 				<key>Red Component</key>
 				<real>0.90196079015731812</real>
 			</dict>
+			<key>Cursor Guide Color</key>
+			<dict>
+				<key>Alpha Component</key>
+				<real>0.1171722412109375</real>
+				<key>Blue Component</key>
+				<real>0.56514263153076172</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
+				<key>Green Component</key>
+				<real>0.54458999633789062</real>
+				<key>Red Component</key>
+				<real>0.48198360204696655</real>
+			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -6395,6 +6408,8 @@
 			<key>Use Bright Bold</key>
 			<true/>
 			<key>Use Canonical Parser</key>
+			<false/>
+			<key>Use Cursor Guide</key>
 			<false/>
 			<key>Use Italic Font</key>
 			<false/>
