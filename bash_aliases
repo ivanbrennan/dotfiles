@@ -27,7 +27,8 @@ alias mvv="mv -v"
 alias rmi="rm -i"
 
 # Vim
-alias vi="vim"
+alias nvim="NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
+alias vi="nvim"
 alias view="nvim -MR"
 
 # GDB

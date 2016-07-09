@@ -31,12 +31,11 @@
     # This variable configures git to not require a message when you merge.
     export GIT_MERGE_AUTOEDIT="no"
 
-    # Editors - MacVim 7.4 option
-    # Tells your shell that when a program requires various editors, use Vim.
-    export VISUAL="vim"
-    export SVN_EDITOR="vim"
-    export GIT_EDITOR="vim"
-    export EDITOR="vim"
+    # Editors
+    NVIM_TRUE_COLOR="NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
+    export VISUAL=$NVIM_TRUE_COLOR
+    export GIT_EDITOR=$NVIM_TRUE_COLOR
+    export SVN_EDITOR=$NVIM_TRUE_COLOR
 
   # Paths {{{1
 
