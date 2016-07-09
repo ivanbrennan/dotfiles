@@ -4780,6 +4780,8 @@
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
+	<key>NSScrollViewShouldScrollUnderTitlebar</key>
+	<false/>
 	<key>NSTableView Columns KeyBingingTable</key>
 	<array>
 		<data>
@@ -4791,7 +4793,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>319</string>
+		<string>307</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -4814,11 +4816,11 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>293 112 228 309 0 0 1440 877 </string>
+	<string>409 104 228 297 0 0 1920 1057 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>876 74 459 94 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>28 392 924 485 0 0 1440 877 </string>
+	<string>54 601 606 456 0 0 1920 1057 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>528 562 384 129 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
@@ -4826,9 +4828,9 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>724 6 714 866 0 0 1440 877 </string>
+	<string>932 178 650 502 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>722 363 650 501 0 0 1440 877 </string>
+	<string>1161 510 650 502 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>722 0 718 438 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -5833,12 +5835,16 @@
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.098039217293262482</real>
+				<real>0.29442828893661499</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.098039217293262482</real>
+				<real>0.35200831294059753</real>
 				<key>Red Component</key>
-				<real>0.098039217293262482</real>
+				<real>0.10891595482826233</real>
 			</dict>
 			<key>Cursor Type</key>
 			<integer>2</integer>
@@ -8547,10 +8553,14 @@
 	</array>
 	<key>NoSyncHaveShownPromoWithId_4</key>
 	<true/>
+	<key>NoSyncInstallationId</key>
+	<string>A51BAAD7-92D1-4B2C-97E7-B0C191211212</string>
+	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
+	<real>489721438.08100498</real>
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>477773770.64656103</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>488607472.67031997</real>
+	<real>489550300.85589898</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -8614,12 +8624,14 @@
 	<integer>3</integer>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
+	<key>SUFeedAlternateAppNameKey</key>
+	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=47</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-06-26T04:17:43Z</date>
+	<date>2016-07-09T01:43:58Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -12175,6 +12187,10 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.1.4</string>
+	<string>3.0.4</string>
+	<key>kCPKSelectionViewPreferredModeKey</key>
+	<integer>0</integer>
+	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
+	<false/>
 </dict>
 </plist>
