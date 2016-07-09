@@ -4828,9 +4828,9 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>724 27 714 844 0 0 1440 877 </string>
+	<string>724 122 650 749 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>722 312 650 523 0 0 1440 877 </string>
+	<string>722 331 650 502 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>722 0 718 438 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -5607,7 +5607,18 @@
 			<key>Transparency</key>
 			<real>0.019554365188236056</real>
 			<key>Triggers</key>
-			<array/>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>SetHostnameTrigger</string>
+					<key>parameter</key>
+					<string>\1@\2</string>
+					<key>partial</key>
+					<true/>
+					<key>regex</key>
+					<string>^.*(\w+)@([-a-zA-Z0-9.]+)</string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
