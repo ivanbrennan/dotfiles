@@ -4818,7 +4818,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>644 141 228 297 0 0 1440 877 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>876 74 459 94 0 0 1440 877 </string>
+	<string>884 234 459 77 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>28 421 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
@@ -4830,9 +4830,9 @@
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>724 7 714 863 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>724 368 650 502 0 0 1440 877 </string>
+	<string>4 365 650 502 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>722 0 718 438 0 0 1440 877 </string>
+	<string>722 0 650 502 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>114 343 730 527 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -6275,7 +6275,7 @@
 			<key>Name</key>
 			<string>black</string>
 			<key>Non Ascii Font</key>
-			<string>SourceCodePro-Regular 15</string>
+			<string>SourceCodePro-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -6540,13 +6540,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.99890190362930298</real>
+				<real>0.98527383804321289</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.64841973781585693</real>
+				<real>0.76658403873443604</real>
 				<key>Red Component</key>
-				<real>0.53630876541137695</real>
+				<real>0.61464756727218628</real>
 			</dict>
 			<key>Ansi 13 Color</key>
 			<dict>
@@ -6595,12 +6595,16 @@
 			</dict>
 			<key>Ansi 4 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.98925203084945679</real>
+				<real>0.99895399808883667</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.84463256597518921</real>
+				<real>0.67004132270812988</real>
 				<key>Red Component</key>
-				<real>0.53884398937225342</real>
+				<real>0.56376171112060547</real>
 			</dict>
 			<key>Ansi 5 Color</key>
 			<dict>
@@ -6660,13 +6664,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.10765025019645691</real>
+				<real>0.093698881566524506</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.12516969442367554</real>
+				<real>0.10453818738460541</real>
 				<key>Red Component</key>
-				<real>0.064675383269786835</real>
+				<real>0.063674256205558777</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -7125,7 +7129,7 @@
 			<key>Name</key>
 			<string>remote</string>
 			<key>Non Ascii Font</key>
-			<string>SourceCodePro-Regular 15</string>
+			<string>SourceCodePro-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -7186,7 +7190,7 @@
 			<key>Silence Bell</key>
 			<true/>
 			<key>Smart Cursor Color</key>
-			<false/>
+			<true/>
 			<key>Smart Selection Rules</key>
 			<array>
 				<dict>
@@ -10979,7 +10983,7 @@
 	<key>iTerm Version</key>
 	<string>3.0.4</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
-	<integer>6</integer>
+	<integer>2</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
 	<key>kCPKUseSystemColorPicker</key>
