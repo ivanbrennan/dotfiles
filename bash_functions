@@ -3,60 +3,73 @@
 # Change profile {{{1
 dark() {
   export THEME=dark
-  if [ -n "${ITERM_PROFILE+x}" ]; then
-    it2prof black
-  else
-    term_prof "blue & grey"
-  fi
-  reload_profile
+  set_profile 'black' 'blue & grey'
+  source_bash_profile
 }
 
 light() {
   export THEME=light
-  if [ -n "${ITERM_PROFILE+x}" ]; then
-    it2prof white
-  else
-    term_prof "blue & white"
-  fi
-  reload_profile
+  set_profile 'white' 'blue & white'
+  source_bash_profile
 }
 
 remote() {
   export THEME=remote
-  if [ -n "${ITERM_PROFILE+x}" ]; then
-    it2prof remote
-  else
-    term_prof Smyck
-  fi
-  reload_profile
+  set_profile 'remote' 'Smyck'
+  source_bash_profile
 }
 
-reload_profile() {
-  if [ -f ~/.bash_profile ]; then
-    . ~/.bash_profile
+set_profile() {
+  if using_iterm; then
+    set_iterm_profile "$1"
+  else
+    set_terminal_profile "$2"
   fi
 }
 
-it2prof() {
-  if [[ "$TERM" =~ "screen" ]]; then
-    scrn_prof "$1"
+set_iterm_profile() {
+  if using_multiplexer; then
+    set_multiplex_iterm_profile "$1"
   else
-    # send escape sequence to change iTerm2 profile
     echo -e "\033]50;SetProfile=$1\007"
   fi
 }
 
-term_prof() {
+set_multiplex_iterm_profile() {
+  if using_tmux; then
+    set_tmux_iterm_profile "$1"
+  else
+    set_gnu_screen_iterm_profile "$1"
+  fi
+}
+
+set_tmux_iterm_profile() {
+  echo -e "\033Ptmux;\033\033]50;SetProfile=$1\007\033\\"
+}
+
+set_gnu_screen_iterm_profile() {
+  echo -e "\033P\033]50;SetProfile=$1\007\033\\"
+}
+
+set_terminal_profile() {
   osascript -e "tell application \"Terminal\" to set current settings of front window to settings set \"$1\""
 }
 
-scrn_prof() {
-  if [ -n "${TMUX+x}" ]; then
-    # tell tmux to send escape sequence to underlying terminal
-    echo -e "\033Ptmux;\033\033]50;SetProfile=$1\007\033\\"
-  else
-    # tell gnu screen to send escape sequence to underlying terminal
-    echo -e "\033P\033]50;SetProfile=$1\007\033\\"
+using_iterm() {
+  [ -n "${ITERM_PROFILE+x}" ]
+}
+
+using_multiplexer() {
+  [[ "$TERM" =~ "screen" ]]
+}
+
+using_tmux() {
+  [ -n "${TMUX+x}" ]
+}
+
+source_bash_profile() {
+  if [ -f ~/.bash_profile ]; then
+    . ~/.bash_profile
   fi
 }
 
