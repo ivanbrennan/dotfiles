@@ -7,9 +7,13 @@
 
   # Theme {{{1
 
-    if [ -z "$THEME" ]; then
-      export THEME=light
-    fi
+  if [ -z "$THEME" ]; then
+    case "$ITERM_PROFILE" in
+      'black'  ) export THEME=dark   ;;
+      'remote' ) export THEME=remote ;;
+      *        ) export THEME=light  ;;
+    esac
+  fi
 
   # Year {{{1
 
