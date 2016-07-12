@@ -8702,12 +8702,16 @@
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.078431372549019607</real>
+				<real>0.10277847945690155</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.61176470588235299</real>
+				<real>0.87651336193084717</real>
 				<key>Red Component</key>
-				<real>0.6588235294117647</real>
+				<real>0.94590556621551514</real>
 			</dict>
 			<key>Ansi 4 Color</key>
 			<dict>
@@ -8781,12 +8785,16 @@
 			<false/>
 			<key>Background Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.12941176470588237</real>
+				<real>0.068507634103298187</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.12941176470588237</real>
+				<real>0.068507418036460876</real>
 				<key>Red Component</key>
-				<real>0.12941176470588237</real>
+				<real>0.068507805466651917</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -8820,13 +8828,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.98959559202194214</real>
+				<real>0.98898923397064209</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.85109925270080566</real>
+				<real>0.63496041297912598</real>
 				<key>Red Component</key>
-				<real>0.80005365610122681</real>
+				<real>0.51544255018234253</real>
 			</dict>
 			<key>Bound Hosts</key>
 			<array/>
@@ -13132,7 +13140,7 @@
 	<key>iTerm Version</key>
 	<string>3.0.4</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<true/>
 	<key>kCPKUseSystemColorPicker</key>
