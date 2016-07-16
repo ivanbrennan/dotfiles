@@ -5238,7 +5238,7 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>545 147 228 297 0 0 1440 877 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>884 234 459 77 0 0 1440 877 </string>
+	<string>884 100 459 77 0 0 1440 877 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>28 421 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
@@ -5248,9 +5248,9 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>5 6 1434 426 0 0 1440 877 </string>
+	<string>6 0 650 502 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>484 368 650 502 0 0 1440 877 </string>
+	<string>4 375 650 502 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>722 0 650 502 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -5867,7 +5867,7 @@
 			<key>Name</key>
 			<string>white</string>
 			<key>Non Ascii Font</key>
-			<string>SourceCodePro-Regular 14</string>
+			<string>SauceCodePowerline-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -6695,7 +6695,7 @@
 			<key>Name</key>
 			<string>black</string>
 			<key>Non Ascii Font</key>
-			<string>SourceCodePro-Regular 14</string>
+			<string>SauceCodePowerline-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -7549,7 +7549,7 @@
 			<key>Name</key>
 			<string>remote</string>
 			<key>Non Ascii Font</key>
-			<string>SourceCodePro-Regular 14</string>
+			<string>SauceCodePowerline-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -8403,7 +8403,7 @@
 			<key>Name</key>
 			<string>pencil-light</string>
 			<key>Non Ascii Font</key>
-			<string>SourceCodePro-Regular 14</string>
+			<string>SauceCodePowerline-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -9281,7 +9281,7 @@
 			<key>Name</key>
 			<string>pencil-dark</string>
 			<key>Non Ascii Font</key>
-			<string>SourceCodePro-Regular 14</string>
+			<string>SauceCodePowerline-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -9488,7 +9488,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>A51BAAD7-92D1-4B2C-97E7-B0C191211212</string>
 	<key>NoSyncLastTipTime</key>
-	<real>489978529.80212098</real>
+	<real>490321277.52156502</real>
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -9501,6 +9501,8 @@
 	<array>
 		<string>000</string>
 		<string>000</string>
+		<string>0000</string>
+		<string>0001</string>
 	</array>
 	<key>NoSyncTurnOffMouseReportingOnHostChange</key>
 	<false/>
