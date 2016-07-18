@@ -112,6 +112,14 @@ ivim() {
   fi
 }
 
+ln_spacemacs() {
+  ln -shF ~/Development/resources/dotemacs/emacs.d.spacemacs ~/.emacs.d
+}
+
+ln_emacs() {
+  ln -shF ~/Development/resources/dotemacs/emacs.d ~/.emacs.d
+}
+
 # Easily grep for a matching process {{{1
 # USE: psg postgres
 psg() {
