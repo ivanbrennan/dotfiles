@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# To export new settings, run:
+# /Applications/Karabiner.app/Contents/Library/bin/karabiner export
+
 cli=/Applications/Karabiner.app/Contents/Library/bin/karabiner
 
 $cli be_careful_to_use__clear_all_values_by_name Default
@@ -31,10 +34,10 @@ $cli set remap.doublepresscommandQ 1
 $cli set remap.return2controlL_return_keyrepeat 1
 /bin/echo -n .
 
-# Shift alone acts as Caps Lock
-$cli set remap.shiftL2shiftL_capslock 1
+# Dual Shift activates Caps Lock, single Shift deactivates it.
+$cli set remap.shiftLshiftR_to_capslock 1
 /bin/echo -n .
-$cli set remap.shiftR2shiftR_capslock 1
+$cli set remap.shiftRshiftL_to_capslock 1
 /bin/echo -n .
 
 # Media key repeat settings
