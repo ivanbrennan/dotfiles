@@ -23,6 +23,10 @@ $cli set parameter.wait_before_and_after_a_modifier_key_event 5
 $cli set remap.controlL2controlL_escape 1
 /bin/echo -n .
 
+# Avoid accidental Command Q quits by requiring a double press
+$cli set remap.doublepresscommandQ 1
+/bin/echo -n .
+
 # Shift alone acts as Caps Lock
 $cli set remap.shiftL2shiftL_capslock 1
 /bin/echo -n .
