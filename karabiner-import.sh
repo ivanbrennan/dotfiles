@@ -23,6 +23,12 @@ $cli set parameter.wait_before_and_after_a_modifier_key_event 5
 $cli set remap.controlL2controlL_escape 1
 /bin/echo -n .
 
+# Shift alone acts as Caps Lock
+$cli set remap.shiftL2shiftL_capslock 1
+/bin/echo -n .
+$cli set remap.shiftR2shiftR_capslock 1
+/bin/echo -n .
+
 # Media key repeat settings
 $cli set repeat.consumer_initial_wait 200
 /bin/echo -n .
