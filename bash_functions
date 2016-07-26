@@ -112,11 +112,11 @@ ivim() {
   fi
 }
 
-ln_spacemacs() {
+lnspacemacs() {
   ln -shF ~/Development/resources/dotemacs/emacs.d.spacemacs ~/.emacs.d
 }
 
-ln_emacs() {
+lnemacs() {
   ln -shF ~/Development/resources/dotemacs/emacs.d ~/.emacs.d
 }
 
