@@ -2,10 +2,8 @@
 
 # ::::::::: Preamble ::::::::::::::::::::::::: {{{1
 
-# bash_profile is meant for login invocations.
-# OSX conventionally uses a login shell for all interactive
-# sessions, so I'm setting environment variables in bashrc
-# and using bash_profile for prompts and functions.
+# bash_profile is meant for login invocations. OSX conventionally
+# uses a login shell for all interactive sessions.
 
 # ::::::::: Environtment Variables ::::::::::: {{{1
 
