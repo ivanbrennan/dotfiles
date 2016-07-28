@@ -74,3 +74,152 @@
       ### Added by the Heroku Toolbelt
       export PATH="/usr/local/heroku/bin:$PATH"
 
+# ::::::::: Bash Completion ::::::::::::::::::
+
+  # Case insensitive tab autocomplete {{{1
+  bind "set completion-ignore-case on"
+
+  # Git Bash Completion {{{1
+  # Activate bash git completion if installed via homebrew
+  if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+  fi
+
+  # Colors {{{1
+    # grep
+    export GREP_OPTIONS="--color"
+
+    # Enable coloring in the terminal
+    export CLICOLOR=1
+    if [[ "$THEME" =~ dark ]]; then
+      export LSCOLORS="GxBxBxDxBxEgEaxbxgxcxd"
+    else
+      export LSCOLORS="exfxcxdxbxegedabagacad"
+    fi
+
+    # Order of attributes:
+    #  1. directory
+    #  2. symbolic link
+    #  3. socket
+    #  4. pipe
+    #  5. executable
+    #  6. block special
+    #  7. character special
+    #  8. executable with setuid bit set
+    #  9. executable with setgid bit set
+    # 10. directory writable to others, with sticky bit
+    # 11. directory writable to others, without sticky bit
+    # Default is "exfxcxdxbxegedabagacad"
+
+    # Color designators:
+    # a black         A bold black (grey)
+    # b red           B bold red
+    # c green         C bold green
+    # d brown         D bold brown (yellow)
+    # e blue          E bold blue
+    # f magenta       F bold magenta
+    # g cyan          G bold cyan
+    # h light grey    H bold light grey (white)
+    # x default foreground or background
+
+
+    # Order of attributes: {{{2
+      #  1. directory
+      #  2. symbolic link
+      #  3. socket
+      #  4. pipe
+      #  5. executable
+      #  6. block special
+      #  7. character special
+      #  8. executable with setuid bit set
+      #  9. executable with setgid bit set
+      # 10. directory writable to others, with sticky bit
+      # 11. directory writable to others, without sticky bit
+      # Default is "exfxcxdxbxegedabagacad"
+
+    # Source .bash_colors if it exists
+    if [ -f ~/.bash_colors.sh ]; then
+      . ~/.bash_colors.sh
+    fi
+
+    # Color designators: {{{2
+      # a black       A bold black (grey)
+      # b red         B bold red
+      # c green       C bold green
+      # d brown       D bold brown (yellow)
+      # e blue        E bold blue
+      # f magenta     F bold magenta
+      # g cyan        G bold cyan
+      # h light grey  H bold light grey (white)
+      # x default foreground or background
+
+# ::::::::: Prompt :::::::::::::::::::::::::::
+
+  # Git prompt components
+  minutes_since_last_commit() {
+    local now
+    local last_commit
+    now=`date +%s`
+    last_commit=`git log --pretty=format:'%at' -1 2>/dev/null`
+
+    if [ "$?" -eq 0 ]; then
+      local seconds_since_last_commit
+      local minutes_since_last_commit
+      seconds_since_last_commit=$((now-last_commit))
+      minutes_since_last_commit=$((seconds_since_last_commit/60))
+      echo $minutes_since_last_commit
+    fi
+  }
+
+  minutes_color() {
+    if [ -z "$1" ]; then
+      return
+    elif [[ "$1" -gt 30 ]]; then
+      echo "${RED}"
+    elif [[  "$1" -gt 10  ]]; then
+      echo "${YELLOW}"
+    else
+      echo "${GREEN}"
+    fi
+  }
+
+  grb_git_prompt() {
+    local g
+    g="$(__gitdir)"
+
+    if [ -n "$g" ]; then
+      local COLOR
+      local MINUTES_SINCE_LAST_COMMIT
+
+      COLOR=`hi_color`
+      MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
+
+      if [ -n "$MINUTES_SINCE_LAST_COMMIT" ]; then
+        local SINCE_LAST_COMMIT
+        COLOR=`minutes_color MINUTES_SINCE_LAST_COMMIT`
+        SINCE_LAST_COMMIT=" ${COLOR}$(minutes_since_last_commit)m${NORMAL}"
+      fi
+      # The __git_ps1 function inserts the current git branch where %s is
+      local GIT_PROMPT
+      GIT_PROMPT=`__git_ps1 "(${COLOR}%s$NORMAL)"`
+      echo ${GIT_PROMPT}
+    fi
+  }
+
+  # ℣ ℒ ∮ ֆ လ  ჶ Ꭶ ဝ ⬭ ⱇ ⬲
+  build_prompt() {
+    export PS1="╭-${BRIGHT_BLUE}\u${NORMAL}·${BRIGHT_BLUE}\W${NORMAL} \$(grb_git_prompt) ${NORMAL}\n╰ဝ "
+    export PS2="   ❯ "
+    export PS4="   + "
+    }
+
+    hi_color() {
+      if [[ "$THEME" =~ dark ]]; then
+        echo $WHITE
+      else
+        echo $BLACK
+      fi
+    }
+
+  # Call the prompt function
+  build_prompt
