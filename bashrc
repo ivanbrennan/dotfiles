@@ -91,11 +91,7 @@
 
     # Enable coloring in the terminal
     export CLICOLOR=1
-    if [[ "$THEME" =~ dark ]]; then
-      export LSCOLORS="GxBxBxDxBxEgEaxbxgxcxd"
-    else
-      export LSCOLORS="exfxcxdxbxegedabagacad"
-    fi
+    export LSCOLORS="exgxcxdxbxegedabagacad"
 
     # Order of attributes:
     #  1. directory
