@@ -5379,7 +5379,7 @@
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
 	<string>185 -679 855 647 0 -900 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 404 796 473 0 0 1440 877 </string>
+	<string>404 496 918 381 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -6962,26 +6962,26 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.91648769378662109</real>
+				<real>0.93568360805511475</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.91671288013458252</real>
+				<real>0.89533525705337524</real>
 				<key>Red Component</key>
-				<real>0.91654461622238159</real>
+				<real>0.71912318468093872</real>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.26020613312721252</real>
+				<real>0.1477460116147995</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.26027005910873413</real>
+				<real>0.13541047275066376</real>
 				<key>Red Component</key>
-				<real>0.26022228598594666</real>
+				<real>0.12397877871990204</real>
 			</dict>
 			<key>Semantic History</key>
 			<dict>
