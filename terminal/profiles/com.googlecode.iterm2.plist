@@ -7001,7 +7001,7 @@
 			<key>Silence Bell</key>
 			<true/>
 			<key>Smart Cursor Color</key>
-			<false/>
+			<true/>
 			<key>Smart Selection Rules</key>
 			<array>
 				<dict>
