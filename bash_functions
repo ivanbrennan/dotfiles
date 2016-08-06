@@ -248,9 +248,9 @@ serverhelp() {
   echo -e "MySQL: \tmysql.server start"
   echo -e "\tmysql.server stop\n"
   echo -e "Redis: \tredis-server ~/.redis/redis.conf"
-  echo -e "\tkill \"\$(rpid redis)\"\n"
+  echo -e "\tpkill redis\n"
   echo -e "kiqs: \tsidekiq -d"
-  echo -e "\tkill \"\$(rpid sidekiq)\""
+  echo -e "\tpkill sidekiq"
 }
 # Rails {{{1
 krs() {
