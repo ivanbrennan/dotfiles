@@ -120,6 +120,10 @@ lnemacs() {
   ln -shF ~/Development/resources/dotemacs/emacs.d ~/.emacs.d
 }
 
+debugemacs() {
+  /usr/local/Cellar/emacs-mac/HEAD-c17d400/Emacs.app/Contents/MacOS/Emacs --debug-init &
+}
+
 # Easily grep for a matching process {{{1
 # USE: psg postgres
 psg() {
