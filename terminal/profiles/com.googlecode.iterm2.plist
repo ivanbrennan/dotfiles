@@ -6,6 +6,8 @@
 	<false/>
 	<key>AllowClipboardAccess</key>
 	<false/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AnimateDimming</key>
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -5379,13 +5381,13 @@
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
 	<string>185 -679 855 647 0 -900 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>404 496 918 381 0 0 1440 877 </string>
+	<string>404 382 796 473 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>6 368 650 502 0 0 1440 877 </string>
+	<string>724 110 650 502 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>396 187 650 502 0 0 1440 877 </string>
+	<string>724 7 714 863 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>724 368 650 502 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
