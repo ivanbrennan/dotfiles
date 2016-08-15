@@ -42,9 +42,9 @@ $cli set repeat.consumer_initial_wait 200
 $cli set repeat.consumer_wait 30
 /bin/echo -n .
 # Regular key repeat settings
-$cli set repeat.initial_wait 300
+$cli set repeat.initial_wait 200
 /bin/echo -n .
-$cli set repeat.wait 30
+$cli set repeat.wait 25
 /bin/echo -n .
 
 /bin/echo
