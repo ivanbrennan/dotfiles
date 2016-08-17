@@ -151,7 +151,7 @@
 
 # ::::::::: Prompt :::::::::::::::::::::::::::
 
-  # Git prompt components
+  # Git prompt components: {{{1
   minutes_since_last_commit() {
     local now
     local last_commit
@@ -203,6 +203,7 @@
   }
 
   # ℣ ℒ ∮ ֆ လ  ჶ Ꭶ ဝ ⬭ ⱇ ⬲
+  # Build the prompt: {{{1
   build_prompt() {
     export PS1="╭-${BRIGHT_BLUE}\u${NORMAL}·${BRIGHT_BLUE}\W${NORMAL} \$(grb_git_prompt) ${NORMAL}\n╰ဝ "
     export PS2="   ❯ "
