@@ -206,7 +206,7 @@
   # Build the prompt: {{{1
   build_prompt() {
     export PS1="╭-${BRIGHT_BLUE}\u${NORMAL}·${BRIGHT_BLUE}\W${NORMAL} \$(grb_git_prompt) ${NORMAL}\n╰ဝ "
-    export PS2="   ❯ "
+    export PS2="quote ❯ "
     export PS4="   + "
     }
 
