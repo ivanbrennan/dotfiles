@@ -27,7 +27,7 @@ $cli set remap.controlL2controlL_escape 1
 /bin/echo -n .
 
 # Control when used as a modifier, Return when used alone. Great for emacs.
-$cli set remap.return2controlL_return_keyrepeat 1
+$cli set remap.return2controlL_return 1
 /bin/echo -n .
 
 # Dual Shift activates Caps Lock, single Shift deactivates it.
