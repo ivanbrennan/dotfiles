@@ -39,8 +39,8 @@
       shopt -s histappend
 
   # Output Control {{{2
-    # Disable output control in interactive shells
-    # so Ctrl-S can be used in i-reverse-search
+    # If the shell is interactive, disable START/STOP output control.
+    # This allows Ctrl-S to be used for i-search.
     case "$-" in
       *i*) stty -ixon;;
     esac
