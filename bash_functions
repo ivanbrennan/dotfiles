@@ -92,6 +92,16 @@ hidden() {
   killall -HUP Finder
 }
 
+# less like a cat
+les() {
+    if (( $(wc -l < "$1") < ${LINES:-20} ))
+    then
+        cat "$1"
+    else
+        less "$1"
+    fi
+}
+
 # Toggle LESS -XR {{{1
 xr() {
   if [ -z "${LESS+x}" ]; then
