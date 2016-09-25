@@ -131,7 +131,7 @@ lnemacs() {
 }
 
 debugemacs() {
-  /usr/local/Cellar/emacs-mac/HEAD-c17d400/Emacs.app/Contents/MacOS/Emacs --debug-init &
+  /usr/local/Cellar/emacs-mac/emacs-25.1-z-mac-6.0/Emacs.app/Contents/MacOS/Emacs --debug-init &
 }
 
 # Easily grep for a matching process {{{1
