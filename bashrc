@@ -29,6 +29,9 @@
     # NODE_PATH from Homebrew I believe
     export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 
+    # Tell Spacemacs where it can find .spacemacs.d
+    export SPACEMACSDIR="~/Development/resources/emacs/spacemacs.d"
+
   # Configurations {{{1
 
     # GIT_MERGE_AUTO_EDIT
