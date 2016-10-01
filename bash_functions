@@ -123,11 +123,11 @@ ivim() {
 }
 
 lnspacemacs() {
-  ln -shF ~/Development/resources/dotemacs/spacemacs ~/.emacs.d
+  ln -shF ~/Development/resources/emacs/spacemacs ~/.emacs.d
 }
 
 lnemacs() {
-  ln -shF ~/Development/resources/dotemacs/emacs.d ~/.emacs.d
+  ln -shF ~/Development/resources/emacs/emacs.d ~/.emacs.d
 }
 
 debugemacs() {
