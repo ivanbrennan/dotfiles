@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>Ivan Bindings</name>
+    <item>
+      <name>Slash(/) to Shift</name>
+      <appendix>(+ When you type Slash only, send Slash)</appendix>
+      <identifier>remap.slash2shift_slash</identifier>
+      <autogen>__KeyOverlaidModifier__ KeyCode::SLASH, KeyCode::SHIFT_L, KeyCode::SLASH</autogen>
+    </item>
+  </item>
+</root>
