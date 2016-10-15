@@ -8,5 +8,12 @@
       <identifier>remap.slash2shift_slash</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::SLASH, KeyCode::SHIFT_L, KeyCode::SLASH</autogen>
     </item>
+
+    <item>
+      <name>Semicolon(;) to Control_L</name>
+      <appendix>(+ When you type Semicolon only, send Semicolon)</appendix>
+      <identifier>remap.semicolon2control_semicolon</identifier>
+      <autogen>__KeyOverlaidModifier__ KeyCode::SEMICOLON, KeyCode::CONTROL_L, KeyCode::SEMICOLON</autogen>
+    </item>
   </item>
 </root>
