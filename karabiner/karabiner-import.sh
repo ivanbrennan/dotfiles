@@ -26,8 +26,12 @@ $cli set parameter.wait_before_and_after_a_modifier_key_event 5
 $cli set remap.controlL2controlL_escape 1
 /bin/echo -n .
 
-# Control when used as a modifier, Return when used alone. Great for emacs.
-$cli set remap.return2controlL_return 1
+# Control when used as a modifier, Semicolon when used alone.
+$cli set remap.semicolon2controlL_semicolon 1
+/bin/echo -n .
+
+# Shift when used as a modifier, Slash when used alone.
+$cli set remap.slash2shift_slash 1
 /bin/echo -n .
 
 # Dual Shift activates Caps Lock, single Shift deactivates it.
