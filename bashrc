@@ -32,6 +32,9 @@
     # Tell Spacemacs where it can find .spacemacs.d
     export SPACEMACSDIR="~/Development/resources/emacs/spacemacs.d"
 
+    # Tell Emacs what email address to send from
+    export EMAIL="ivan.brennan@gmail.com"
+
   # Configurations {{{1
 
     # GIT_MERGE_AUTO_EDIT
