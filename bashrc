@@ -75,7 +75,10 @@
 
     # PATH {{{2
 
-      export PATH="$USR_PATHS:$PATH"
+      # personal scripts
+      export SCRIPTS_PATH="$HOME/Development/resources/dotfiles/bin"
+
+      export PATH="$SCRIPTS_PATH:$USR_PATHS:$PATH"
 
       ### Added by the Heroku Toolbelt
       export PATH="/usr/local/heroku/bin:$PATH"
