@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # disable rubber-band scrolling
 defaults write -g               NSScrollViewRubberbanding -int  0

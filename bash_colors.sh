@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 DULL=0
 BRIGHT=1
