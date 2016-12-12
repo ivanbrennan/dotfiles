@@ -8,7 +8,7 @@ trap 'rm -f "$dir/$$.tags"' EXIT # delete temp file upon EXIT
 # pipe project's files to ctags for tagging
 # use paths relative to tagfile
 # write to temp file .git/<pid>.tags
-# dont' tag javascript or sql
+# don't tag javascript or sql
 git ls-files | \
   ctags --tag-relative=yes -L - -f "$dir/$$.tags" --languages=-javascript,sql
 mv "$dir/$$.tags" "$dir/tags"  # tagfile: .git/tags
