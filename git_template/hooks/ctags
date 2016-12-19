@@ -10,6 +10,6 @@ trap 'rm -f "$dir/$$.tags"' EXIT # delete temp file upon EXIT
 # write to temp file .git/<pid>.tags
 # don't tag javascript, sql, json, or css
 git ls-files | \
-  ctags --tag-relative=yes -L - -f "$dir/$$.tags" --languages=-javascript,sql,json,css
+  ctags -L - -o "$dir/$$.tags" --tag-relative=yes --languages=-javascript,sql,json,svg
 mv "$dir/$$.tags" "$dir/tags"  # tagfile: .git/tags
 
