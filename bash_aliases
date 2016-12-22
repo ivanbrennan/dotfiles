@@ -7,6 +7,7 @@ alias sbs=". ~/.bash_profile"
 alias gst="git status"
 alias gasp="git add -p db/schema.rb"
 alias gpr="git log origin/master.. --reverse"
+alias gpp="git log origin/master.. --reverse -p"
 alias gpc="git log origin/master.. -- | wc -l"
 
 # iOS Simulator
