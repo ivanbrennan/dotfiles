@@ -30,10 +30,6 @@ $cli set remap.controlL2controlL_escape 1
 $cli set remap.semicolon2controlL_semicolon 1
 /bin/echo -n .
 
-# Shift when used as a modifier, Slash when used alone.
-$cli set remap.slash2shift_slash 1
-/bin/echo -n .
-
 # Dual Shift activates Caps Lock, single Shift deactivates it.
 $cli set remap.shiftLshiftR_to_capslock 1
 /bin/echo -n .
