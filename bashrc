@@ -47,6 +47,11 @@
     export GIT_EDITOR=$NVIM_TRUE_COLOR
     export SVN_EDITOR=$NVIM_TRUE_COLOR
 
+    # XDG Base Directory Specification
+    # Some well-crafted applications (e.g. git, neovim) observe this spec.
+    # See https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
+    export XDG_CONFIG_HOME="$HOME/.config"
+
   # Paths {{{1
 
     # USR_PATHS {{{2
