@@ -34,8 +34,6 @@
 	branch = auto
 [format]
 	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
-[diff "ruby"]
-	funcname = ^ *\\(\\(class\\|module\\|def\\) .*\\)
 [commit]
 	verbose = true
 [push]
