@@ -34,6 +34,8 @@
 	branch = auto
 [format]
 	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+[diff "elisp"]
+  xfuncname = ^[[:space:]]*(\\(def[^[:space:]]+[[:space:]]+([^()[:space:]]+))
 [commit]
 	verbose = true
 [push]
