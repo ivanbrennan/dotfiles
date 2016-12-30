@@ -48,3 +48,10 @@ Thumbs.db
 #############
 \#*#
 .#*
+
+# Tags
+######
+/tags
+/GTAGS
+/GRTAGS
+/GPATH
