@@ -2,10 +2,10 @@
 
 set -e
 PATH="/usr/local/bin:$PATH"
-dir="`git rev-parse --git-dir`"  # repo's git dir
+dir="`git rev-parse --git-dir`"   # repo's git dir
 trap 'rm -f "$dir/$$.etags"' EXIT # delete temp file upon EXIT
 
-# pipe project's files to ctags for tagging
+# pipe project's files to ctags, use etags format
 # use paths relative to tagfile
 # write to temp file .git/<pid>.etags
 # don't tag javascript, sql, json, or minified-css
