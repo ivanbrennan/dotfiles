@@ -10,6 +10,6 @@ mkdir -p "$dir/$$.gtags"
 # pipe project's files to gtags for tagging
 # write to temp directory .git/<pid>.gtags
 git ls-files | \
-  gtags --file - "$dir"/$$.gtags"
-mv "$dir"/$$.gtags/{GTAGS,GRTAGS,GPATH} "$dir"  # files: .git/{GTAGS,GRTAGS,GPATH}
+  gtags --file - "$dir/$$.gtags"
+mv "$dir/$$.gtags/"{GTAGS,GRTAGS,GPATH} "$dir"  # files: .git/{GTAGS,GRTAGS,GPATH}
 
