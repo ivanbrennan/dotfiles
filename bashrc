@@ -35,6 +35,10 @@
     # Tell Emacs what email address to send from
     export EMAIL="ivan.brennan@gmail.com"
 
+    # Configure GNU Global to work with universal-ctags
+    export GTAGSCONF=/usr/local/share/gtags/gtags.conf
+    export GTAGSLABEL=new-ctags
+
   # Configurations {{{1
 
     # GIT_MERGE_AUTO_EDIT
