@@ -5,11 +5,14 @@ PATH="/usr/local/bin:$PATH"
 dir="`git rev-parse --git-dir`"  # repo's git dir
 trap 'rm -f "$dir/$$.tags"' EXIT # delete temp file upon EXIT
 
-# pipe project's files to ctags for tagging
+# pipe project's files to ctags
 # use paths relative to tagfile
 # write to temp file .git/<pid>.tags
-# don't tag javascript, sql, json, or css
+# don't tag javascript, sql, json, or minified-css
 git ls-files | \
-  ctags -L - -o "$dir/$$.tags" --tag-relative=yes --languages=-javascript,sql,json,svg
+  ctags -L - -o "$dir/$$.tags" --tag-relative=yes \
+  --languages=-javascript,sql,json,svg \
+  --exclude=*.min.css
+
 mv "$dir/$$.tags" "$dir/tags"  # tagfile: .git/tags
 
