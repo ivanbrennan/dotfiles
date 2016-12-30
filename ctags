@@ -1,1 +1,3 @@
+--languages=-javascript,sql,json,svg
 --exclude=.git
+--exclude=*.min.css
