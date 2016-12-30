@@ -2,14 +2,15 @@
 
 set -e
 PATH="/usr/local/bin:$PATH"
-dir="`git rev-parse --show-toplevel`"  # repo's root dir
-trap 'rm -rf "$dir/$$.gtags"' EXIT # delete temp directory upon EXIT
+git_dir="`git rev-parse --git-dir`"  # repo's git dir
+top_dir="`git rev-parse --show-toplevel`"  # repo's root dir
+trap 'rm -rf "$git_dir/$$.gtags"' EXIT # delete temp directory upon EXIT
 
-mkdir -p "$dir/$$.gtags"
+mkdir -p "$git_dir/$$.gtags"
 
 # pipe project's files to gtags for tagging
 # write to temp directory <pid>.gtags
 git ls-files | \
-  gtags --file - "$dir/$$.gtags"
-mv "$dir/$$.gtags/"{GTAGS,GRTAGS,GPATH} "$dir"  # files: GTAGS GRTAGS GPATH
+  gtags --file - "$git_dir/$$.gtags"
+mv "$git_dir/$$.gtags/"{GTAGS,GRTAGS,GPATH} "$top_dir"  # files: GTAGS GRTAGS GPATH
 
