@@ -10,9 +10,7 @@ trap 'rm -f "$dir/$$.etags"' EXIT # delete temp file upon EXIT
 # write to temp file .git/<pid>.etags
 # don't tag javascript, sql, json, or minified-css
 git ls-files | \
-  ctags -L - -e -o "$dir/$$.etags" --tag-relative=yes \
-  --languages=-javascript,sql,json,svg \
-  --exclude=*.min.css
+  ctags -L - -e -o "$dir/$$.etags" --tag-relative=yes
 
 mv "$dir/$$.etags" "$dir/etags"  # tagfile: .git/etags
 
