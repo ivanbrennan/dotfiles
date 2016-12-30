@@ -7,10 +7,6 @@ top_dir="`git rev-parse --show-toplevel`"  # repo's root dir
 trap 'rm -rf "$git_dir/$$.gtags"' EXIT     # delete temp directory upon EXIT
 
 mkdir -p "$git_dir/$$.gtags"
-# pipe project's files to ctags, use etags format
-# use paths relative to tagfile
-# write to temp file .git/<pid>.etags
-# don't tag javascript, sql, json, or minified-css
 
 # pipe project's files to gtags
 # write to temp directory <pid>.gtags
