@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+PATH="/usr/local/bin:$PATH"
+dir="`git rev-parse --git-dir`"  # repo's git dir
+trap 'rm -rf "$dir/$$.gtags"' EXIT # delete temp directory upon EXIT
+
+mkdir -p "$dir/$$.gtags"
+
+# pipe project's files to gtags for tagging
+# write to temp directory .git/<pid>.gtags
+git ls-files | \
+  gtags --file - "$dir"/$$.gtags"
+mv "$dir"/$$.gtags/{GTAGS,GRTAGS,GPATH} "$dir"  # files: .git/{GTAGS,GRTAGS,GPATH}
+
