@@ -8,8 +8,11 @@ trap 'rm -f "$dir/$$.etags"' EXIT # delete temp file upon EXIT
 # pipe project's files to ctags for tagging
 # use paths relative to tagfile
 # write to temp file .git/<pid>.etags
-# don't tag javascript, sql, json, or css
+# don't tag javascript, sql, json, or minified-css
 git ls-files | \
-  ctags -L - -e -o "$dir/$$.etags" --tag-relative=yes --languages=-javascript,sql,json,css,svg
+  ctags -L - -e -o "$dir/$$.etags" --tag-relative=yes \
+  --languages=-javascript,sql,json,svg \
+  --exclude=*.min.css
+
 mv "$dir/$$.etags" "$dir/etags"  # tagfile: .git/etags
 
