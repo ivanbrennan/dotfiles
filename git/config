@@ -48,6 +48,6 @@
 [merge]
 	tool = opendiff
 [init]
-	templatedir = ~/.git_template
+	templatedir = ~/.config/git/templates
 [advice]
 	statusHints = false
