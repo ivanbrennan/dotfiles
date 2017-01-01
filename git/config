@@ -34,7 +34,7 @@
 [format]
 	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [diff "elisp"]
-  xfuncname = ^[[:space:]]*(\\((cl-)?def[^[:space:]]+[[:space:]]+([^()[:space:]]+).*)$
+  xfuncname = ^[[:space:]]*(\\(.+)$
 [commit]
 	verbose = true
 [push]
