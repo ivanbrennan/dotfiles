@@ -4,10 +4,11 @@
       "name": "Default profile",
       "selected": true,
       "simple_modifications": {
+        "left_control": "shift",
         "caps_lock": "left_control",
         "semicolon": "right_control"
       },
-      "standalone_modifiers": {
+      "standalone_keys": {
         "left_control": "escape",
         "right_control": "semicolon"
       }
