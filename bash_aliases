@@ -21,11 +21,10 @@ alias lsf="CLICOLOR_FORCE=1 ls -F"
 # LESS
 alias lessr="less -R"
 
-# MV
-alias mvv="mv -v"
-
-# RM
-alias rmi="rm -i"
+# -iv
+alias cp="cp -iv"
+alias rm="rm -iv"
+alias mv="mv -iv"
 
 # Vim
 alias nvim="NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
