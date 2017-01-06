@@ -8,8 +8,8 @@
         "semicolon": "right_control"
       },
       "standalone_keys": {
-        "left_control": "escape",
-        "right_control": "semicolon"
+        "caps_lock": "escape",
+        "semicolon": "semicolon"
       }
     }
   ]
