@@ -5,7 +5,6 @@ alias sbs=". ~/.bash_profile"
 
 # Git
 alias gst="git status"
-alias gasp="git add -p db/schema.rb"
 alias gpr="git log origin/master.. --reverse"
 alias gpt="git log origin/master.. --reverse --pretty='[\`%h\`](https://github.com/Handybook/handybook/commit/%H) %s'"
 alias gpp="git log origin/master.. --reverse -p"
