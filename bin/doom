@@ -1,0 +1,15 @@
+#!/bin/sh
+
+exit_with_error() {
+  echo "$@" >&2
+  exit 1
+}
+
+emacs_app="/usr/local/opt/emacs-mac/Emacs.app/Contents/MacOS/Emacs"
+doom_home="${HOME}/Development/resources/emacs/doom"
+doom_init="${doom_home}/.emacs.d/init.el"
+
+[ ! -e $emacs_app ] && exit_with_error "Emacs.app not found"
+[ ! -f $doom_init ] && exit_with_error "doom config not found"
+
+(env HOME="${doom_home}" $emacs_app &)
