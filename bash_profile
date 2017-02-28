@@ -12,6 +12,11 @@
     . ~/.bashrc
   fi
 
+  # Source .bashrc.local if it's readable
+  if [ -r ~/.bashrc.local ]; then
+    . ~/.bashrc.local
+  fi
+
 # ::::::::: Aliases :::::::::::::::::::::::::: {{{1
 
   # Source bash_aliases if it exists
