@@ -263,7 +263,7 @@ serverhelp() {
   echo -e "\tmysql.server stop\n"
   echo -e "Redis: \tredis-server ~/.redis/redis.conf"
   echo -e "\tpkill redis\n"
-  echo -e "kiqs: \tsidekiq -d"
+  echo -e "kiqs: \tsidekiq -d -L log/sidekiq.log"
   echo -e "\tpkill sidekiq"
 }
 # Rails {{{1
