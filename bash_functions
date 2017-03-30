@@ -369,21 +369,23 @@ rupl() {
 }
 
 greplace() {
-  if [ "$#" != 3 ]; then
-    echo "Usage: greplace file_pattern search_pattern replacement"
+  if [ "$#" != 4 ]; then
+    echo "Usage: greplace path file_pattern search_pattern replacement"
     return 1
   else
+    local path
     local file_pattern
     local search_pattern
     local replacement
-    file_pattern=$1
-    search_pattern=$2
-    replacement=$3
+    path=$1
+    file_pattern=$2
+    search_pattern=$3
+    replacement=$4
 
     # This is built for BSD grep and the sed bundled with OS X.
     # GNU grep takes -Z instead of --null, and other versions of sed may not support the -i '' syntax.
 
-    find . -name "$file_pattern" -exec grep -lw --null "$search_pattern" {} + |
+    find "$path" -type f -name "$file_pattern" -exec grep -lw --null "$search_pattern" {} + |
     xargs -0 sed -i '' "s/[[:<:]]$search_pattern[[:>:]]/$replacement/g"
   fi
 }
