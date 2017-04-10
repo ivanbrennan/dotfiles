@@ -15,7 +15,7 @@ if [ ${#@} -eq 0 ]; then
     if application "Emacs.app" is running then
       tell application id (id of application "Emacs.app") to activate
     else
-      tell application ((path to applications folder as text) & "Emacs.app") to activate
+      tell application "$emacs_app" to activate
     end if
 END
   ) &
@@ -33,7 +33,7 @@ else
       if application "Emacs.app" is running then
         tell application id (id of application "Emacs.app") to open POSIX file "$file"
       else
-        tell application ((path to applications folder as text) & "Emacs.app")
+        tell application "$emacs_app"
           activate
           open POSIX file "$file"
         end tell
