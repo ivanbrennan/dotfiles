@@ -1,0 +1,50 @@
+#!/bin/sh
+
+exit_with_error() {
+  echo "$@" >&2
+  exit 1
+}
+
+emacs_app="/usr/local/opt/emacs-mac/Emacs.app/Contents/MacOS/Emacs"
+if [ ! -e $emacs_app ]; then
+  exit_with_error "Emacs.app not found"
+fi
+
+if [ ${#@} -eq 0 ]; then
+  $(/usr/bin/osascript <<-END
+    if application "Emacs.app" is running then
+      tell application id (id of application "Emacs.app") to activate
+    else
+      tell application ((path to applications folder as text) & "Emacs.app") to activate
+    end if
+END
+  ) &
+else
+  t=()
+
+  while IFS= read -r filename; do
+    if [ ! -f "$filename" ]; then
+      t+=("$filename") && /usr/bin/touch "$filename"
+    fi
+
+    file=$(echo $(cd $(dirname "$filename") && pwd -P)/$(basename "$filename"))
+
+    $(/usr/bin/osascript <<-END
+      if application "Emacs.app" is running then
+        tell application id (id of application "Emacs.app") to open POSIX file "$file"
+      else
+        tell application ((path to applications folder as text) & "Emacs.app")
+          activate
+          open POSIX file "$file"
+        end tell
+      end if
+END
+    ) &
+  done <<<"$(printf '%s\n' "$@")"
+
+  if [ ! -z "$t" ]; then
+    $(/bin/sleep 10; for file in "${t[@]}"; do
+      [ ! -s "$file" ] && /bin/rm "$file";
+    done) &
+  fi
+fi
