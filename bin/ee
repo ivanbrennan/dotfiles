@@ -1,0 +1,13 @@
+#!/bin/sh
+
+exit_with_error() {
+  echo "$@" >&2
+  exit 1
+}
+
+emacs_app="/usr/local/opt/emacs-mac/Emacs.app/Contents/MacOS/Emacs"
+if [ ! -e $emacs_app ]; then
+  exit_with_error "Emacs.app not found"
+fi
+
+($emacs_app &)
