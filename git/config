@@ -50,4 +50,4 @@
 [advice]
 	statusHints = false
 [init]
-	templateDir = /Users/ivan/.config/git/templates
+	templatedir = ~/.config/git/templates
