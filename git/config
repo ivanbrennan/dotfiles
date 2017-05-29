@@ -47,7 +47,7 @@
 	trustExitCode = true
 [merge]
 	tool = opendiff
-[init]
-	templatedir = ~/.config/git/templates
 [advice]
 	statusHints = false
+[init]
+	templateDir = /Users/ivan/.config/git/templates
