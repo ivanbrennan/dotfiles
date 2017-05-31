@@ -390,3 +390,9 @@ greplace() {
   fi
 }
 
+# dictionary {{{1
+
+fdoc() {
+  curl dict://dict.org/d:$1:foldoc
+}
+
