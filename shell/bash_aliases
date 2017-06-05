@@ -24,7 +24,6 @@ alias lessr="less -R"
 
 # -iv
 alias cp="cp -iv"
-alias rm="rm -iv"
 alias mv="mv -iv"
 
 # Vim
