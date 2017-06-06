@@ -11,7 +11,7 @@ dotfiles=(
 
 echo '### Generating symlinks...'
 
-for file in ${dotfiles[@]}; do
-  name=$(basename $file)
+for file in "${dotfiles[@]}"; do
+  name=$(basename "$file")
   ln -svhF "$file" "$HOME/.$name"
 done
