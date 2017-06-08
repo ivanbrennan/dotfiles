@@ -15,11 +15,6 @@
     esac
   fi
 
-  # Year {{{1
-
-  current_year=$(date +'%Y')
-  export YEAR=$current_year
-
   # Library Paths {{{1
 
     # These variables tell your shell where they can find certain
