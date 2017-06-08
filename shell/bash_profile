@@ -2,7 +2,7 @@
 
 # ::::::::: Preamble ::::::::::::::::::::::::: {{{1
 
-# bash_profile is meant for login invocations. OSX conventionally
+# bash_profile is meant for login invocations. macOS conventionally
 # uses a login shell for all interactive sessions.
 
 # ::::::::: Environtment Variables ::::::::::: {{{1
