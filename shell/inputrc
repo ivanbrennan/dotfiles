@@ -1,4 +1,5 @@
 set keyseq-timeout 250
+set completion-ignore-case on
 
 # Shift-Space
 "\e[32;2u": " "
