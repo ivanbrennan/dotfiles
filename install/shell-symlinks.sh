@@ -9,8 +9,6 @@ dotfiles=(
   "$HOME/Development/resources/dotfiles/shell/inputrc"
 )
 
-echo '### Generating symlinks...'
-
 for file in "${dotfiles[@]}"; do
   name=$(basename "$file")
   ln -svhF "$file" "$HOME/.$name"
