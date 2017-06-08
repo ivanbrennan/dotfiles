@@ -62,6 +62,8 @@
 
 # ::::::::: Colors :::::::::::::::::::::::::::
 {
+  [ -f ~/.bash_colors.sh ] && . ~/.bash_colors.sh
+
   if [ -z "$THEME" ]; then
     case "$ITERM_PROFILE" in
       'black'  ) export THEME=dark   ;;
@@ -70,37 +72,38 @@
     esac
   fi
 
-  # Enable coloring in the terminal
   export CLICOLOR=1
   export GREP_OPTIONS="--color"
-  export LSCOLORS="exgxcxdxbxegedabagacad"
 
-  # Order of attributes:
-  #  1. directory
-  #  2. symbolic link
-  #  3. socket
-  #  4. pipe
-  #  5. executable
-  #  6. block special
-  #  7. character special
-  #  8. executable with setuid bit set
-  #  9. executable with setgid bit set
-  # 10. directory writable to others, with sticky bit
-  # 11. directory writable to others, without sticky bit
-  # Default is "exfxcxdxbxegedabagacad"
+  # ls
+  {
+    # Order of attributes:
+    #  1. directory
+    #  2. symbolic link
+    #  3. socket
+    #  4. pipe
+    #  5. executable
+    #  6. block special
+    #  7. character special
+    #  8. executable with setuid bit set
+    #  9. executable with setgid bit set
+    # 10. directory writable to others, with sticky bit
+    # 11. directory writable to others, without sticky bit
 
-  # Color designators:
-  # a black         A bold black (grey)
-  # b red           B bold red
-  # c green         C bold green
-  # d brown         D bold brown (yellow)
-  # e blue          E bold blue
-  # f magenta       F bold magenta
-  # g cyan          G bold cyan
-  # h light grey    H bold light grey (white)
-  # x default foreground or background
+    # Color designators:
+    # a black         A bold black (grey)
+    # b red           B bold red
+    # c green         C bold green
+    # d brown         D bold brown (yellow)
+    # e blue          E bold blue
+    # f magenta       F bold magenta
+    # g cyan          G bold cyan
+    # h light grey    H bold light grey (white)
+    # x default foreground or background
 
-  [ -f ~/.bash_colors.sh ] && . ~/.bash_colors.sh
+    # the default is exfxcxdxbxegedabagacad
+    export LSCOLORS="exgxcxdxbxegedabagacad"
+  }
 }
 
 # ::::::::: Prompt :::::::::::::::::::::::::::
