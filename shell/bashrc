@@ -55,7 +55,7 @@
 # ::::::::: Bash Completion ::::::::::::::::::
 {
   # Activate bash git completion if installed via homebrew
-  if [ -f $(brew --prefix >2/dev/null)/etc/bash_completion ]; then
+  if [ -f $(brew --prefix 2>/dev/null)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
   fi
 }
