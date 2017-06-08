@@ -1,56 +1,36 @@
 #!/bin/sh
 
-# ::::::::: Preamble ::::::::::::::::::::::::: {{{1
+# ::::::::: Preamble :::::::::::::::::::::::::
 
-# bash_profile is meant for login invocations. macOS conventionally
-# uses a login shell for all interactive sessions.
+# bash_profile is meant for login invocations.
+# macOS conventionally uses a login shell for
+# all interactive sessions.
 
-# ::::::::: Environtment Variables ::::::::::: {{{1
+# ::::::::: Environtment Variables :::::::::::
 
-  # Source .bashrc if it exists
-  if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-  fi
+files=(~/.bashrc
+       ~/.bashrc.local
+       ~/.bash_aliases
+       ~/.bash_functions)
 
-  # Source .bashrc.local if it's readable
-  if [ -r ~/.bashrc.local ]; then
-    . ~/.bashrc.local
-  fi
+for file in "$files"; do
+  [ -r "$file" ] && . "$file"
+done
 
-# ::::::::: Aliases :::::::::::::::::::::::::: {{{1
+# ::::::::: Options ::::::::::::::::::::::::::
 
-  # Source bash_aliases if it exists
-  if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-  fi
+# History
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+shopt -s histappend
 
-# ::::::::: Functions :::::::::::::::::::::::: {{{1
+# If the shell is interactive, disable START/STOP output
+# control. This allows Ctrl-S to be used for i-search.
+case "$-" in
+  *i*) stty -ixon;;
+esac
 
-  # Source bash_functions if it exists
-  if [ -f ~/.bash_functions ]; then
-    . ~/.bash_functions
-  fi
+# ::::::::: rbenv ::::::::::::::::::::::::::::
 
-# ::::::::: Final Config and Plugins ::::::::: {{{1
-
-  # History {{{2
-    # Erase duplicates in history
-      export HISTCONTROL=erasedups
-
-    # Store 10k history entries
-      export HISTSIZE=10000
-
-    # Append to the history file when exiting instead of overwriting it
-      shopt -s histappend
-
-  # Output Control {{{2
-    # If the shell is interactive, disable START/STOP output control.
-    # This allows Ctrl-S to be used for i-search.
-    case "$-" in
-      *i*) stty -ixon;;
-    esac
-
-# ::::::::: rbenv :::::::::::::::::::::::::::: {{{1
-
-    if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
