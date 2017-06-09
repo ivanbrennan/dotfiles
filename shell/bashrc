@@ -77,6 +77,8 @@
 
   # ls
   {
+    export LSCOLORS="exgxcxdxbxegedabagacad"
+
     # Order of attributes:
     #  1. directory
     #  2. symbolic link
@@ -102,13 +104,48 @@
     # x default foreground or background
 
     # the default is exfxcxdxbxegedabagacad
-    export LSCOLORS="exgxcxdxbxegedabagacad"
   }
 }
 
 # ::::::::: Prompt :::::::::::::::::::::::::::
+{
+  build_prompt() {
+    export PS1="╭-${BRIGHT_BLUE}\u${NORMAL}·${BRIGHT_BLUE}\W${NORMAL} \$(grb_git_prompt) ${NORMAL}\n╰ဝ "
+    export PS2=" ❯ "
+    export PS4=" + "
+  }
 
-  # Git prompt components: {{{1
+  grb_git_prompt() {
+    local g
+    g="$(__gitdir)"
+
+    if [ -n "$g" ]; then
+      local COLOR
+      local MINUTES_SINCE_LAST_COMMIT
+
+      COLOR="$(hi_color)"
+      MINUTES_SINCE_LAST_COMMIT="$(minutes_since_last_commit)"
+
+      if [ -n "$MINUTES_SINCE_LAST_COMMIT" ]; then
+        local SINCE_LAST_COMMIT
+        COLOR="$(minutes_color MINUTES_SINCE_LAST_COMMIT)"
+        SINCE_LAST_COMMIT=" ${COLOR}$(minutes_since_last_commit)m${NORMAL}"
+      fi
+      # The __git_ps1 function inserts the current git branch where %s is
+      local GIT_PROMPT
+      GIT_PROMPT=$(__git_ps1 "(${COLOR}%s$NORMAL)")
+      echo ${GIT_PROMPT}
+    fi
+  }
+
+  hi_color() {
+    if [[ "$THEME" =~ dark ]]; then
+      echo $WHITE
+    else
+      echo $BLACK
+    fi
+  }
+
   minutes_since_last_commit() {
     local now
     local last_commit
@@ -136,44 +173,5 @@
     fi
   }
 
-  grb_git_prompt() {
-    local g
-    g="$(__gitdir)"
-
-    if [ -n "$g" ]; then
-      local COLOR
-      local MINUTES_SINCE_LAST_COMMIT
-
-      COLOR=`hi_color`
-      MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
-
-      if [ -n "$MINUTES_SINCE_LAST_COMMIT" ]; then
-        local SINCE_LAST_COMMIT
-        COLOR=`minutes_color MINUTES_SINCE_LAST_COMMIT`
-        SINCE_LAST_COMMIT=" ${COLOR}$(minutes_since_last_commit)m${NORMAL}"
-      fi
-      # The __git_ps1 function inserts the current git branch where %s is
-      local GIT_PROMPT
-      GIT_PROMPT=`__git_ps1 "(${COLOR}%s$NORMAL)"`
-      echo ${GIT_PROMPT}
-    fi
-  }
-
-  # ℣ ℒ ∮ ֆ လ  ჶ Ꭶ ဝ ⬭ ⱇ ⬲
-  # Build the prompt: {{{1
-  build_prompt() {
-    export PS1="╭-${BRIGHT_BLUE}\u${NORMAL}·${BRIGHT_BLUE}\W${NORMAL} \$(grb_git_prompt) ${NORMAL}\n╰ဝ "
-    export PS2=" ❯ "
-    export PS4=" + "
-    }
-
-    hi_color() {
-      if [[ "$THEME" =~ dark ]]; then
-        echo $WHITE
-      else
-        echo $BLACK
-      fi
-    }
-
-  # Call the prompt function
   build_prompt
+}
