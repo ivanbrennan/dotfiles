@@ -54,10 +54,10 @@
 
 # ::::::::: Bash Completion ::::::::::::::::::
 {
-  # Activate bash git completion if installed via homebrew
-  if [ -f $(brew --prefix 2>/dev/null)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
-  fi
+  brew_prefix=$(brew --prefix 2>/dev/null)
+  completion_file="${brew_prefix:-x}/etc/bash_completion"
+
+  [ -f "$completion_file" ] && . "$completion_file"
 }
 
 # ::::::::: Colors :::::::::::::::::::::::::::
