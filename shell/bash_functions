@@ -144,14 +144,9 @@ psg() {
   fi
 }
 
-# Easily grep for a matching file {{{1
-# USE: lg filename
+# Easily grep for a matching file
 lg() {
-  local FIRST
-  local REST
-  FIRST=`echo $1 | sed -e 's/^\(.\).*/\1/'`
-  REST=`echo $1 | sed -e 's/^.\(.*\)/\1/'`
-  ls -la | grep "[$FIRST]$REST"
+  ls -la | grep "$1"
 }
 
 # Extract archive based on extension {{{1
