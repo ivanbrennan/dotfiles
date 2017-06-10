@@ -1,52 +1,55 @@
 #!/bin/sh
 
-DULL=0
-BRIGHT=1
+{
+  DULL=0
+  BRIGHT=1
+  {
+    FG_NULL=00
+    FG_BLACK=30
+    FG_RED=31
+    FG_GREEN=32
+    FG_YELLOW=33
+    FG_BLUE=34
+    FG_VIOLET=35
+    FG_CYAN=36
+    FG_WHITE=37
+  }
+  {
+    BG_NULL=00
+    BG_BLACK=40
+    BG_RED=41
+    BG_GREEN=42
+    BG_YELLOW=43
+    BG_BLUE=44
+    BG_VIOLET=45
+    BG_CYAN=46
+    BG_WHITE=47
+  }
+}
 
-FG_BLACK=30
-FG_RED=31
-FG_GREEN=32
-FG_YELLOW=33
-FG_BLUE=34
-FG_VIOLET=35
-FG_CYAN=36
-FG_WHITE=37
-
-FG_NULL=00
-
-BG_BLACK=40
-BG_RED=41
-BG_GREEN=42
-BG_YELLOW=43
-BG_BLUE=44
-BG_VIOLET=45
-BG_CYAN=46
-BG_WHITE=47
-
-BG_NULL=00
-
-##
 # ANSI Escape Commands
-##
-NORMAL="\e[m"
-RESET="\e[${DULL};${FG_WHITE};${BG_NULL}m"
-
-BLACK="\e[${DULL};${FG_BLACK}m"
-RED="\e[${DULL};${FG_RED}m"
-GREEN="\e[${DULL};${FG_GREEN}m"
-YELLOW="\e[${DULL};${FG_YELLOW}m"
-BLUE="\e[${DULL};${FG_BLUE}m"
-VIOLET="\e[${DULL};${FG_VIOLET}m"
-CYAN="\e[${DULL};${FG_CYAN}m"
-WHITE="\e[${DULL};${FG_WHITE}m"
-
-# BRIGHT TEXT
-BRIGHT_BLACK="\e[${BRIGHT};${FG_BLACK}m"
-BRIGHT_RED="\e[${BRIGHT};${FG_RED}m"
-BRIGHT_GREEN="\e[${BRIGHT};${FG_GREEN}m"
-BRIGHT_YELLOW="\e[${BRIGHT};${FG_YELLOW}m"
-BRIGHT_BLUE="\e[${BRIGHT};${FG_BLUE}m"
-BRIGHT_VIOLET="\e[${BRIGHT};${FG_VIOLET}m"
-BRIGHT_CYAN="\e[${BRIGHT};${FG_CYAN}m"
-BRIGHT_WHITE="\e[${BRIGHT};${FG_WHITE}m"
+{
+  NORMAL="\e[m"
+  RESET="\e[${DULL};${FG_WHITE};${BG_NULL}m"
+  {
+    BLACK="\e[${DULL};${FG_BLACK}m"
+    RED="\e[${DULL};${FG_RED}m"
+    GREEN="\e[${DULL};${FG_GREEN}m"
+    YELLOW="\e[${DULL};${FG_YELLOW}m"
+    BLUE="\e[${DULL};${FG_BLUE}m"
+    VIOLET="\e[${DULL};${FG_VIOLET}m"
+    CYAN="\e[${DULL};${FG_CYAN}m"
+    WHITE="\e[${DULL};${FG_WHITE}m"
+  }
+  {
+    BRIGHT_BLACK="\e[${BRIGHT};${FG_BLACK}m"
+    BRIGHT_RED="\e[${BRIGHT};${FG_RED}m"
+    BRIGHT_GREEN="\e[${BRIGHT};${FG_GREEN}m"
+    BRIGHT_YELLOW="\e[${BRIGHT};${FG_YELLOW}m"
+    BRIGHT_BLUE="\e[${BRIGHT};${FG_BLUE}m"
+    BRIGHT_VIOLET="\e[${BRIGHT};${FG_VIOLET}m"
+    BRIGHT_CYAN="\e[${BRIGHT};${FG_CYAN}m"
+    BRIGHT_WHITE="\e[${BRIGHT};${FG_WHITE}m"
+  }
+}
 
