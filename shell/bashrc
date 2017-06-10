@@ -55,9 +55,10 @@
 # ::::::::: Bash Completion ::::::::::::::::::
 {
   brew_prefix=$(brew --prefix 2>/dev/null)
-  completion_file="${brew_prefix:-x}/etc/bash_completion"
 
-  [ -f "$completion_file" ] && . "$completion_file"
+  if [ -n "$brew_prefix" ] && [ -f "$brew_prefix/etc/bash_completion" ]; then
+    . "$brew_prefix/etc/bash_completion"
+  fi
 }
 
 # ::::::::: Colors :::::::::::::::::::::::::::
