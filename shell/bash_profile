@@ -1,13 +1,10 @@
 #!/bin/sh
 
-# ::::::::: Preamble :::::::::::::::::::::::::
-
 # bash_profile is meant for login invocations.
 # macOS conventionally uses a login shell for
 # all interactive sessions.
 
-# ::::::::: Environtment Variables :::::::::::
-
+# Sources
 files=(~/.bashrc
        ~/.bashrc.local
        ~/.bash_aliases
@@ -17,20 +14,15 @@ for file in "${files[@]}"; do
   [ -r "$file" ] && . "$file"
 done
 
-# ::::::::: Options ::::::::::::::::::::::::::
-
 # History
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
 shopt -s histappend
 
-# If the shell is interactive, disable START/STOP output
-# control. This allows Ctrl-S to be used for i-search.
-case "$-" in
-  *i*) stty -ixon;;
-esac
+# If shell is interactive, disable START/STOP output control.
+# This allows Ctrl-S to trigger i-search.
+[[ $- = *i* ]] && stty -ixon
 
 # ::::::::: rbenv ::::::::::::::::::::::::::::
-
 if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
