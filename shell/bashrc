@@ -35,10 +35,10 @@
 # ::::::::: One True Editor(s) :::::::::::::::
 {
   # Neovim
-  NVIM_TRUE_COLOR="NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
-  export VISUAL=$NVIM_TRUE_COLOR
-  export GIT_EDITOR=$NVIM_TRUE_COLOR
-  export SVN_EDITOR=$NVIM_TRUE_COLOR
+  NEOVIM="NVIM_TUI_ENABLE_TRUE_COLOR=1 $( command -v nvim 2>/dev/null || echo vim )"
+  export VISUAL=$NEOVIM
+  export GIT_EDITOR=$NEOVIM
+  export SVN_EDITOR=$NEOVIM
 
   # Emacs
   export SPACEMACSDIR="~/Development/resources/emacs/spacemacs.d"

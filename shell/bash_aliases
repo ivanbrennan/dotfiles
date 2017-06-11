@@ -24,8 +24,7 @@ alias cp="cp -iv"
 alias mv="mv -iv"
 
 # Vim
-alias nvim="NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
-alias vi="nvim"
+alias v=$NEOVIM
 alias view="nvim -MR"
 
 # GDB
