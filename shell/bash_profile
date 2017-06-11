@@ -15,7 +15,7 @@ for file in "${files[@]}"; do
 done
 
 # History
-export HISTCONTROL=erasedups
+export HISTCONTROL=erasedups:ignorespace
 export HISTSIZE=10000
 shopt -s histappend
 
