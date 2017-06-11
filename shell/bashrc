@@ -35,7 +35,8 @@
 # ::::::::: One True Editor(s) :::::::::::::::
 {
   # Neovim
-  NEOVIM="NVIM_TUI_ENABLE_TRUE_COLOR=1 $( command -v nvim 2>/dev/null || echo vim )"
+  NEOVIM="$( { command -v nvim || command -v vim; } 2>/dev/null || echo vi )"
+
   export VISUAL=$NEOVIM
   export GIT_EDITOR=$NEOVIM
   export SVN_EDITOR=$NEOVIM
