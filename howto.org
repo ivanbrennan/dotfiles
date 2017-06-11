@@ -1,0 +1,3 @@
+* better tab completion of CDPATH entries
+** pushd
+** omit CDPATH completion candidates if candidates exist in the current directory
