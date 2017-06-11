@@ -136,9 +136,9 @@ debugemacs() {
 
 # Easily grep for a matching process
 psg() {
-  if [[ "$1" =~ (.)(.*) ]]; then
-    local first=${BASH_REMATCH[1]}
-    local rest=${BASH_REMATCH[2]}
+  if [ $# = 1 ]; then
+    local first=${1:0:1}
+    local rest=${1:1}
 
     ps aux | grep "[$first]$rest\|[P]ID"
   fi
