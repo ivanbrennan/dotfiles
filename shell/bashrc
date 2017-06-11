@@ -36,7 +36,6 @@
 {
   # Neovim
   NEOVIM="$( { command -v nvim || command -v vim; } 2>/dev/null || echo vi )"
-
   export VISUAL=$NEOVIM
   export GIT_EDITOR=$NEOVIM
   export SVN_EDITOR=$NEOVIM
