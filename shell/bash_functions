@@ -187,23 +187,11 @@ rpid() {
   pgrep -f "$1" 2> /dev/null
 }
 
-p_start() {
-  local proc
-  local name
-  proc=$1; shift
-  name=$1; shift
-  if ! running "$proc"; then
-    "$@"
-  else
-    echo "$name already running"
-  fi
-}
 
 p_stop() {
-  local proc
-  local name
-  proc=$1; shift
-  name=$1; shift
+  local proc=$1; shift
+  local name=$1; shift
+
   if running "$proc"; then
     "$@"
   else
@@ -212,24 +200,14 @@ p_stop() {
 }
 
 p_status() {
-  local proc
-  local name
-  proc=$1; shift
-  name=$1; shift
+  local proc=$1; shift
+  local name=$1; shift
+
   if running "$proc"; then
     echo "$name alive"
   else
     echo "$name dead"
   fi
-}
-
-# Start / Stop PostgreSQL server {{{1
-pgsta() {
-  pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
-}
-
-pgsto() {
-  pg_ctl -D /usr/local/var/postgres stop -s -m fast
 }
 
 # server helpers {{{1
@@ -247,10 +225,6 @@ sistat() {
 
 astat() {
   mstat && restat && sistat
-}
-
-astop() {
-  sksto && resto && msto
 }
 
 serverhelp() {
