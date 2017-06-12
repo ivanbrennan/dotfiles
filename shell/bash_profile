@@ -4,7 +4,7 @@
 # macOS conventionally uses a login shell for
 # all interactive sessions.
 
-# Sources
+# ::::::::: Sources ::::::::::::::::::::::::::
 files=(~/.bashrc
        ~/.bashrc.local
        ~/.bash_aliases
@@ -14,10 +14,7 @@ for file in "${files[@]}"; do
   [ -r "$file" ] && . "$file"
 done
 
-# Email?
-unset -v MAILCHECK
-
-# History
+# ::::::::: Parameters :::::::::::::::::::::::
 export HISTCONTROL=erasedups:ignorespace
 export HISTSIZE=10000
 shopt -s histappend
@@ -25,6 +22,8 @@ shopt -s histappend
 # If shell is interactive, disable START/STOP output control.
 # This allows Ctrl-S to trigger i-search.
 [[ $- = *i* ]] && stty -ixon
+
+unset -v MAILCHECK
 
 # ::::::::: rbenv ::::::::::::::::::::::::::::
 if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi
