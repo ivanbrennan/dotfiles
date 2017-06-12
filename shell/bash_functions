@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# profile
+# ::::::::: Profile ::::::::::::::::::::::::::
 {
   dark() {
     export THEME=dark
@@ -73,7 +73,7 @@
   }
 }
 
-# shell utils
+# ::::::::: Utils ::::::::::::::::::::::::::::
 {
   path() {
     echo "PATH:" && echo "$PATH" | tr ":" "\n"
@@ -194,7 +194,7 @@
   }
 }
 
-# editors
+# ::::::::: Editors ::::::::::::::::::::::::::
 {
   # Run just one MacVim
   ivim() {
@@ -220,7 +220,7 @@
   }
 }
 
-# process helpers
+# ::::::::: Processes ::::::::::::::::::::::::
 {
   running() {
     rpid "$1" > /dev/null
@@ -308,7 +308,7 @@
   }
 }
 
-# tmux
+# ::::::::: Tmux :::::::::::::::::::::::::::::
 {
   gmit() {
     if [ -n "${TMUX+x}" ]; then
