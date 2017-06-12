@@ -14,6 +14,9 @@ for file in "${files[@]}"; do
   [ -r "$file" ] && . "$file"
 done
 
+# Email?
+unset -v MAILCHECK
+
 # History
 export HISTCONTROL=erasedups:ignorespace
 export HISTSIZE=10000
