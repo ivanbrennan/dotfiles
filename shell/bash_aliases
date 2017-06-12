@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# source profile
+# ::::::::: Reload :::::::::::::::::::::::::::
 alias r.r=". ~/.bash_profile"
 
-# Git
+# ::::::::: Git ::::::::::::::::::::::::::::::
 alias gst="git status"
 alias gpff="git pull --ff-only"
 alias gpr="git log origin/master.. --reverse"
@@ -11,22 +11,20 @@ alias gpt="git log origin/master.. --reverse --pretty='[\`%h\`](https://github.c
 alias gpp="git log origin/master.. --reverse -p"
 alias gpc="git log origin/master.. -- | wc -l"
 
-# LS
+# ::::::::: Vim ::::::::::::::::::::::::::::::
+alias v=$NEOVIM
+alias view="nvim -MR"
+
+# ::::::::: Utils ::::::::::::::::::::::::::::
 alias l="CLICOLOR_FORCE=1 ls -lAh"
 alias lsa="CLICOLOR_FORCE=1 ls -A"
 alias lsf="CLICOLOR_FORCE=1 ls -F"
 
-# LESS
 alias lessr="less -R"
 
-# -iv
 alias cp="cp -iv"
 alias mv="mv -iv"
 
-# Vim
-alias v=$NEOVIM
-alias view="nvim -MR"
-
-# GDB
+# ::::::::: GDB ::::::::::::::::::::::::::::::
 alias gdb="gdb -quiet"
 
