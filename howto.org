@@ -1,3 +1,8 @@
 * better tab completion of CDPATH entries
 ** pushd
 ** omit CDPATH completion candidates if candidates exist in the current directory
+* terminate shell incremental search without executing found command
+** Readline's ~isearch-terminators~ variable:
+#+begin_quote
+If this variable has not been given a value, the characters ESC and C-J will terminate an incremental search.
+#+end_quote
