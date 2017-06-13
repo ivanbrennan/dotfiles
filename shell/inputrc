@@ -1,6 +1,10 @@
 set keyseq-timeout 250
 set completion-ignore-case on
 
+# Search history for the characters preceding the cursor
+"\en": history-search-forward
+"\ep": history-search-backward
+
 # Shift-Space
 "\e[32;2u": " "
 # Ctrl-Shift-Space
