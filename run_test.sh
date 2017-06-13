@@ -1,7 +1,5 @@
-if [ ! -p test_commands ]; then
-  mkfifo test_commands
-fi
+[ -p test_commands ] || mkfifo test_commands
 
 while true; do
-  sh -c "$(cat test_commands)";
+  $(< test_commands)
 done
