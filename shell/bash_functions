@@ -188,6 +188,11 @@
     fi
   }
 
+  # jump to Bash builtin documentation
+  mbn () {
+    man bash | less --hilite-search --pattern="^ *$1 "
+  }
+
   # dictionary
   fdoc() {
     curl dict://dict.org/d:$1:foldoc
