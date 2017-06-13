@@ -323,12 +323,10 @@
     local height=$( tmux display-message -p '#{pane_height}' )
     local ratio=3
 
-    if (( ${width} > (${height} * ${ratio}) )); then
-      local chars=85
-      $( tmux split-window -h -l ${chars} "$*" )
+    if (( width > (height * ratio) )); then
+      tmux split-window -h -l 85 "$*"
     else
-      local percent=30
-      $( tmux split-window -v -p ${percent} "$*" )
+      tmux split-window -v -p 30 "$*"
     fi
   }
 }
