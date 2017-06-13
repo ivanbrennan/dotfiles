@@ -35,7 +35,7 @@
 # ::::::::: One True Editor(s) :::::::::::::::
 {
   # Neovim
-  NEOVIM="$( { command -v nvim || command -v vim; } 2>/dev/null || echo vi )"
+  NEOVIM="$( { command -v nvim || command -v vim || command -v vi; } )"
   export VISUAL=$NEOVIM
   export GIT_EDITOR=$NEOVIM
   export SVN_EDITOR=$NEOVIM

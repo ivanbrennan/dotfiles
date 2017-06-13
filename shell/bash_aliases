@@ -13,7 +13,8 @@ alias gpc="git log origin/master.. -- | wc -l"
 
 # ::::::::: Vim ::::::::::::::::::::::::::::::
 alias v=$NEOVIM
-alias view="nvim -MR"
+alias vi=v
+alias view="v -MR"
 
 # ::::::::: Utils ::::::::::::::::::::::::::::
 alias l="CLICOLOR_FORCE=1 ls -lAh"
