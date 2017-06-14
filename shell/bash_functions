@@ -190,11 +190,14 @@
 
   # jump to Bash builtin documentation
   man () {
-    if [ "$(type -t "$1")" = "builtin" ]; then
-      command man bash | less --hilite-search --pattern="^ *$1 +\["
-    else
-      command man "$@"
-    fi
+    case "$(type -t "$1")" in
+      builtin)
+        command man bash | less --hilite-search --pattern="^ *$1 +\[";;
+      keyword)
+        command man bash | less --hilite-search --pattern='^SHELL GRAMMAR$';;
+      *)
+        command man "$@";;
+    esac
   }
 
   # dictionary
