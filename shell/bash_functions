@@ -189,8 +189,12 @@
   }
 
   # jump to Bash builtin documentation
-  mbn () {
-    man bash | less --hilite-search --pattern="^ *$1 +\["
+  man () {
+    if [ "$(type -t "$1")" = "builtin" ]; then
+      command man bash | less --hilite-search --pattern="^ *$1 +\["
+    else
+      command man "$@"
+    fi
   }
 
   # dictionary
