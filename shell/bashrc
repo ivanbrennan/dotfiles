@@ -3,6 +3,8 @@
 # bashrc is meant for non-login shells. It should not
 # print any output, as that causes tools like scp fail.
 
+DOTFILES="$HOME/Development/resources/dotfiles"
+
 # ::::::::: XDG Base Directory :::::::::::::::
 {
   # Some well-crafted applications (e.g. git, neovim) observe this spec.
@@ -15,7 +17,7 @@
 {
   # PATH
   {
-    export SCRIPTS_PATH="$HOME/Development/resources/dotfiles/bin"
+    export SCRIPTS_PATH="$DOTFILES/bin"
 
     export USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin"
 
