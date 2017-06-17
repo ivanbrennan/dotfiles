@@ -56,6 +56,9 @@ DOTFILES="$HOME/Development/resources/dotfiles"
 
 # ::::::::: Bash Completion ::::::::::::::::::
 {
+  # Display all 2856 possibilities? Um, no thanks
+  shopt -s no_empty_cmd_completion
+
   brew_prefix=$(brew --prefix 2>/dev/null)
 
   if [ -n "$brew_prefix" ] && [ -f "$brew_prefix/etc/bash_completion" ]; then
