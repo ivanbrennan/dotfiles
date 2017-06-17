@@ -1,5 +1,6 @@
 set keyseq-timeout 250
 set completion-ignore-case on
+set show-all-if-ambiguous on
 
 # Search history for the characters preceding the cursor
 "\en": history-search-forward
