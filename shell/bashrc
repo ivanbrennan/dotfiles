@@ -86,8 +86,8 @@ DOTFILES="$HOME/Development/resources/dotfiles"
     case $THEME in
       light)
         {
-          # bold: Grey27(#444444)
-          export LESS_TERMCAP_md=$'\e[01;38;5;238m'
+          # bold: Grey15(#262626)
+          export LESS_TERMCAP_md=$'\e[01;38;5;235m'
           export LESS_TERMCAP_me=$'\e[0m'
 
           # highlight: Grey0(#000000) on Gold1(#ffd700)
