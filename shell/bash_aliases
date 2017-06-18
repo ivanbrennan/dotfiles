@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # ::::::::: Reload :::::::::::::::::::::::::::
-alias r.r=". ~/.bash_profile"
+alias SS=". ~/.bash_profile"
 
 # ::::::::: Git ::::::::::::::::::::::::::::::
 alias gst="git status"
