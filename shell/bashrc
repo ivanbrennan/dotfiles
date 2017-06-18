@@ -91,7 +91,7 @@ DOTFILES="$HOME/Development/resources/dotfiles"
           export LESS_TERMCAP_me=$'\e[0m'
 
           # highlight: Grey0(#000000) on Gold1(#ffd700)
-          export LESS_TERMCAP_so=$'\e[38;2;16m\e[48;5;220m'
+          export LESS_TERMCAP_so=$'\e[38;5;16m\e[48;5;220m'
           export LESS_TERMCAP_se=$'\e[0m'
 
           # underline: DarkRed(#870000)
