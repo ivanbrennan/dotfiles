@@ -94,8 +94,8 @@ DOTFILES="$HOME/Development/resources/dotfiles"
           export LESS_TERMCAP_so=$'\e[38;5;16m\e[48;5;220m'
           export LESS_TERMCAP_se=$'\e[0m'
 
-          # underline: DarkRed(#870000)
-          export LESS_TERMCAP_us=$'\e[04;38;5;88m'
+          # underline: DeepSkyBlue4(#005faf)
+          export LESS_TERMCAP_us=$'\e[04;38;5;25m'
           export LESS_TERMCAP_ue=$'\e[0m'
         }
         ;;
