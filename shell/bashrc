@@ -86,20 +86,23 @@ DOTFILES="$HOME/Development/resources/dotfiles"
     case $THEME in
       light)
         {
-          # export LESS_TERMCAP_mb=$'\e[01;31m'       # begin blinking
-          export LESS_TERMCAP_md=$'\e[01;38;5;74m'  # begin bold
-          # export LESS_TERMCAP_me=$'\e[0m'           # end mode
-          # export LESS_TERMCAP_se=$'\e[0m'           # end standout-mode
+          # bold: Grey27(#444444)
+          export LESS_TERMCAP_md=$'\e[01;38;5;238m'
+          export LESS_TERMCAP_me=$'\e[0m'
 
-          # export LESS_TERMCAP_so=$'\e[38;5;246m'    # begin standout-mode - info box
-          export LESS_TERMCAP_so=$'\e[38;5;016m\e[48;5;220m' # begin standout-mode - info box
+          # highlight: Grey0(#000000) on Gold1(#ffd700)
+          export LESS_TERMCAP_so=$'\e[38;2;16m\e[48;5;220m'
+          export LESS_TERMCAP_se=$'\e[0m'
 
-          export LESS_TERMCAP_ue=$'\e[0m'           # end underline
-          export LESS_TERMCAP_us=$'\e[04;38;5;146m' # begin underline
+          # underline: DarkRed(#870000)
+          export LESS_TERMCAP_us=$'\e[04;38;5;88m'
+          export LESS_TERMCAP_ue=$'\e[0m'
         }
         ;;
       *)
-        :
+          unset LESS_TERMCAP_md LESS_TERMCAP_me
+          unset LESS_TERMCAP_so LESS_TERMCAP_se
+          unset LESS_TERMCAP_us LESS_TERMCAP_ue
         ;;
     esac
   }
