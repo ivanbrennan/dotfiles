@@ -8,3 +8,6 @@
   #+end_quote
 * automatically generate a shell brace expansion list
 ** Readline's ~complete-into-braces~ bound to ~M-{~
+* LESS tricks
+** ^R from within search (/ or ?) to toggle regex matching
+** ESC-u to toggle search highlighting
