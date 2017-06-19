@@ -99,8 +99,14 @@
   }
 
   lxr() {
-    if [[ "${LESS-x}" == -XR ]]; then
-      unset LESS
+    if [ -n "${LESS:+x}" ]; then
+      if [[ "$LESS" == -XR ]]; then
+        unset LESS
+      elif [[ "$LESS" == *XR* ]]; then
+        export LESS="${LESS//XR}"
+      else
+        export LESS+=XR
+      fi
     else
       export LESS="-XR"
     fi
