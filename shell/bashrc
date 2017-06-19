@@ -87,44 +87,44 @@ DOTFILES="$HOME/Development/resources/dotfiles"
       light)
         {
           # bold: Grey15(#262626)
-          export LESS_TERMCAP_md=$'\e[01;38;5;235m'
-          export LESS_TERMCAP_me=$'\e[0m'
+          export LESS_TERMCAP_md=$'\033[01;38;5;235m'
+          export LESS_TERMCAP_me=$'\033[0m'
 
           # highlight: Grey0(#000000) on Gold1(#ffd700)
-          export LESS_TERMCAP_so=$'\e[38;5;16m\e[48;5;220m'
-          export LESS_TERMCAP_se=$'\e[0m'
+          export LESS_TERMCAP_so=$'\033[38;5;16m\033[48;5;220m'
+          export LESS_TERMCAP_se=$'\033[0m'
 
           # underline: DarkBlue(#000087)
-          export LESS_TERMCAP_us=$'\e[04;38;5;18m'
-          export LESS_TERMCAP_ue=$'\e[0m'
+          export LESS_TERMCAP_us=$'\033[04;38;5;18m'
+          export LESS_TERMCAP_ue=$'\033[0m'
         } ;;
       remote)
         {
           # bold: Grey84(#d7d7d7)
-          export LESS_TERMCAP_md=$'\e[01;38;5;188m'
-          export LESS_TERMCAP_me=$'\e[0m'
+          export LESS_TERMCAP_md=$'\033[01;38;5;188m'
+          export LESS_TERMCAP_me=$'\033[0m'
 
           # highlight: Grey0(#000000) on Gold1(#ffd700)
-          export LESS_TERMCAP_so=$'\e[38;5;16m\e[48;5;228m'
-          export LESS_TERMCAP_se=$'\e[0m'
+          export LESS_TERMCAP_so=$'\033[38;5;16m\033[48;5;228m'
+          export LESS_TERMCAP_se=$'\033[0m'
 
           # underline: LightSkyBlue1(#afd7ff)
-          export LESS_TERMCAP_us=$'\e[04;38;5;153m'
-          export LESS_TERMCAP_ue=$'\e[0m'
+          export LESS_TERMCAP_us=$'\033[04;38;5;153m'
+          export LESS_TERMCAP_ue=$'\033[0m'
         } ;;
       dark)
         {
           # bold: LightGoldenrod3(#d7af5f)
-          export LESS_TERMCAP_md=$'\e[01;38;5;179m'
-          export LESS_TERMCAP_me=$'\e[0m'
+          export LESS_TERMCAP_md=$'\033[01;38;5;179m'
+          export LESS_TERMCAP_me=$'\033[0m'
 
           # highlight: Grey0(#000000) on Khaki1(#ffff87)
-          export LESS_TERMCAP_so=$'\e[38;5;16m\e[48;5;228m'
-          export LESS_TERMCAP_se=$'\e[0m'
+          export LESS_TERMCAP_so=$'\033[38;5;16m\033[48;5;228m'
+          export LESS_TERMCAP_se=$'\033[0m'
 
           # underline: Orange1(#ffaf00)
-          export LESS_TERMCAP_us=$'\e[04;38;5;214m'
-          export LESS_TERMCAP_ue=$'\e[0m'
+          export LESS_TERMCAP_us=$'\033[04;38;5;214m'
+          export LESS_TERMCAP_ue=$'\033[0m'
         } ;;
       *)
         unset LESS_TERMCAP_md LESS_TERMCAP_me

@@ -22,18 +22,18 @@ class Object
 end
 
 ANSI = {}
-ANSI[:RESET]     = "\e[0m"
-ANSI[:BOLD]      = "\e[1m"
-ANSI[:UNDERLINE] = "\e[4m"
-ANSI[:LGRAY]     = "\e[0;37m"
-ANSI[:GRAY]      = "\e[1;30m"
-ANSI[:RED]       = "\e[31m"
-ANSI[:GREEN]     = "\e[32m"
-ANSI[:YELLOW]    = "\e[33m"
-ANSI[:BLUE]      = "\e[34m"
-ANSI[:MAGENTA]   = "\e[35m"
-ANSI[:CYAN]      = "\e[36m"
-ANSI[:WHITE]     = "\e[37m"
+ANSI[:RESET]     = "\033[0m"
+ANSI[:BOLD]      = "\033[1m"
+ANSI[:UNDERLINE] = "\033[4m"
+ANSI[:LGRAY]     = "\033[0;37m"
+ANSI[:GRAY]      = "\033[1;30m"
+ANSI[:RED]       = "\033[31m"
+ANSI[:GREEN]     = "\033[32m"
+ANSI[:YELLOW]    = "\033[33m"
+ANSI[:BLUE]      = "\033[34m"
+ANSI[:MAGENTA]   = "\033[35m"
+ANSI[:CYAN]      = "\033[36m"
+ANSI[:WHITE]     = "\033[37m"
 
 # Build a simple colorful IRB prompt
 IRB.conf[:PROMPT][:SIMPLE_COLOR] = {

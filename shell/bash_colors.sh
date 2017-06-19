@@ -29,27 +29,27 @@
 
 # ANSI Escape Commands
 {
-  NORMAL="\e[m"
-  RESET="\e[${DULL};${FG_WHITE};${BG_NULL}m"
+  NORMAL="\033[m"
+  RESET="\033[${DULL};${FG_WHITE};${BG_NULL}m"
   {
-    BLACK="\e[${DULL};${FG_BLACK}m"
-    RED="\e[${DULL};${FG_RED}m"
-    GREEN="\e[${DULL};${FG_GREEN}m"
-    YELLOW="\e[${DULL};${FG_YELLOW}m"
-    BLUE="\e[${DULL};${FG_BLUE}m"
-    VIOLET="\e[${DULL};${FG_VIOLET}m"
-    CYAN="\e[${DULL};${FG_CYAN}m"
-    WHITE="\e[${DULL};${FG_WHITE}m"
+    BLACK="\033[${DULL};${FG_BLACK}m"
+    RED="\033[${DULL};${FG_RED}m"
+    GREEN="\033[${DULL};${FG_GREEN}m"
+    YELLOW="\033[${DULL};${FG_YELLOW}m"
+    BLUE="\033[${DULL};${FG_BLUE}m"
+    VIOLET="\033[${DULL};${FG_VIOLET}m"
+    CYAN="\033[${DULL};${FG_CYAN}m"
+    WHITE="\033[${DULL};${FG_WHITE}m"
   }
   {
-    BRIGHT_BLACK="\e[${BRIGHT};${FG_BLACK}m"
-    BRIGHT_RED="\e[${BRIGHT};${FG_RED}m"
-    BRIGHT_GREEN="\e[${BRIGHT};${FG_GREEN}m"
-    BRIGHT_YELLOW="\e[${BRIGHT};${FG_YELLOW}m"
-    BRIGHT_BLUE="\e[${BRIGHT};${FG_BLUE}m"
-    BRIGHT_VIOLET="\e[${BRIGHT};${FG_VIOLET}m"
-    BRIGHT_CYAN="\e[${BRIGHT};${FG_CYAN}m"
-    BRIGHT_WHITE="\e[${BRIGHT};${FG_WHITE}m"
+    BRIGHT_BLACK="\033[${BRIGHT};${FG_BLACK}m"
+    BRIGHT_RED="\033[${BRIGHT};${FG_RED}m"
+    BRIGHT_GREEN="\033[${BRIGHT};${FG_GREEN}m"
+    BRIGHT_YELLOW="\033[${BRIGHT};${FG_YELLOW}m"
+    BRIGHT_BLUE="\033[${BRIGHT};${FG_BLUE}m"
+    BRIGHT_VIOLET="\033[${BRIGHT};${FG_VIOLET}m"
+    BRIGHT_CYAN="\033[${BRIGHT};${FG_CYAN}m"
+    BRIGHT_WHITE="\033[${BRIGHT};${FG_WHITE}m"
   }
 }
 

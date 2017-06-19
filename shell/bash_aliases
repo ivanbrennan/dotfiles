@@ -26,7 +26,7 @@ alias lessr="less -R"
 alias cp="cp -iv"
 alias mv="mv -iv"
 
-alias cls='printf "\ec"'
+alias cls='printf "\033c"'
 
 # ::::::::: GDB ::::::::::::::::::::::::::::::
 alias gdb="gdb -quiet"
