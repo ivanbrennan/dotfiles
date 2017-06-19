@@ -105,7 +105,7 @@
       elif [[ "$LESS" == *XR* ]]; then
         export LESS="${LESS//XR}"
       else
-        export LESS="${LESS}XR"
+        export LESS+=XR
       fi
     else
       export LESS="-XR"
