@@ -131,8 +131,6 @@ DOTFILES="$HOME/Development/resources/dotfiles"
         unset LESS_TERMCAP_so LESS_TERMCAP_se
         unset LESS_TERMCAP_us LESS_TERMCAP_ue ;;
     esac
-
-    export LESS="-~"
   }
 
   # ls
