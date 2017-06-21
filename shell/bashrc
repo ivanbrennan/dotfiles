@@ -193,7 +193,7 @@ DOTFILES="$HOME/Development/resources/dotfiles"
 
     if [ -n "$minutes" ]; then
       echo "$(minutes_color minutes)"
-    elif [[ "$THEME" =~ dark ]]; then
+    elif [[ "$THEME" =~ 'dark' ]]; then
       echo $WHITE
     else
       echo $BLACK
