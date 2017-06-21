@@ -1,0 +1,5 @@
+#line-edit
+\033[1;2D    word-left
+\033[1;5D    word-left
+\033[1;2C    word-right
+\033[1;5C    word-right

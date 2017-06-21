@@ -81,7 +81,41 @@ DOTFILES="$HOME/Development/resources/dotfiles"
   export CLICOLOR=1
   export GREP_OPTIONS="--color"
 
-  # Less Colors for Man Pages
+  # ls
+  {
+    export LSCOLORS="exgxcxdxbxegedabagacad"
+
+    # Order of attributes:
+    #  1. directory
+    #  2. symbolic link
+    #  3. socket
+    #  4. pipe
+    #  5. executable
+    #  6. block special
+    #  7. character special
+    #  8. executable with setuid bit set
+    #  9. executable with setgid bit set
+    # 10. directory writable to others, with sticky bit
+    # 11. directory writable to others, without sticky bit
+
+    # Color designators:
+    # a black         A bold black (grey)
+    # b red           B bold red
+    # c green         C bold green
+    # d brown         D bold brown (yellow)
+    # e blue          E bold blue
+    # f magenta       F bold magenta
+    # g cyan          G bold cyan
+    # h light grey    H bold light grey (white)
+    # x default foreground or background
+
+    # the default is exfxcxdxbxegedabagacad
+  }
+}
+
+# ::::::::: Less :::::::::::::::::::::::::::::
+{
+  # Colors
   {
     case $THEME in
       light)
@@ -131,40 +165,10 @@ DOTFILES="$HOME/Development/resources/dotfiles"
         unset LESS_TERMCAP_so LESS_TERMCAP_se
         unset LESS_TERMCAP_us LESS_TERMCAP_ue ;;
     esac
-
-    export LESS="-~"
   }
 
-  # ls
-  {
-    export LSCOLORS="exgxcxdxbxegedabagacad"
-
-    # Order of attributes:
-    #  1. directory
-    #  2. symbolic link
-    #  3. socket
-    #  4. pipe
-    #  5. executable
-    #  6. block special
-    #  7. character special
-    #  8. executable with setuid bit set
-    #  9. executable with setgid bit set
-    # 10. directory writable to others, with sticky bit
-    # 11. directory writable to others, without sticky bit
-
-    # Color designators:
-    # a black         A bold black (grey)
-    # b red           B bold red
-    # c green         C bold green
-    # d brown         D bold brown (yellow)
-    # e blue          E bold blue
-    # f magenta       F bold magenta
-    # g cyan          G bold cyan
-    # h light grey    H bold light grey (white)
-    # x default foreground or background
-
-    # the default is exfxcxdxbxegedabagacad
-  }
+  export LESS="-~"
+  export MANPAGER="less -is"
 }
 
 # ::::::::: Prompt :::::::::::::::::::::::::::
