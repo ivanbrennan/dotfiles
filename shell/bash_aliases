@@ -16,6 +16,9 @@ alias v=$NEOVIM
 alias vi=v
 alias view="v -MR"
 
+# ::::::::: Tmux  ::::::::::::::::::::::::::::
+alias t='tmux'
+
 # ::::::::: Utils ::::::::::::::::::::::::::::
 alias l="CLICOLOR_FORCE=1 ls -lAh"
 alias lsa="CLICOLOR_FORCE=1 ls -A"
