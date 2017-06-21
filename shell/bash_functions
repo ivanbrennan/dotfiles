@@ -32,7 +32,7 @@
     if using_multiplexer; then
       set_multiplex_iterm_profile "$1"
     else
-      echo -e "\033]50;SetProfile=$1\007"
+      printf '\033]50;SetProfile=%s\007' $1
     fi
   }
 
@@ -49,11 +49,11 @@
   }
 
   set_tmux_iterm_profile() {
-    echo -e "\033Ptmux;\033\033]50;SetProfile=$1\007\033\\"
+    printf '\033Ptmux;\033\033]50;SetProfile=%s\007\033\\' $1
   }
 
   set_gnu_screen_iterm_profile() {
-    echo -e "\033P\033]50;SetProfile=$1\007\033\\"
+    printf '\033P\033]50;SetProfile=%s\007\033\\' $1
   }
 
   using_iterm() {
@@ -76,7 +76,7 @@
 # ::::::::: Utils ::::::::::::::::::::::::::::
 {
   path() {
-    echo "PATH:" && echo "$PATH" | tr ":" "\n"
+    printf 'PATH:\n%s\n' "${PATH//:/$'\n'}"
   }
 
   hidden() {
@@ -160,7 +160,7 @@
   }
 
   set_window_title() {
-    echo -en "\033]0;$*\007"
+    printf '\033]0;%s\007' "$*"
   }
 
   # search and replace
@@ -303,12 +303,12 @@
   }
 
   serverhelp() {
-    echo -e "MySQL: \tmysql.server start"
-    echo -e "\tmysql.server stop\n"
-    echo -e "Redis: \tredis-server ~/.redis/redis.conf"
-    echo -e "\tpkill redis\n"
-    echo -e "kiqs: \tsidekiq -d -L log/sidekiq.log"
-    echo -e "\tpkill sidekiq"
+    printf 'MySQL: \tmysql.server start\n'
+    printf '\tmysql.server stop\n\n'
+    printf 'Redis: \tredis-server ~/.redis/redis.conf\n'
+    printf '\tpkill redis\n\n'
+    printf 'kiqs: \tsidekiq -d -L log/sidekiq.log\n'
+    printf '\tpkill sidekiq\n'
   }
 
   # Rails
