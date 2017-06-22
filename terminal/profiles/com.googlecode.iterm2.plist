@@ -5387,23 +5387,37 @@
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
 	<string>185 -679 855 647 0 -900 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>51 511 796 473 0 0 1920 1057 </string>
+	<string>51 359 796 473 0 0 1920 1057 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>964 2 954 1053 0 0 1920 1057 </string>
+	<string>277 368 650 502 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>6 0 650 502 0 0 1440 877 </string>
+	<string>1164 546 650 502 0 0 1920 1057 </string>
+	<key>NSWindow Frame iTerm Window 10</key>
+	<string>499 283 650 502 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 11</key>
+	<string>520 260 650 502 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 12</key>
+	<string>541 237 650 502 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 13</key>
+	<string>562 214 650 502 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>484 14 954 856 0 0 1440 877 </string>
+	<string>964 2 954 1053 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>7 104 986 768 0 0 1440 877 </string>
+	<string>1203 458 650 502 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>77 269 730 527 0 0 1440 878 </string>
+	<string>77 287 650 502 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>862 23 577 349 0 0 1440 878 </string>
+	<string>790 0 650 502 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
-	<string>1 22 577 349 0 0 1440 878 </string>
+	<string>5 0 650 502 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 7</key>
+	<string>436 352 650 502 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 8</key>
+	<string>457 329 650 502 0 0 1440 877 </string>
+	<key>NSWindow Frame iTerm Window 9</key>
+	<string>478 306 650 502 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -5600,7 +5614,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string>/bin/bash -l</string>
+			<string>/usr/local/bin/bash -l</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -10668,6 +10682,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/ivan/Development/resources/dotfiles/terminal/profiles</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnClose</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -10687,7 +10703,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-11-20T15:57:16Z</date>
+	<date>2017-03-30T01:29:47Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -14251,7 +14267,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.12</string>
+	<string>3.0.15</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
