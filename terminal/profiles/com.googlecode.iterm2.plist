@@ -5387,11 +5387,11 @@
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
 	<string>185 -679 855 647 0 -900 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>51 359 796 473 0 0 1920 1057 </string>
+	<string>29 256 796 473 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>277 368 650 502 0 0 1440 877 </string>
+	<string>6 368 650 502 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1164 546 650 502 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 10</key>
@@ -5403,7 +5403,7 @@
 	<key>NSWindow Frame iTerm Window 13</key>
 	<string>562 214 650 502 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>964 2 954 1053 0 0 1920 1057 </string>
+	<string>484 375 650 502 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>1203 458 650 502 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
@@ -6215,7 +6215,7 @@
 			<key>Use Canonical Parser</key>
 			<false/>
 			<key>Use Italic Font</key>
-			<false/>
+			<true/>
 			<key>Vertical Spacing</key>
 			<real>1.0035895109176636</real>
 			<key>Visual Bell</key>
@@ -6516,7 +6516,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string>/bin/bash -l</string>
+			<string>/usr/local/bin/bash -l</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Color</key>
@@ -7157,7 +7157,7 @@
 			<key>Use Cursor Guide</key>
 			<false/>
 			<key>Use Italic Font</key>
-			<false/>
+			<true/>
 			<key>Vertical Spacing</key>
 			<real>1.0035895109176636</real>
 			<key>Visual Bell</key>
@@ -7395,7 +7395,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string>/bin/bash -l</string>
+			<string>/usr/local/bin/bash -l</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Color</key>
@@ -8011,7 +8011,7 @@
 			<key>Use Cursor Guide</key>
 			<false/>
 			<key>Use Italic Font</key>
-			<false/>
+			<true/>
 			<key>Vertical Spacing</key>
 			<real>1.0035895109176636</real>
 			<key>Visual Bell</key>

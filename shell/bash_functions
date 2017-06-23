@@ -61,7 +61,7 @@
   }
 
   using_multiplexer() {
-    [[ "$TERM" =~ 'screen' ]]
+    [[ "$TERM" =~ tmux|screen ]]
   }
 
   using_tmux() {
