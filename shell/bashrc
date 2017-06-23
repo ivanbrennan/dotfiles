@@ -61,9 +61,10 @@ DOTFILES="$HOME/Development/resources/dotfiles"
 
   brew_prefix=$(brew --prefix 2>/dev/null)
 
-  if [ -n "$brew_prefix" ] && [ -f "$brew_prefix/etc/bash_completion" ]; then
-    . "$brew_prefix/etc/bash_completion"
+  if [ -n "$brew_prefix" ] && [ -f "$brew_prefix/share/bash-completion/bash_completion" ]; then
+    . "$brew_prefix/share/bash-completion/bash_completion"
   fi
+
 }
 
 # ::::::::: Colors :::::::::::::::::::::::::::
