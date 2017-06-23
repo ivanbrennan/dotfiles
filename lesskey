@@ -1,4 +1,8 @@
 #line-edit
+^P           up
+^N           down
+^A           home
+^E           end
 \033[1;2D    word-left
 \033[1;5D    word-left
 \033[1;2C    word-right
