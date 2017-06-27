@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# Script to check which packages were brewed with options, and what the option
-# flags were.
+# Check which packages were brewed with options, and what the option flags were.
 
 brew info --json=v1 --installed \
   | jq 'map({name: .name, version: .installed[].version, used_options: .installed[].used_options})' \
