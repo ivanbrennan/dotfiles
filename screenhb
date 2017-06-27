@@ -1,8 +1,0 @@
-source ~/.screenrc
-
-screen -t git -ln 6
-screen -t console -ln 7
-screen -t spec -ln 8
-screen -t vim -ln 9
-screen -t bash -ln 0
-screen -t server -ln 5
