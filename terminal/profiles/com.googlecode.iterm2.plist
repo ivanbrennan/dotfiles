@@ -5312,7 +5312,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSColorPanelMode</key>
-	<string>7</string>
+	<string>3</string>
 	<key>NSColorPickerSlidersDefaults</key>
 	<string>3</string>
 	<key>NSFontPanelAttributes</key>
@@ -5321,10 +5321,8 @@
 	<real>0.0</real>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Development/resources/dotfiles/terminal/colors</string>
-	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 459}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
-	<string>{805, 488}</string>
+	<string>{805, 448}</string>
 	<key>NSNavPanelExpandedStateForSaveMode</key>
 	<true/>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -5375,49 +5373,37 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>545 147 228 297 0 0 1440 877 </string>
+	<string>783 52 214 309 0 0 1280 778 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>884 100 459 77 0 0 1440 877 </string>
+	<string>815 21 459 268 0 0 1440 878 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>28 421 606 456 0 0 1440 877 </string>
+	<string>89 257 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>522 561 400 129 0 0 1440 877 </string>
+	<string>760 804 400 129 0 0 1920 1200 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>412 363 620 392 0 0 1440 877 </string>
+	<string>610 417 700 622 0 0 1920 1177 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
 	<string>185 -679 855 647 0 -900 1440 878 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>524 270 606 456 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>29 256 796 473 0 0 1440 877 </string>
+	<string>-1030 -140 796 473 -1200 -314 1200 1920 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>6 368 650 502 0 0 1440 877 </string>
+	<string>0 0 1920 1200 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>1164 546 650 502 0 0 1920 1057 </string>
-	<key>NSWindow Frame iTerm Window 10</key>
-	<string>499 283 650 502 0 0 1440 877 </string>
-	<key>NSWindow Frame iTerm Window 11</key>
-	<string>520 260 650 502 0 0 1440 877 </string>
-	<key>NSWindow Frame iTerm Window 12</key>
-	<string>541 237 650 502 0 0 1440 877 </string>
-	<key>NSWindow Frame iTerm Window 13</key>
-	<string>562 214 650 502 0 0 1440 877 </string>
+	<string>-925 387 650 502 -1200 -314 1200 1897 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>484 375 650 502 0 0 1440 877 </string>
+	<string>3 186 650 502 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>1203 458 650 502 0 0 1920 1057 </string>
+	<string>-49 805 954 1167 -52 800 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>77 287 650 502 0 0 1440 877 </string>
+	<string>77 269 730 527 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>790 0 650 502 0 0 1440 877 </string>
+	<string>862 23 577 349 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
-	<string>5 0 650 502 0 0 1440 877 </string>
-	<key>NSWindow Frame iTerm Window 7</key>
-	<string>436 352 650 502 0 0 1440 877 </string>
-	<key>NSWindow Frame iTerm Window 8</key>
-	<string>457 329 650 502 0 0 1440 877 </string>
-	<key>NSWindow Frame iTerm Window 9</key>
-	<string>478 306 650 502 0 0 1440 877 </string>
+	<string>1 22 577 349 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -5577,12 +5563,16 @@
 			<false/>
 			<key>Background Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.95073974132537842</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.95072358846664429</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.95075207948684692</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -10604,31 +10594,20 @@
 	</array>
 	<key>NoSyncHaveShownPromoWithId_4</key>
 	<true/>
+	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>A51BAAD7-92D1-4B2C-97E7-B0C191211212</string>
-	<key>NoSyncLastTipTime</key>
-	<real>490535619.14213401</real>
+	<string>96EBCFBB-0133-4787-A049-0B8B01672554</string>
 	<key>NoSyncPermissionToShowTip</key>
-	<true/>
+	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>489721438.08100498</real>
+	<real>489938680.013129</real>
 	<key>NoSyncTimeOfLastPromo</key>
-	<real>477773770.64656103</real>
+	<real>477529399.759498</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>489550300.85589898</real>
-	<key>NoSyncTipsDisabled</key>
-	<true/>
-	<key>NoSyncTipsToNotShow</key>
-	<array>
-		<string>000</string>
-		<string>000</string>
-		<string>0000</string>
-		<string>0001</string>
-		<string>0002</string>
-		<string>0003</string>
-	</array>
+	<real>489613650.75168598</real>
 	<key>NoSyncTurnOffMouseReportingOnHostChange</key>
 	<false/>
 	<key>OnlyWhenMoreTabs</key>
@@ -10695,15 +10674,15 @@
 	<key>RightOption</key>
 	<integer>3</integer>
 	<key>SUEnableAutomaticChecks</key>
-	<false/>
+	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=47</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=55</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-03-30T01:29:47Z</date>
+	<date>2017-06-27T21:00:16Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
