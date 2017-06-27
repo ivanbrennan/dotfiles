@@ -56,3 +56,7 @@ Thumbs.db
 /GTAGS
 /GRTAGS
 /GPATH
+
+# Search Tools
+##############
+.agignore
