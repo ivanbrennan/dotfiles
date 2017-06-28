@@ -5387,13 +5387,13 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>524 270 606 456 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>473 112 796 473 0 0 1920 1177 </string>
+	<string>-821 -34 796 473 -1200 -314 1200 1897 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>635 339 650 502 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>-925 387 650 502 -1200 -314 1200 1897 </string>
+	<string>3 7 954 1167 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>3 186 650 502 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -5566,13 +5566,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.95073974132537842</real>
+				<real>0.97036570310592651</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.95072358846664429</real>
+				<real>0.97034925222396851</real>
 				<key>Red Component</key>
-				<real>0.95075207948684692</real>
+				<real>0.97037827968597412</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
