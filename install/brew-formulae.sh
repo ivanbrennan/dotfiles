@@ -10,6 +10,7 @@ formulae=(
   graphviz
   imagemagick
   jq
+  less
   multimarkdown
   mysql
   nginx
