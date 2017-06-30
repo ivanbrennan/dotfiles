@@ -19,6 +19,9 @@ bash "$repo_root/install/brew-cask-formulae.sh"
 printf ':::%b Installing Python packages %b:::\n' $col_green $col_reset
 bash "$repo_root/install/python-packages.sh"
 
+printf ':::%b Installing Ruby Gems %b:::\n' $col_green $col_reset
+bash "$repo_root/install/ruby-gems.sh"
+
 printf ':::%b Choosing shell %b:::\n' $col_green $col_reset
 bash "$repo_root/install/choose-shell.sh"
 
