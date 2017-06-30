@@ -3,7 +3,7 @@ files=( tmux.terminfo
         tmux-256color.terminfo
         xterm-256color.terminfo )
 
-for file in "$files"; do
+for file in "${files[@]}"; do
   tic -o $dir/terminfo $dir/$file
 done
 
