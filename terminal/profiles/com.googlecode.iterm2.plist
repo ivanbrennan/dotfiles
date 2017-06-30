@@ -5387,13 +5387,13 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>524 270 606 456 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-821 -34 796 473 -1200 -314 1200 1897 </string>
+	<string>1054 162 796 473 0 0 1920 1177 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>472 132 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>635 339 650 502 0 0 1920 1177 </string>
+	<string>-1200 -314 1200 1920 -1200 -314 1200 1897 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>3 7 954 1167 0 0 1920 1177 </string>
+	<string>-1077 51 954 1167 -1200 -314 1200 1897 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>3 186 650 502 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -6022,7 +6022,7 @@
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<integer>0</integer>
 			<key>Right Option Key Sends</key>
@@ -6954,7 +6954,7 @@
 			<key>Normal Font</key>
 			<string>SourceCodePro-Regular 14</string>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<integer>0</integer>
 			<key>Right Option Key Sends</key>
@@ -7812,7 +7812,7 @@
 			<key>Normal Font</key>
 			<string>SourceCodePro-Regular 14</string>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<integer>0</integer>
 			<key>Right Option Key Sends</key>
@@ -10682,7 +10682,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-06-27T21:00:16Z</date>
+	<date>2017-06-29T21:00:29Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
