@@ -22,5 +22,5 @@ bash "$repo_root/install/python-packages.sh"
 printf ':::%b Choosing shell %b:::\n' $col_green $col_reset
 bash "$repo_root/install/choose-shell.sh"
 
-printf ':::%b Symlinking shell config files %b:::\n' $col_green $col_reset
-bash "$repo_root/install/shell-symlinks.sh"
+printf ':::%b Making symlinks %b:::\n' $col_green $col_reset
+bash "$repo_root/install/make-symlinks.sh"

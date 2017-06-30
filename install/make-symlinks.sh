@@ -35,7 +35,7 @@ misc_files=(
   "$repo/less"
 )
 
-dotfiles=(
+source_files=(
   "${term_files[@]}"
   "${shell_files[@]}"
   "${tag_files[@]}"
@@ -43,7 +43,23 @@ dotfiles=(
   "${misc_files[@]}"
 )
 
-for file in "${dotfiles[@]}"; do
-  name=$(basename "$file")
-  ln -svhF "$file" "$HOME/.$name"
-done
+main() {
+  for src in "${source_files[@]}"; do
+    link="$HOME/.$(basename "$src")"
+
+    if already_exists "$link"; then
+      backup="${link}-backup-$(date +%s)"
+      echo "$link already exists. Backing up to $backup"
+      mv -i "$link" "$backup"
+    fi
+
+    ln -svhF "$src" "link"
+  done
+}
+
+already_exists() {
+  # non-empty && not a symlink
+  [ -s "$1" ] && [ ! -L "$1" ]
+}
+
+main
