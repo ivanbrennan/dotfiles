@@ -125,8 +125,8 @@ DOTFILES="$HOME/Development/resources/dotfiles"
           export LESS_TERMCAP_md=$'\033[01;38;5;235m'
           export LESS_TERMCAP_me=$'\033[0m'
 
-          # highlight: Grey0(#000000) on Gold1(#ffd700)
-          export LESS_TERMCAP_so=$'\033[38;5;16m\033[48;5;220m'
+          # highlight: Grey0(#000000) on LightGoldenrod2(#ffd787)
+          export LESS_TERMCAP_so=$'\033[38;5;16m\033[48;5;222m'
           export LESS_TERMCAP_se=$'\033[0m'
 
           # underline: DarkBlue(#000087)
