@@ -54,3 +54,5 @@
 	templatedir = ~/.config/git/templates
 [status]
 	submodulesummary = true
+[diff]
+	submodule = log
