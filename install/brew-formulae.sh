@@ -44,8 +44,7 @@ done
 brew install vim               \
      --with-override-system-vi \
      --with-custom-perl        \
-     --with-custom-ruby        \
-     --with-client-server
+     --with-custom-ruby
 
 # emacs-mac
 brew tap railwaycat/emacsmacport
