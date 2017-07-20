@@ -1,7 +1,5 @@
 # bashrc for interactive shells
-
-# bashrc is meant for non-login shells. It should not
-# print any output, as that causes tools like scp fail.
+# It should not print any output, as that causes tools like scp fail.
 
 DOTFILES="$HOME/Development/resources/dotfiles"
 
