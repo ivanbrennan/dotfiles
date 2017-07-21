@@ -18,6 +18,7 @@
 	lp = log -p
 	who = shortlog -s --
 	pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+	ff = pull --ff-only
 	switch = !legit switch \"$@\"
 	branches = !legit branches
 	sprout = !legit sprout \"$@\"

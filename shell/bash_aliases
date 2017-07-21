@@ -5,7 +5,6 @@ alias SS=". ~/.bash_profile"
 
 # ::::::::: Git ::::::::::::::::::::::::::::::
 alias gst="git status"
-alias gpff="git pull --ff-only"
 alias gpr="git log origin/master.. --reverse"
 alias gpt="git log origin/master.. --reverse --pretty='[\`%h\`](https://github.com/Handybook/handybook/commit/%H) %s'"
 alias gpp="git log origin/master.. --reverse -p"
