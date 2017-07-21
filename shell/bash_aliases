@@ -18,6 +18,7 @@ alias view="v -MR"
 # ::::::::: Tmux  ::::::::::::::::::::::::::::
 alias t='tmux'
 alias tls='tmux ls'
+complete -F _tmux t
 
 # ::::::::: Utils ::::::::::::::::::::::::::::
 alias l="CLICOLOR_FORCE=1 ls -lAh"
