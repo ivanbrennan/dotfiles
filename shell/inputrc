@@ -1,9 +1,10 @@
 set keyseq-timeout 250
-set completion-ignore-case on
-set enable-bracketed-paste on
+
 set colored-completion-prefix on
-set skip-completed-text on
+set completion-ignore-case on
 set echo-control-characters off
+set enable-bracketed-paste on
+set skip-completed-text on
 
 # Search history for the characters preceding the cursor
 "\033n": history-search-forward
