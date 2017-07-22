@@ -17,6 +17,7 @@ done
 # ::::::::: Parameters :::::::::::::::::::::::
 export HISTCONTROL=erasedups:ignorespace
 export HISTSIZE=10000
+export HISTIGNORE=?:??
 shopt -s histappend
 
 # If shell is interactive, disable START/STOP output control.
