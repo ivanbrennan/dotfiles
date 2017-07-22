@@ -30,7 +30,7 @@ alias lessr="less -R"
 alias cp="cp -iv"
 alias mv="mv -iv"
 
-alias b="jobs"
+alias jb="jobs"
 
 alias cls='printf "\033c"'
 
