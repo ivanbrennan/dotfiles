@@ -1,5 +1,5 @@
-* better tab completion of CDPATH entries
 * send command to all tmux windows/panes in all running tmux sessions (e.g. `SS`)
+* better tab completion of CDPATH entries
 ** pushd
 ** omit CDPATH completion candidates if candidates exist in the current directory
 * terminate shell incremental search without executing found command
