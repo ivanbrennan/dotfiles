@@ -30,8 +30,6 @@ alias lessr="less -R"
 alias cp="cp -iv"
 alias mv="mv -iv"
 
-alias jb="jobs"
-
 alias cls='printf "\033c"'
 
 # ::::::::: GDB ::::::::::::::::::::::::::::::
