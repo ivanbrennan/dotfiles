@@ -224,4 +224,6 @@ DOTFILES="$HOME/Development/resources/dotfiles"
 }
 
 # ::::::::: History Filter :::::::::::::::::::
-trap '[[ $- == *i* ]] && $HOME/.bash_history_filter >/dev/null 2>&1 &' EXIT
+if [[ $- == *i* ]]; then
+  trap '$HOME/.bash_history_filter >/dev/null 2>&1 &' EXIT
+fi
