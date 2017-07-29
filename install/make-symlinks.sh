@@ -54,7 +54,7 @@ main() {
       mv -i "$link" "$backup"
     fi
 
-    ln -svhF "$src" "$link"
+    ln -svhF "$src" "$link" | grep -Fe '->'
   done
 }
 
