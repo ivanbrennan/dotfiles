@@ -18,7 +18,7 @@ done
 export HISTTIMEFORMAT='%F %T '
 export HISTCONTROL=erasedups:ignorespace
 export HISTSIZE=10000
-export HISTIGNORE='?:??:[fb]g[ ]*:jobs:history:gst:tls'
+export HISTIGNORE='[^l]:[fb]g[ ]*:jobs:history:gst:tls'
 shopt -s histappend cmdhist lithist
 
 # If shell is interactive, disable START/STOP output control.

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+tmpfile=$(mktemp)
+trap 'rm -f "$tmpfile"' EXIT
+
+history -w "$tmpfile"
+
+awk '/^#[[:digit:]]{10}$/  { timestamp=$0; ignore=0; next }
+     length(timestamp) > 0 && /^(ls?|man|cat)([^[:alnum:]]|$)/ { timestamp=""; ignore=1 ; next }
+     length(timestamp) > 0 { print timestamp; timestamp=""; print; next }
+     ignore == 0           { print }' \
+    "$tmpfile" >> "$HISTFILE"

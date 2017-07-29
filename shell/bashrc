@@ -222,3 +222,6 @@ DOTFILES="$HOME/Development/resources/dotfiles"
 
   build_prompt
 }
+
+# ::::::::: History Filter :::::::::::::::::::
+trap '[[ $- == *i* ]] && $HOME/.filter_history >/dev/null 2>&1 &' EXIT
