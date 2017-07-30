@@ -1,5 +1,5 @@
 digraph {
-  graph [ label = "Bash History Filter\n(Awk)", labelloc = top, labeljust = left, fontsize = 20, pad = 0.25 ];
+  graph [ label = "Bash History Filter", labelloc = top, labeljust = left, fontsize = 20, pad = 0.25 ];
   rankdir  = LR;
   node [ shape = circle, fontcolor = grey25, color = grey25, style = filled, fillcolor = grey99 ];
   edge [ color = slategrey ];

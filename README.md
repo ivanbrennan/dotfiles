@@ -14,3 +14,5 @@ cd dotfiles && bash install.sh
 ```
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dict><key>enabled</key><false/></dict>'
 ```
+
+[![Bash History Filter](/shell/bash_history_filter_awk.png?raw=true)](/shell/bash_history_filter.awk)
