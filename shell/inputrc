@@ -7,8 +7,10 @@ set enable-bracketed-paste on
 set skip-completed-text on
 
 # Search history for the characters preceding the cursor
-control-p: history-search-backward
-control-n: history-search-forward
+control-p: previous-history
+control-n: next-history
+"\033[A": history-search-backward
+"\033[B": history-search-forward
 
 # Shift-Space
 "\033[32;2u": " "
