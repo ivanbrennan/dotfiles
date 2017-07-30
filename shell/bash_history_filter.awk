@@ -16,7 +16,6 @@ BEGIN {
     else
     {
       print
-      state = "ready"
     }
   }
   else if (state == "readtimestamp")
@@ -24,7 +23,6 @@ BEGIN {
     if ($0 ~ timestamp_regex && $0 >= timestamp)
     {
       timestamp = $0
-      state = "readtimestamp"
     }
     else if ($1 ~ exclusion_regex)
     {
