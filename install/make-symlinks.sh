@@ -14,6 +14,7 @@ shell_files=(
   "$repo/shell/bash_colors.sh"
   "$repo/shell/bash_functions"
   "$repo/shell/bash_history_filter"
+  "$repo/shell/bash_history_filter.awk"
   "$repo/shell/bash_profile"
   "$repo/shell/bashrc"
   "$repo/shell/inputrc"

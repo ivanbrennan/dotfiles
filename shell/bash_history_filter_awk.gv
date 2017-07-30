@@ -1,0 +1,24 @@
+digraph {
+  graph [ label = "Bash History Filter\n(Awk)", labelloc = top, labeljust = left, fontsize = 20, pad = 0.25 ];
+  rankdir  = LR;
+  node [ shape = circle, fontcolor = grey25, color = grey25, style = filled, fillcolor = grey99 ];
+  edge [ color = slategrey ];
+
+  begin;
+  printedline   [ label = "printed\nline" ];
+  readtimestamp [ label = "read\ntimestamp" ];
+  readentryline [ label = "read\nentryline" ];
+
+  begin -> readtimestamp [ label = "timestamp=$0" ];
+  begin -> printedline   [ label = "print($0)" ];
+
+  printedline -> readtimestamp [ label = "timestamp=$0" ];
+  printedline -> printedline   [ label = "print($0)" ];
+
+  readtimestamp -> readtimestamp [ label = "timestamp=$0" ];
+  readtimestamp -> printedline   [ label = "print(timestamp)\nprint($0)" ];
+  readtimestamp -> readentryline [ label = "entryline=$0" ];
+
+  readentryline -> printedline   [ label = "print(timestamp)\nprint(entryline)\nprint($0)" ];
+  readentryline -> readtimestamp [ label = "timestamp=$0" ];
+}
