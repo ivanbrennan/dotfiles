@@ -5,7 +5,6 @@ BEGIN {
   exclusion_regex = "^(ls?|man|cat)$"
   state = "ready"
 }
-
 {
   if (state == "ready") {
     if ($0 ~ timestamp_regex) {
