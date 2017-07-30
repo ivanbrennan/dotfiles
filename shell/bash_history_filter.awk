@@ -3,10 +3,10 @@ BEGIN {
   entryline = ""
   timestamp_regex = "^#[[:digit:]]{10}$"
   exclusion_regex = "^(ls?|man|cat)$"
-  state = "begin"
+  state = "ready"
 }
 {
-  if (state == "begin")
+  if (state == "ready")
   {
     if ($0 ~ timestamp_regex)
     {
@@ -16,20 +16,7 @@ BEGIN {
     else
     {
       print
-      state = "printedline"
-    }
-  }
-  else if (state == "printedline")
-  {
-    if ($0 ~ timestamp_regex)
-    {
-      timestamp = $0
-      state = "readtimestamp"
-    }
-    else
-    {
-      print
-      state = "printedline"
+      state = "ready"
     }
   }
   else if (state == "readtimestamp")
@@ -48,7 +35,7 @@ BEGIN {
     {
       print timestamp
       print
-      state = "printedline"
+      state = "ready"
     }
   }
   else if (state == "readentryline")
@@ -64,7 +51,7 @@ BEGIN {
       print timestamp
       print entryline
       print
-      state = "printedline"
+      state = "ready"
     }
   }
 }

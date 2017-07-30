@@ -4,21 +4,20 @@ digraph {
   node [ shape = circle, fontcolor = grey25, color = grey25, style = filled, fillcolor = grey99 ];
   edge [ color = slategrey ];
 
-  begin;
-  printedline   [ label = "printed\nline" ];
+  start [ label = "", fixedsize = "false", width = 0, height = 0, shape = none ];
+  ready;
   readtimestamp [ label = "read\ntimestamp" ];
   readentryline [ label = "read\nentryline" ];
 
-  begin -> readtimestamp [ label = "timestamp=$0" ];
-  begin -> printedline   [ label = "print($0)" ];
+  start -> ready [ color = black ];
 
-  printedline -> readtimestamp [ label = "timestamp=$0" ];
-  printedline -> printedline   [ label = "print($0)" ];
+  ready -> readtimestamp [ label = "timestamp=$0" ];
+  ready -> ready         [ label = "print($0)" ];
 
   readtimestamp -> readtimestamp [ label = "timestamp=$0" ];
-  readtimestamp -> printedline   [ label = "print(timestamp)\nprint($0)" ];
+  readtimestamp -> ready         [ label = "print(timestamp)\nprint($0)" ];
   readtimestamp -> readentryline [ label = "entryline=$0" ];
 
-  readentryline -> printedline   [ label = "print(timestamp)\nprint(entryline)\nprint($0)" ];
+  readentryline -> ready         [ label = "print(timestamp)\nprint(entryline)\nprint($0)" ];
   readentryline -> readtimestamp [ label = "timestamp=$0" ];
 }
