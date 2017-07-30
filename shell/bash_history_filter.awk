@@ -1,39 +1,36 @@
 BEGIN {
   timestamp = ""
-  entryline = ""
+  histentry = ""
   timestamp_regex = "^#[[:digit:]]{10}$"
   exclusion_regex = "^(ls?|man|cat)$"
-  state = "ready"
 }
 {
-  if (state == "ready") {
+  if (timestamp == "") {
     if ($0 ~ timestamp_regex) {
       timestamp = $0
-      state = "readtimestamp"
     } else {
       print
     }
-  } else if (state == "readtimestamp") {
+  } else if (histentry == "") {
     if ($0 ~ timestamp_regex && $0 >= timestamp) {
       timestamp = $0
     } else if ($1 ~ exclusion_regex) {
-      entryline = $0
-      state = "readentryline"
+      histentry = $0
     } else {
       print timestamp
       print
-      state = "ready"
+      timestamp = ""
     }
-  } else if (state == "readentryline") {
+  } else {
     if ($0 ~ timestamp_regex) {
-      entryline = ""
+      histentry = ""
       timestamp = $0
-      state = "readtimestamp"
     } else {
       print timestamp
-      print entryline
+      print histentry
       print
-      state = "ready"
+      timestamp = ""
+      histentry = ""
     }
   }
 }
