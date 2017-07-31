@@ -5,13 +5,13 @@ BEGIN {
   exclusion_regex = "^(ls?|man|cat)$"
 }
 {
-  if (timestamp == "") {
+  if (! timestamp) {
     if ($0 ~ timestamp_regex) {
       timestamp = $0
     } else {
       print
     }
-  } else if (histentry == "") {
+  } else if (! histentry) {
     if ($0 ~ timestamp_regex && $0 >= timestamp) {
       timestamp = $0
     } else if ($1 ~ exclusion_regex) {
