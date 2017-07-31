@@ -7,7 +7,7 @@ digraph {
   start [ label = "", fixedsize = "false", width = 0, height = 0, shape = none ];
   ready;
   readtimestamp [ label = "read\ntimestamp" ];
-  readentryline [ label = "read\nentryline" ];
+  readhistentry [ label = "read\nhistentry" ];
 
   start -> ready [ color = black ];
 
@@ -16,8 +16,8 @@ digraph {
 
   readtimestamp -> readtimestamp [ label = "timestamp=$0" ];
   readtimestamp -> ready         [ label = "print(timestamp)\nprint($0)" ];
-  readtimestamp -> readentryline [ label = "entryline=$0" ];
+  readtimestamp -> readhistentry [ label = "histentry=$0" ];
 
-  readentryline -> ready         [ label = "print(timestamp)\nprint(entryline)\nprint($0)" ];
-  readentryline -> readtimestamp [ label = "timestamp=$0" ];
+  readhistentry -> ready         [ label = "print(timestamp)\nprint(histentry)\nprint($0)" ];
+  readhistentry -> readtimestamp [ label = "timestamp=$0" ];
 }
