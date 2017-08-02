@@ -55,6 +55,7 @@
 	templatedir = ~/.config/git/templates
 [status]
 	submodulesummary = true
+	showuntrackedfiles = all
 [diff]
 	submodule = log
 [fetch]
