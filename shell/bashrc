@@ -73,6 +73,7 @@ DOTFILES="$HOME/Development/resources/dotfiles"
     case "$ITERM_PROFILE" in
       'black'  ) export THEME=dark   ;;
       'remote' ) export THEME=remote ;;
+      'nord'   ) export THEME=nord   ;;
       *        ) export THEME=light  ;;
     esac
   fi
@@ -131,7 +132,7 @@ DOTFILES="$HOME/Development/resources/dotfiles"
           export LESS_TERMCAP_us=$'\033[04;38;5;18m'
           export LESS_TERMCAP_ue=$'\033[0m'
         } ;;
-      remote)
+      remote|nord)
         {
           # bold: Grey84(#d7d7d7)
           export LESS_TERMCAP_md=$'\033[01;38;5;188m'
@@ -192,7 +193,7 @@ DOTFILES="$HOME/Development/resources/dotfiles"
 
     if [ -n "$minutes" ]; then
       echo "$(minutes_color minutes)"
-    elif [[ "$THEME" =~ 'dark' ]]; then
+    elif [[ "$THEME" == 'dark' ]]; then
       echo $WHITE
     else
       echo $BLACK

@@ -20,6 +20,12 @@
     source_bash_profile
   }
 
+  nord() {
+    export THEME=nord
+    set_profile 'nord' 'blue & grey'
+    source_bash_profile
+  }
+
   set_profile() {
     if using_iterm; then
       set_iterm_profile "$1"
