@@ -1,0 +1,227 @@
+#!/usr/bin/env bash
+
+set -e
+
+{ # utils
+  echo_usage() {
+    local indent="       ${0//?/ }"
+
+    echo "Usage: $0 awk_script"
+    echo "${indent} [--golden-master <golden_master>]"
+    echo "${indent} [--histfile <histfile>]"
+  }
+
+  assert_readable() {
+    if ! [[ -r "$1" ]]; then
+      echo "Error: cannot read '$1'"
+      exit 1
+    fi
+  }
+}
+
+{ # command-line args
+  (( $# == 0 )) && { echo_usage; exit 0; }
+
+  awk_script=$1
+  assert_readable "$awk_script"
+  shift
+
+  while [[ "$1" ]]; do
+    case "$1" in
+      -g|--golden-master)
+        {
+          [[ -n "$2" ]] || { echo_usage; exit 1; }
+          golden_master="$2"
+          shift
+        }
+        ;;
+      -f|--histfile)
+        {
+          [[ -n "$2" ]] || { echo_usage; exit 1; }
+          histfile_arg="$2"
+          shift
+        }
+        ;;
+      *)
+        { echo_usage; exit 1; }
+        ;;
+    esac
+    shift
+  done
+
+  if [[ -n "$golden_master" ]]; then
+    histfile="${histfile_arg:-$HOME/.bash_history}"
+    assert_readable "$golden_master"
+    assert_readable "$histfile"
+  elif [[ -n "$histfile_arg" ]]; then
+    echo "Please specify a golden-master to compare against"
+    echo_usage
+    exit 1
+  fi
+}
+
+{ # temp files
+  infile=$(mktemp)
+  outfile=$(mktemp)
+  comparefile=$(mktemp)
+  diffout=$(mktemp)
+
+  trap 'rm -f "$infile" "$outfile" "$comparefile" "$diffout"' EXIT
+}
+
+main() {
+  printf 'Test - empty history file...'
+  {
+    > "$infile"
+    > "$comparefile"
+  }
+  run_test
+
+  printf 'Test - one-line entry...'
+  {
+    echo 'abc' > "$infile"
+    echo 'abc' > "$comparefile"
+  }
+  run_test
+
+  printf 'Test - almost a timestamp...'
+  {
+    echo '#012345678' > "$infile"
+    echo '#012345678' > "$comparefile"
+  }
+  run_test
+
+  printf 'Test - timestamped entry with exclusion pattern...'
+  {
+    echo '#0123456789' >  "$infile"
+    echo 'ls'          >> "$infile"
+
+    > "$comparefile"
+  }
+  run_test
+
+  printf 'Test - multiple one-line entries...'
+  {
+    echo 'abc' >  "$infile"
+    echo 'xyz' >> "$infile"
+
+    echo 'abc' >  "$comparefile"
+    echo 'xyz' >> "$comparefile"
+  }
+  run_test
+
+  printf 'Test - timestamped entry...'
+  {
+    echo '#0123456789' >  "$infile"
+    echo 'abc'         >> "$infile"
+
+    echo '#0123456789' >  "$comparefile"
+    echo 'abc'         >> "$comparefile"
+  }
+  run_test
+
+  printf 'Test - multi-line timestamped entry...'
+  {
+    cat <<'EOF' > "$infile"
+#0123456789
+ls | while read -r line; do
+  sed 's/foo/bar/' <<<$line
+done
+EOF
+    cat <<'EOF' > "$comparefile"
+#0123456789
+ls | while read -r line; do
+  sed 's/foo/bar/' <<<$line
+done
+EOF
+  }
+  run_test
+
+  printf 'Test - mix of timestamped entries...'
+  {
+    cat <<'EOF' > "$infile"
+#0123456789
+git stash
+#0123456789
+ls movie
+#0123456789
+rmdir xyz
+EOF
+    cat <<'EOF' > "$comparefile"
+#0123456789
+git stash
+#0123456789
+rmdir xyz
+EOF
+  }
+  run_test
+
+  printf 'Test - adjacent timestamps...'
+  {
+    cat <<'EOF' > "$infile"
+#0123456789
+echo abc
+#1111111111
+#2222222222
+echo def
+EOF
+    cat <<'EOF' > "$comparefile"
+#0123456789
+echo abc
+#2222222222
+echo def
+EOF
+  }
+  run_test
+
+  printf 'Test - trailing timestamp...'
+  {
+    echo '#0123456789' >  "$infile"
+    echo 'echo abc'    >> "$infile"
+    echo '#1111111111' >> "$infile"
+
+    echo '#0123456789' >  "$comparefile"
+    echo 'echo abc'    >> "$comparefile"
+  }
+  run_test
+
+  if [[ -n "$golden_master" ]]; then
+    printf 'Test - compare against known results...'
+    {
+      cp "$histfile" "$infile"
+      cp "$golden_master" "$comparefile"
+    }
+    run_test
+  fi
+}
+
+{ # test-helpers
+  run_test() {
+    awk -f "$awk_script" "$infile"  >"$outfile"
+    compare_results
+  }
+
+  compare_results() {
+    if diff "$comparefile" "$outfile" >"$diffout"; then
+      report_success
+    else
+      report_failure
+    fi
+  }
+
+  report_success() {
+    printf '%b✓%b\n' "$col_green" "$col_reset"
+  }
+
+  report_failure() {
+    printf '%b✗%b\n' "$col_red" "$col_reset"
+    echo "Diff:"
+    cat "$diffout"
+  }
+
+  col_red="\033[31;01m"
+  col_green="\033[32;01m"
+  col_reset="\033[39;49;00m"
+}
+
+main
