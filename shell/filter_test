@@ -69,151 +69,6 @@ set -e
   trap 'rm -f "$infile" "$outfile" "$comparefile" "$diffout"' EXIT
 }
 
-main() {
-  printf 'Test - empty history file...'
-  {
-    > "$infile"
-    > "$comparefile"
-  }
-  run_test
-
-  printf 'Test - one-line entry...'
-  {
-    echo 'abc' > "$infile"
-    echo 'abc' > "$comparefile"
-  }
-  run_test
-
-  printf 'Test - almost a timestamp...'
-  {
-    echo '#012345678' > "$infile"
-    echo '#012345678' > "$comparefile"
-  }
-  run_test
-
-  printf 'Test - timestamped entry with "uninteresting" command...'
-  {
-    echo '#0123456789' >  "$infile"
-    echo 'ls'          >> "$infile"
-
-    > "$comparefile"
-  }
-  run_test
-
-  printf 'Test - timestamped entry with one-character command...'
-  {
-    echo '#0123456789' >  "$infile"
-    echo 'x'           >> "$infile"
-
-    > "$comparefile"
-  }
-  run_test
-
-  printf 'Test - timestamped entry with one-character command and args...'
-  {
-    echo '#0123456789' >  "$infile"
-    echo 'x abc'       >> "$infile"
-
-    echo '#0123456789' >  "$comparefile"
-    echo 'x abc'       >> "$comparefile"
-  }
-  run_test
-
-  printf 'Test - multiple one-line entries...'
-  {
-    echo 'abc' >  "$infile"
-    echo 'xyz' >> "$infile"
-
-    echo 'abc' >  "$comparefile"
-    echo 'xyz' >> "$comparefile"
-  }
-  run_test
-
-  printf 'Test - timestamped entry...'
-  {
-    echo '#0123456789' >  "$infile"
-    echo 'abc'         >> "$infile"
-
-    echo '#0123456789' >  "$comparefile"
-    echo 'abc'         >> "$comparefile"
-  }
-  run_test
-
-  printf 'Test - multi-line timestamped entry...'
-  {
-    cat <<'EOF' > "$infile"
-#0123456789
-ls | while read -r line; do
-  sed 's/foo/bar/' <<<$line
-done
-EOF
-    cat <<'EOF' > "$comparefile"
-#0123456789
-ls | while read -r line; do
-  sed 's/foo/bar/' <<<$line
-done
-EOF
-  }
-  run_test
-
-  printf 'Test - mix of timestamped entries...'
-  {
-    cat <<'EOF' > "$infile"
-#0123456789
-git stash
-#0123456789
-ls movie
-#0123456789
-rmdir xyz
-EOF
-    cat <<'EOF' > "$comparefile"
-#0123456789
-git stash
-#0123456789
-rmdir xyz
-EOF
-  }
-  run_test
-
-  printf 'Test - adjacent timestamps...'
-  {
-    cat <<'EOF' > "$infile"
-#0123456789
-echo abc
-#1111111111
-#2222222222
-echo def
-EOF
-    cat <<'EOF' > "$comparefile"
-#0123456789
-echo abc
-#2222222222
-echo def
-EOF
-  }
-  run_test
-
-  printf 'Test - trailing timestamp...'
-  {
-    echo '#0123456789' >  "$infile"
-    echo 'echo abc'    >> "$infile"
-    echo '#1111111111' >> "$infile"
-
-    echo '#0123456789' >  "$comparefile"
-    echo 'echo abc'    >> "$comparefile"
-  }
-  run_test
-
-  if [[ -n "$golden_master" ]]; then
-    printf 'Test - compare against known results...'
-    {
-      cp "$histfile" "$infile"
-      cp "$golden_master" "$comparefile"
-    }
-    run_test
-  fi
-}
-
 { # test-helpers
   run_test() {
     awk -f "$awk_script" "$infile"  >"$outfile"
@@ -243,4 +98,150 @@ EOF
   col_reset="\033[39;49;00m"
 }
 
-main
+## finally, the actual tests!
+
+printf 'Test - empty history file...'
+{
+  > "$infile"
+  > "$comparefile"
+}
+run_test
+
+printf 'Test - one-line entry...'
+{
+  echo 'abc' > "$infile"
+  echo 'abc' > "$comparefile"
+}
+run_test
+
+printf 'Test - almost a timestamp...'
+{
+  echo '#012345678' > "$infile"
+  echo '#012345678' > "$comparefile"
+}
+run_test
+
+printf 'Test - timestamped entry with "uninteresting" command...'
+{
+  echo '#0123456789' >  "$infile"
+  echo 'ls'          >> "$infile"
+
+  > "$comparefile"
+}
+run_test
+
+printf 'Test - timestamped entry with one-character command...'
+{
+  echo '#0123456789' >  "$infile"
+  echo 'x'           >> "$infile"
+
+  > "$comparefile"
+}
+run_test
+
+printf 'Test - timestamped entry with one-character command and args...'
+{
+  echo '#0123456789' >  "$infile"
+  echo 'x abc'       >> "$infile"
+
+  echo '#0123456789' >  "$comparefile"
+  echo 'x abc'       >> "$comparefile"
+}
+run_test
+
+printf 'Test - multiple one-line entries...'
+{
+  echo 'abc' >  "$infile"
+  echo 'xyz' >> "$infile"
+
+  echo 'abc' >  "$comparefile"
+  echo 'xyz' >> "$comparefile"
+}
+run_test
+
+printf 'Test - timestamped entry...'
+{
+  echo '#0123456789' >  "$infile"
+  echo 'abc'         >> "$infile"
+
+  echo '#0123456789' >  "$comparefile"
+  echo 'abc'         >> "$comparefile"
+}
+run_test
+
+printf 'Test - multi-line timestamped entry...'
+{
+  cat <<'EOF' > "$infile"
+#0123456789
+ls | while read -r line; do
+sed 's/foo/bar/' <<<$line
+done
+EOF
+  cat <<'EOF' > "$comparefile"
+#0123456789
+ls | while read -r line; do
+sed 's/foo/bar/' <<<$line
+done
+EOF
+}
+run_test
+
+printf 'Test - mix of timestamped entries...'
+{
+  cat <<'EOF' > "$infile"
+#0123456789
+git stash
+#0123456789
+ls movie
+#0123456789
+rmdir xyz
+EOF
+  cat <<'EOF' > "$comparefile"
+#0123456789
+git stash
+#0123456789
+rmdir xyz
+EOF
+}
+run_test
+
+printf 'Test - adjacent timestamps...'
+{
+  cat <<'EOF' > "$infile"
+#0123456789
+echo abc
+#1111111111
+#2222222222
+echo def
+EOF
+  cat <<'EOF' > "$comparefile"
+#0123456789
+echo abc
+#2222222222
+echo def
+EOF
+}
+run_test
+
+printf 'Test - trailing timestamp...'
+{
+  cat <<'EOF' > "$infile"
+#0123456789
+echo abc
+#1111111111
+EOF
+  cat <<'EOF' > "$comparefile"
+#0123456789
+echo abc
+EOF
+}
+run_test
+
+if [[ -n "$golden_master" ]]; then
+  printf 'Test - compare against known results...'
+  {
+    cp "$histfile" "$infile"
+    cp "$golden_master" "$comparefile"
+  }
+  run_test
+fi
