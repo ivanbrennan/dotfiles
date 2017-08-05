@@ -3,7 +3,7 @@
   histentry = ""
   next
 }
-($1 ~ /^(ls?|man|cat)$/) || /^\w$/ {
+($1 ~ /^(ls?|man|cat)$/) || /^[[:alpha:]]$/ {
   if (! timestamp) {
     print
   } else {
