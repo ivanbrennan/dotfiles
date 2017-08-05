@@ -3,11 +3,11 @@
 tmpfile=$(mktemp)
 trap 'rm -f "$tmpfile"' EXIT
 
-filter_script="$HOME/.bash_history_filter.awk"
+awk_script="$HOME/.bash_history_filter.awk"
 persisted_history="${HISTFILE:-$HOME/.bash_history}"
 
-if [[ -r "$filter_script" && -r "$persisted_history" ]]; then
-  awk -f "$filter_script" "$persisted_history" > "$tmpfile"
+if [[ -r "$awk_script" && -r "$persisted_history" ]]; then
+  awk -f "$awk_script" "$persisted_history" > "$tmpfile"
 
   mv "$tmpfile" "$persisted_history"
 fi
