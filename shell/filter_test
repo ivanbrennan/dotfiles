@@ -91,12 +91,31 @@ main() {
   }
   run_test
 
-  printf 'Test - timestamped entry with exclusion pattern...'
+  printf 'Test - timestamped entry with "uninteresting" command...'
   {
     echo '#0123456789' >  "$infile"
     echo 'ls'          >> "$infile"
 
     > "$comparefile"
+  }
+  run_test
+
+  printf 'Test - timestamped entry with one-character command...'
+  {
+    echo '#0123456789' >  "$infile"
+    echo 'x'           >> "$infile"
+
+    > "$comparefile"
+  }
+  run_test
+
+  printf 'Test - timestamped entry with one-character command and args...'
+  {
+    echo '#0123456789' >  "$infile"
+    echo 'x abc'       >> "$infile"
+
+    echo '#0123456789' >  "$comparefile"
+    echo 'x abc'       >> "$comparefile"
   }
   run_test
 
@@ -215,7 +234,7 @@ EOF
 
   report_failure() {
     printf '%b✗%b\n' "$col_red" "$col_reset"
-    echo "Diff:"
+    echo "Diff expected vs actual:"
     cat "$diffout"
   }
 
