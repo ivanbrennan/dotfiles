@@ -4,6 +4,7 @@ set colored-completion-prefix on
 set completion-ignore-case on
 set echo-control-characters off
 set enable-bracketed-paste on
+set mark-symlinked-directories on
 set skip-completed-text on
 
 # Search history for the characters preceding the cursor
