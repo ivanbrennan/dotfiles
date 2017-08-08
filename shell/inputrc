@@ -11,6 +11,8 @@ control-p: previous-history
 control-n: next-history
 "\033[A": history-search-backward
 "\033[B": history-search-forward
+"\033p": history-search-backward
+"\033n": history-search-forward
 
 # Shift-Space
 "\033[32;2u": " "
