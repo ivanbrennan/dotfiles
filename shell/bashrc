@@ -244,3 +244,19 @@ fi
     [ -r "$file" ] && . "$file"
   done
 }
+
+# ::::::::: Parameters :::::::::::::::::::::::
+export HISTTIMEFORMAT='%F %T '
+export HISTCONTROL=erasedups:ignorespace
+export HISTSIZE=10000
+export HISTIGNORE='jobs:[fb]g:history:gst:tls'
+shopt -s histappend cmdhist lithist
+
+# If shell is interactive, disable START/STOP output control.
+# This allows Ctrl-S to trigger i-search.
+[[ $- = *i* ]] && stty -ixon
+
+unset -v MAILCHECK
+
+# ::::::::: rbenv ::::::::::::::::::::::::::::
+if command -v rbenv > /dev/null; then eval "$(rbenv init -)"; fi
