@@ -233,3 +233,14 @@ DOTFILES="$HOME/Development/resources/dotfiles"
 if [[ $- == *i* ]]; then
   trap '$HOME/.bash_history_filter >/dev/null 2>&1 &' EXIT
 fi
+
+# ::::::::: Sources ::::::::::::::::::::::::::
+{
+  files=(~/.bashrc.local
+         ~/.bash_aliases
+         ~/.bash_functions)
+
+  for file in "${files[@]}"; do
+    [ -r "$file" ] && . "$file"
+  done
+}

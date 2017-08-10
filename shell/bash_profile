@@ -4,15 +4,8 @@
 # macOS conventionally uses a login shell for
 # all interactive sessions.
 
-# ::::::::: Sources ::::::::::::::::::::::::::
-files=(~/.bashrc
-       ~/.bashrc.local
-       ~/.bash_aliases
-       ~/.bash_functions)
-
-for file in "${files[@]}"; do
-  [ -r "$file" ] && . "$file"
-done
+# ::::::::: bashrc :::::::::::::::::::::::::::
+[[ -r ~/.bashrc ]] && . ~/.bashrc
 
 # ::::::::: Parameters :::::::::::::::::::::::
 export HISTTIMEFORMAT='%F %T '
