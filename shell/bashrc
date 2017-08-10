@@ -3,6 +3,11 @@
 
 DOTFILES="$HOME/Development/resources/dotfiles"
 
+# ::::::::: Homebrewed Bash ::::::::::::::::::
+{
+  [[ -r /usr/local/bin/bash ]] && export SHELL=/usr/local/bin/bash
+}
+
 # ::::::::: XDG Base Directory :::::::::::::::
 {
   # Some well-crafted applications (e.g. git, neovim) observe this spec.
