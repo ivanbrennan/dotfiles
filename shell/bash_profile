@@ -4,5 +4,109 @@
 # macOS conventionally uses a login shell for
 # all interactive sessions.
 
+DOTFILES="$HOME/Development/resources/dotfiles"
+
+# ::::::::: Homebrewed Bash ::::::::::::::::::
+{
+  [[ -r /usr/local/bin/bash ]] && export SHELL=/usr/local/bin/bash
+}
+
+# ::::::::: XDG Base Directory :::::::::::::::
+{
+  # Some well-crafted applications (e.g. git, neovim) observe this spec.
+  # https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
+
+  export XDG_CONFIG_HOME="$HOME/.config"
+}
+
+# ::::::::: Paths ::::::::::::::::::::::::::::
+{
+  # PATH
+  {
+    export SCRIPTS_PATH="$DOTFILES/bin"
+
+    export USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin"
+
+    export PATH="$SCRIPTS_PATH:$USR_PATHS:$PATH"
+  }
+
+  # Node.js
+  export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
+
+  ### Added by the Heroku Toolbelt
+  export PATH="/usr/local/heroku/bin:$PATH"
+}
+
+# ::::::::: One True Editor(s) :::::::::::::::
+{
+  # Neovim
+  NEOVIM="$( { command -v nvim || command -v vim || command -v vi; } )"
+  export VISUAL=$NEOVIM
+  export GIT_EDITOR=$NEOVIM
+  export SVN_EDITOR=$NEOVIM
+
+  # Emacs
+  export SPACEMACSDIR="~/Development/resources/emacs/spacemacs.d"
+  export EMAIL="ivan.brennan@gmail.com"
+
+  # Configure GNU Global to work with universal-ctags
+  export GTAGSCONF=/usr/local/share/gtags/gtags.conf
+  export GTAGSLABEL=new-ctags
+
+  # Don't bother editing Git merge commit-messages
+  export GIT_MERGE_AUTOEDIT="no"
+}
+
+# ::::::::: Colors :::::::::::::::::::::::::::
+{
+  export CLICOLOR=1
+  export GREP_OPTIONS="--color"
+
+  # ls
+  {
+    export LSCOLORS="exgxcxdxbxegedabagacad"
+
+    # Order of attributes:
+    #  1. directory
+    #  2. symbolic link
+    #  3. socket
+    #  4. pipe
+    #  5. executable
+    #  6. block special
+    #  7. character special
+    #  8. executable with setuid bit set
+    #  9. executable with setgid bit set
+    # 10. directory writable to others, with sticky bit
+    # 11. directory writable to others, without sticky bit
+
+    # Color designators:
+    # a black         A bold black (grey)
+    # b red           B bold red
+    # c green         C bold green
+    # d brown         D bold brown (yellow)
+    # e blue          E bold blue
+    # f magenta       F bold magenta
+    # g cyan          G bold cyan
+    # h light grey    H bold light grey (white)
+    # x default foreground or background
+
+    # the default is exfxcxdxbxegedabagacad
+  }
+}
+
+# ::::::::: Less :::::::::::::::::::::::::::::
+{
+  export LESS="-~"
+  export MANPAGER="less -is"
+}
+
+# ::::::::: History ::::::::::::::::::::::::::
+{
+  export HISTTIMEFORMAT='%F %T '
+  export HISTCONTROL=erasedups:ignorespace
+  export HISTSIZE=10000
+  export HISTIGNORE='jobs:[fb]g:history:gst:tls'
+}
+
 # ::::::::: bashrc :::::::::::::::::::::::::::
 [[ -r ~/.bashrc ]] && . ~/.bashrc
