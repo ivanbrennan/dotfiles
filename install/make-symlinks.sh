@@ -45,7 +45,18 @@ source_files=(
   "${misc_files[@]}"
 )
 
+docker_cmds=(
+  docker
+  docker-machine
+  docker-compose
+)
+
 main() {
+  symlink_dotfiles
+  symlink_docker_completions
+}
+
+symlink_dotfiles() {
   for src in "${source_files[@]}"; do
     link="$HOME/.$(basename "$src")"
 
@@ -55,8 +66,25 @@ main() {
       mv -i "$link" "$backup"
     fi
 
-    ln -svhF "$src" "$link" | grep -Fe '->'
+    make_symlink "$src" "$link"
   done
+}
+
+symlink_docker_completions() {
+  brew_prefix="$(brew --prefix 2>/dev/null)"
+  completion_dir="${brew_prefix:+${brew_prefix}/etc/bash_completion.d}"
+
+  if [[ -w "$completion_dir" ]]; then
+    docker_etc=/Applications/Docker.app/Contents/Resources/etc
+
+    for cmd in "${docker_cmds[@]}"; do
+      cmd_completion="${docker_etc}/${cmd}.bash-completion"
+
+      if [[ -r "$cmd_completion" ]]; then
+        make_symlink "$cmd_completion" "${completion_dir}/${cmd}"
+      fi
+    done
+  fi
 }
 
 already_exists() {
@@ -64,4 +92,10 @@ already_exists() {
   [ -s "$1" ] && [ ! -L "$1" ]
 }
 
-main
+make_symlink() {
+  local src=$1 link=$2
+  ln -svhF "$src" "$link" | grep -Fe '->'
+}
+
+symlink_dotfiles
+symlink_docker_completions
