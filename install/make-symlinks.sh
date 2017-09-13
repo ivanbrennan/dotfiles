@@ -35,6 +35,7 @@ misc_files=(
   "$repo/githelpers"
   "$repo/my.cnf"
   "$repo/less"
+  "$repo/haskeline"
 )
 
 source_files=(
