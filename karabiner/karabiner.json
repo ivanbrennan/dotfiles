@@ -40,35 +40,6 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Change semicolon to control when used as modifier, semicolon when used alone",
-                                "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_control"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "semicolon",
-                                        "modifiers": [
-                                            "any"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "manipulators": [
-                            {
                                 "description": "Left and Right Shift together -> Caps Lock",
                                 "from": {
                                     "key_code": "right_shift",
