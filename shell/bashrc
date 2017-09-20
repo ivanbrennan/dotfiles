@@ -175,7 +175,13 @@ fi
 
   # If shell is interactive, disable START/STOP output control.
   # This allows Ctrl-S to trigger i-search.
-  [[ $- = *i* ]] && stty -ixon
+  if [[ $- = *i* ]]; then
+    # -ixon : Disable START/STOP output control.
+    # This allows Ctrl-S to trigger i-search.
+    # dsusp undef : Turn off "delayed suspend".
+    # This allows C-Y to work in GHCi.
+    stty -ixon dsusp undef
+  fi
 
   unset -v MAILCHECK
 }
