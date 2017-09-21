@@ -89,23 +89,9 @@
 # ::::::::: Prompt :::::::::::::::::::::::::::
 {
   build_prompt() {
-    export PS1="\$(ps1_head)${BRIGHT_BLUE}\u${NORMAL}·${BRIGHT_BLUE}\W${NORMAL}\$(grb_git_prompt)${NORMAL}\n╰ဝ "
+    export PS1="╭-${BRIGHT_BLUE}\u${NORMAL}·${BRIGHT_BLUE}\W${NORMAL}\$(grb_git_prompt)${NORMAL}\n╰ဝ "
     export PS2=" ❯ "
     export PS4=" + "
-  }
-
-  ps1_head() {
-    if (( $(cursor_col) > 1 )); then
-      printf '\n╭-'
-    else
-      printf '╭-'
-    fi
-  }
-
-  cursor_col() {
-    local _row col
-    IFS=';' read -s -dR -p $'\033[6n' _row col
-    echo "${col}"
   }
 
   grb_git_prompt() {
@@ -151,6 +137,18 @@
   }
 
   build_prompt
+
+  export PROMPT_COMMAND='maybe_newline'
+
+  maybe_newline() {
+    (( $(cursor_col) > 1 )) && printf '\n'
+  }
+
+  cursor_col() {
+    local _row col
+    IFS=';' read -s -dR -p $'\033[6n' _row col
+    echo "${col}"
+  }
 }
 
 # ::::::::: History Filter :::::::::::::::::::
