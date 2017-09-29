@@ -137,18 +137,6 @@
   }
 
   build_prompt
-
-  export PROMPT_COMMAND='maybe_newline'
-
-  maybe_newline() {
-    (( $(cursor_col) > 1 )) && printf '\n'
-  }
-
-  cursor_col() {
-    local _row col
-    IFS=';' read -s -dR -p $'\033[6n' _row col
-    echo "${col}"
-  }
 }
 
 # ::::::::: History Filter :::::::::::::::::::
