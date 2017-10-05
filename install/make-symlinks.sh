@@ -95,7 +95,7 @@ already_exists() {
 
 make_symlink() {
   local src=$1 link=$2
-  ln -svhF "$src" "$link" | grep -Fe '->'
+  ln -svnF "$src" "$link" | grep -Fe '->'
 }
 
 symlink_dotfiles
