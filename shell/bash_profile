@@ -104,11 +104,13 @@ DOTFILES="$HOME/Development/resources/dotfiles"
 {
   export FZF_DEFAULT_OPTS="--height 40% --reverse --exact"
 }
+
 # ::::::::: History ::::::::::::::::::::::::::
 {
   export HISTTIMEFORMAT='%F %T '
   export HISTCONTROL=erasedups:ignorespace
   export HISTSIZE=10000
+  export HISTFILESIZE=20000
   export HISTIGNORE='jobs:[fb]g:history:gst:tls'
 }
 
