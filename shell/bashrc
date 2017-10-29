@@ -89,7 +89,7 @@
 # ::::::::: Prompt :::::::::::::::::::::::::::
 {
   build_prompt() {
-    export PS1="╭-${BRIGHT_BLUE}\u${NORMAL}·${BRIGHT_BLUE}\W${NORMAL}\$(grb_git_prompt)${NORMAL}\n╰ဝ "
+    export PS1="┌${CYAN}\w${NORMAL}\$(grb_git_prompt)${NORMAL}\n└(\u)• "
     export PS2=" ❯ "
     export PS4=" + "
   }
