@@ -32,6 +32,12 @@ alias mv="mv -iv"
 
 alias cls='printf "\033c"'
 
+if command -v ggrep > /dev/null; then
+  alias grep="ggrep --color"
+else
+  alias grep="grep --color"
+fi
+
 # ::::::::: GDB ::::::::::::::::::::::::::::::
 alias gdb="gdb -quiet"
 

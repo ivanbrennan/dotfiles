@@ -8,6 +8,7 @@ formulae=(
   git
   gnutls
   graphviz
+  grep
   imagemagick
   jq
   less

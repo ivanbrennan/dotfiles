@@ -60,7 +60,6 @@ DOTFILES="$HOME/Development/resources/dotfiles"
 # ::::::::: Colors :::::::::::::::::::::::::::
 {
   export CLICOLOR=1
-  export GREP_OPTIONS="--color"
 
   # ls
   {
