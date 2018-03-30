@@ -1,72 +1,83 @@
-set keyseq-timeout 250
-
+set bell-style none
 set colored-completion-prefix on
+set colored-stats off
 set completion-ignore-case on
+set convert-meta off
 set echo-control-characters off
 set enable-bracketed-paste on
+set input-meta on
+set keyseq-timeout 250
 set mark-symlinked-directories on
+set output-meta on
 set skip-completed-text on
 
 # Search history for the characters preceding the cursor
 control-p: previous-history
 control-n: next-history
-"\033[A": history-search-backward
-"\033[B": history-search-forward
-"\033p": history-search-backward
-"\033n": history-search-forward
+"\e[1;5A": history-search-backward
+"\e[1;5B": history-search-forward
+"\ep": history-search-backward
+"\en": history-search-forward
 
 # Shift-Space
-"\033[32;2u": " "
+"\e[32;2u": " "
 # Ctrl-Shift-Space
-"\033[32;6u": " "
-
-# Alt-Tab
-"\033[9;3u": "\t"
-# Alt-Shift-Tab
-"\033[1;3Z": "\t"
+"\e[32;6u": " "
 
 # Ctrl-,
-"\033[44;5u": ","
+"\e[44;5u": ","
 # Ctrl-.
-"\033[46;5u": "."
+"\e[46;5u": "."
 
 # Shift-Enter
-"\033[13;2u": "\n"
+"\e[13;2u": "\n"
 # Ctrl-Enter
-"\033[13;5u": "\n"
+"\e[13;5u": "\n"
+# Alt-Enter
+"\e[13;3u": "\n"
 
 # Shift-Up
-"\033[1;2A": beginning-of-history
-# Ctrl-Up
-"\033[1;5A": beginning-of-history
-# Ctrl-Shift-Up
-"\033[1;6A": beginning-of-history
-# Alt-Up
-"\x1b\x1b\x5b\x41": beginning-of-history
+"\e[1;2A": beginning-of-history
 
 # Shift-Down
-"\033[1;2B": end-of-history
-# Ctrl-Down
-"\033[1;5B": end-of-history
-# Ctrl-Shift-Down
-"\033[1;6B": end-of-history
-# Alt-Down
-"\x1b\x1b\x5b\x42": end-of-history
+"\e[1;2B": end-of-history
 
 # Shift-Left
-"\033[1;2D": backward-word
+"\e[1;2D": backward-word
 # Ctrl-Left
-"\033[1;5D": backward-word
+"\e[1;5D": backward-word
 # Ctrl-Shift-Left
-"\033[1;6D": beginning-of-line
+"\e[1;6D": beginning-of-line
 # Alt-Left
-"\033B": backward-word
+"\e[1;3D": backward-word
 
 # Shift-Right
-"\033[1;2C": forward-word
+"\e[1;2C": forward-word
 # Ctrl-Right
-"\033[1;5C": forward-word
+"\e[1;5C": forward-word
 # Ctrl-Shift-Right
-"\033[1;6C": end-of-line
+"\e[1;6C": end-of-line
 # Alt-Right
-"\033[1;5P": forward-word
+"\e[1;3C": forward-word
+
+
+# for linux console and RH/Debian xterm
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+"\e[5~": beginning-of-history
+"\e[6~": end-of-history
+"\e[3~": delete-char
+"\e[2~": quoted-insert
+"\e[5C": forward-word
+"\e[5D": backward-word
+
+# for rxvt
+"\e[8~": end-of-line
+
+# for non RH/Debian xterm, can't hurt for RH/DEbian xterm
+"\eOH": beginning-of-line
+"\eOF": end-of-line
+
+# for freebsd console
+"\e[H": beginning-of-line
+"\e[F": end-of-line
