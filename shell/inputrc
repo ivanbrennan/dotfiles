@@ -20,9 +20,9 @@ control-n: next-history
 "\en": history-search-forward
 
 # Move like Less
-meta-l: forward-char
-meta-h: backward-char
-meta-w: forward-word
+"\el": forward-char
+"\eh": backward-char
+"\ew": forward-word
 
 # Shift-Space
 "\e[32;2u": " "
