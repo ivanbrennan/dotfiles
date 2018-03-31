@@ -10,9 +10,14 @@ git clone git@github.com:ivanbrennan/dotfiles.git
 cd dotfiles && bash install.sh
 ```
 
-#### Disable Control-Command-D macOS lookup key
+#### lesskey
+compile lesskey to a user location:
+``` sh
+lesskey --output=$HOME/.less -- ./lesskey
 ```
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 70 '<dict><key>enabled</key><false/></dict>'
-```
+
+compile lesskey to a system-wide location:
+``` sh
+sudo lesskey --output=/etc/sysless -- ./lesskey
 
 [![Bash History Filter](/shell/bash_history_filter_awk.png?raw=true)](/shell/bash_history_filter.awk)
