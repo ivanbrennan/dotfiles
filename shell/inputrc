@@ -19,6 +19,11 @@ control-n: next-history
 "\ep": history-search-backward
 "\en": history-search-forward
 
+# Move like Less
+meta-l: forward-char
+meta-h: backward-char
+meta-w: forward-word
+
 # Shift-Space
 "\e[32;2u": " "
 # Ctrl-Shift-Space
