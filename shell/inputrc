@@ -14,15 +14,19 @@ set skip-completed-text on
 # Search history for the characters preceding the cursor
 control-p: previous-history
 control-n: next-history
-"\e[1;5A": history-search-backward
-"\e[1;5B": history-search-forward
-"\ep": history-search-backward
-"\en": history-search-forward
+"\ep": previous-history
+"\en": next-history
+"\e[1A": history-search-backward
+"\e[1B": history-search-forward
 
 # Move like Less
 "\el": forward-char
 "\eh": backward-char
 "\ew": forward-word
+
+# Use your thumbs
+"\ea": beginning-of-line
+"\ee": end-of-line
 
 # Shift-Space
 "\e[32;2u": " "

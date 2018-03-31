@@ -1,10 +1,15 @@
 #line-edit
 ^P           up
+\033p        up
 ^N           down
+\033n        down
 ^A           home
+\033a        home
 ^E           end
+\033e        end
 \033[1;2D    word-left
 \033[1;5D    word-left
 \033[1;2C    word-right
 \033[1;5C    word-right
 \033f        word-right
+^D           delete

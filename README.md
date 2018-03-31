@@ -11,6 +11,11 @@ cd dotfiles && bash install.sh
 ```
 
 #### lesskey
+recompile lesskey
+``` sh
+lesskey --output=./less -- ./lesskey
+```
+
 compile lesskey to a user location:
 ``` sh
 lesskey --output=$HOME/.less -- ./lesskey
