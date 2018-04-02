@@ -16,8 +16,8 @@ control-p: previous-history
 control-n: next-history
 "\ep": previous-history
 "\en": next-history
-"\e[1A": history-search-backward
-"\e[1B": history-search-forward
+"\e[A": history-search-backward
+"\e[B": history-search-forward
 
 # Move like Less
 "\el": forward-char
