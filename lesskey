@@ -15,4 +15,4 @@
 ^D           delete
 
 #env
-LESS = -~--quit-if-one-screen
+LESS = -i~R--quit-if-one-screen

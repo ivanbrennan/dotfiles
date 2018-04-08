@@ -95,8 +95,7 @@ DOTFILES="$HOME/Development/resources/dotfiles"
 
 # ::::::::: Less :::::::::::::::::::::::::::::
 {
-  export LESS="-~"
-  export MANPAGER="less -is"
+  export MANPAGER="less -s"
 }
 
 # ::::::::: FZF ::::::::::::::::::::::::::::::
