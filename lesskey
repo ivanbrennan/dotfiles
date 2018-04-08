@@ -13,3 +13,6 @@
 \033[1;5C    word-right
 \033f        word-right
 ^D           delete
+
+#env
+LESS = -~--quit-if-one-screen
