@@ -28,6 +28,9 @@ control-n: next-history
 "\ea": beginning-of-line
 "\ee": end-of-line
 
+# Edit and execute
+"\ex\ex": edit-and-execute-command
+
 # Shift-Space
 "\e[32;2u": " "
 # Ctrl-Shift-Space
