@@ -1,7 +1,6 @@
-#! /usr/bin/env nix-shell
-#! nix-shell -i perl --packages perlPackages.LWP perl
+#! /usr/bin/perl
 
-# Usage: flaccurate.pl FLACDIR...
+# Usage: flaccurate FLACDIR...
 
 # This script can verify that a set of files is good, but
 # may erroneously identify a set as "bad" in some cases.
