@@ -1,0 +1,50 @@
+# This file contains some additional readline configuration that
+# I'm not currently using but want to keep around for reference.
+
+# :::: Compatibility for various terminals ::::::::::
+# linux console and RH/Debian xterm
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+"\e[5~": beginning-of-history
+"\e[6~": end-of-history
+"\e[3~": delete-char
+"\e[2~": quoted-insert
+"\e[5C": forward-word
+"\e[5D": backward-word
+# rxvt
+"\e[8~": end-of-line
+# non RH/Debian xterm, can't hurt for RH/DEbian xterm
+"\eOH": beginning-of-line
+"\eOF": end-of-line
+# freebsd console
+"\e[H": beginning-of-line
+"\e[F": end-of-line
+
+# :::: Extended modifiers :::::::::::::::::::::::::::
+# Shift-Space
+"\e[32;2u": " "
+# Ctrl-Shift-Space
+"\e[32;6u": " "
+# Ctrl-{,|.}
+"\e[44;5u": ","
+"\e[46;5u": "."
+# Shift-Enter
+"\e[13;2u": "\n"
+# Ctrl-Enter
+"\e[13;5u": "\n"
+# Meta-Enter
+"\e[13;3u": "\n"
+# Ctrl-Shift-{Left|Right}
+"\e[1;6D": beginning-of-line
+"\e[1;6C": end-of-line
+
+# :::: Non-standard bindings ::::::::::::::::::::::::
+# Meta-{l|h|w}
+"\el": forward-char
+"\eh": backward-char
+"\ew": forward-word
+# Meta-{a|e}
+"\ea": beginning-of-line
+"\ee": end-of-line
+
+# vim: filetype=readline
