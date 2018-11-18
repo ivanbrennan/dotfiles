@@ -19,10 +19,6 @@ control-n: next-history
 "\ep": history-search-backward
 "\en": history-search-forward
 
-# Shift-{Up|Down}
-"\e[1;2A": beginning-of-history
-"\e[1;2B": end-of-history
-
 # Ctrl-{Left|Right}
 "\e[1;5D": backward-word
 "\e[1;5C": forward-word
@@ -34,6 +30,10 @@ control-n: next-history
 # Meta-{Left|Right}
 "\e[1;3D": beginning-of-line
 "\e[1;3C": end-of-line
+
+# Meta-{Up|Down}
+"\e[1;3A": beginning-of-history
+"\e[1;3B": end-of-history
 
 # Meta-x Meta-x
 "\ex\ex": edit-and-execute-command
