@@ -35,6 +35,9 @@ DOTFILES="$HOME/Development/resources/dotfiles"
 
   ### Added by the Heroku Toolbelt
   export PATH="/usr/local/heroku/bin:$PATH"
+
+  # Nix
+  export PATH="$HOME/.nix-profile/bin:/nix/var/nix/profiles/default/bin:$PATH"
 }
 
 # ::::::::: One True Editor(s) :::::::::::::::
