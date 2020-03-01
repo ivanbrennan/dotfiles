@@ -1,6 +1,7 @@
 /* XPM */
 static char *XPM_icon[] = {
-"21 13 17 1 12 8",
+/* width height colors chars-per-pixel spot-x spot-y */
+"21 13 17 1 11 6",
 "  c None",
 "s c #282a2e",
 "S c #373b41",
