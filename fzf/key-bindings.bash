@@ -11,13 +11,16 @@ bind '"\et": transpose-words'
 bind '"\eR": redraw-current-line'
 bind '"\e^": history-expand-line'
 
-# Shift-Space - Paste the selected file path into the command line
+# Control-Space - Paste the selected file path into the command line
 if [ $BASH_VERSINFO -gt 3 ]; then
-    bind -x '"\e[32;2u": "fzf-file-widget"'
+    # Workaround for a Readline limitation
+    # https://github.com/pindexis/marker/issues/45#issuecomment-363795526
+    bind '"\C-@": "\eWorkaround"'
+    bind -x '"\eWorkaround": "fzf-file-widget"'
 elif __fzf_use_tmux__; then
-    bind '"\e[32;2u": " \C-u \C-a\C-k`__fzf_select_tmux__`\e\C-e\C-y\C-a\C-d\C-y\ey\C-h"'
+    bind '"\C-@": " \C-u \C-a\C-k`__fzf_select_tmux__`\e\C-e\C-y\C-a\C-d\C-y\ey\C-h"'
 else
-    bind '"\e[32;2u": " \C-u \C-a\C-k`__fzf_select__`\e\C-e\C-y\C-a\C-y\ey\C-h\C-e\eR \C-h"'
+    bind '"\C-@": " \C-u \C-a\C-k`__fzf_select__`\e\C-e\C-y\C-a\C-y\ey\C-h\C-e\eR \C-h"'
 fi
 
 # ALT-R - Paste the selected command from history into the command line
