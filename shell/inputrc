@@ -39,22 +39,22 @@ control-n: next-history
 "\ex\ex": edit-and-execute-command
 
 # Shift-Space
-"\e[32;2u": " "
+"\e[32;2u": nop
 
 # Ctrl-Shift-Space
-"\e[32;6u": " "
+"\e[32;6u": nop
 
 # Ctrl-{,|.}
-"\e[44;5u": ","
-"\e[46;5u": "."
+"\e[44;5u": nop
+"\e[46;5u": nop
 
 # Shift-Enter
-"\e[13;2u": "\n"
+"\e[13;2u": nop
 
 # Ctrl-Enter
-"\e[13;5u": "\n"
+"\e[13;5u": nop
 
 # Meta-Enter
-"\e[13;3u": "\n"
+"\e[13;3u": nop
 
 $include ~/.inputrc.local
