@@ -41,6 +41,9 @@ control-n: next-history
 # Shift-Space
 "\e[32;2u": nop
 
+# Meta-Shift-Space
+"\e[32;4u": nop
+
 # Ctrl-Shift-Space
 "\e[32;6u": nop
 
