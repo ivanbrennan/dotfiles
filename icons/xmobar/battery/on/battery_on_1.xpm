@@ -5,7 +5,7 @@ static char *XPM_icon[] = {
 "  c None",
 "s c #282a2e",
 "S c #373b41",
-"r c #a54242",
+"r c #f8bb39",
 "b c #5f819d",
 "B c #81a2be",
 "w c #9098a0",
