@@ -35,6 +35,9 @@ control-n: next-history
 "\e[1;3A": beginning-of-history
 "\e[1;3B": end-of-history
 
+# Ctrl-i ≡ Tab
+"\e[105;5u": complete
+
 # Meta-x Meta-x
 "\ex\ex": edit-and-execute-command
 
