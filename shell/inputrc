@@ -50,9 +50,10 @@ control-n: next-history
 # Ctrl-Shift-Space
 "\e[32;6u": nop
 
-# Ctrl-{,|.}
-"\e[44;5u": nop
-"\e[46;5u": nop
+# Ctrl-{,|.|;}
+"\e[44;5u": ","
+"\e[46;5u": "."
+"\e[59;5u": ";"
 
 # Shift-Enter
 "\e[13;2u": nop
