@@ -1,7 +1,10 @@
 require 'rubygems'
 require 'yaml'
 require 'irb/completion'
-require 'irb/ext/save-history'
+
+if Gem::Version.new(RUBY_VERSION) < Gem::Version.new("3.2")
+  require 'irb/ext/save-history'
+end
 
 IRB.conf[:SAVE_HISTORY] = 200
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-history"
